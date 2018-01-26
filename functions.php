@@ -7,7 +7,4 @@ function porfolioSetUp() {
 
 add_action('wp_enqueue_scripts', 'porfolioSetUp');
 
-
-
-
 ?>

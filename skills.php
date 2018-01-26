@@ -4,129 +4,54 @@
 Template Name: Skills
 */
 
+$post = get_page_by_title('Skills');
+
 ?>
 
 <section class="section vp-skills beginning-skills sec_number" data-target='section4'>
     <div class="row expanded small-collapse">
         <div class="column small-12">
-            <h1>Skills</h1>
-
-            <?php
-
-
-            $post = get_page_by_title('Skills');
-
-            $entries = get_field('entry', $post->ID);
-
-            ?>
-
-
+            <h1><?php echo get_the_title($post); ?></h1>
         </div>
     </div>
     <div class="row expanded small-collapse medium-uncollapse to_animate">
         <div class="column small-12 medium-6">
             <div class="row small-up-2 list-skills">
 
-                <?php foreach($entries as $entry) {?>
-
-
+                <?php
+                $skillsWebDev = get_field('webdev', $post->ID);
+                foreach($skillsWebDev as $skillWebDev) {?>
 
                     <div class="column">
                         <div class="skills-label">
-                            <h3><?php echo $entry['text'] ?></h3>
+                            <h3><?php echo $skillWebDev['text'] ?></h3>
                         </div>
                     </div>
                     <div class="column">
-                        <img src="<?php echo $entry['picture']['url'] ?>" alt="coming soon..." class="piece">
+                        <img src="<?php echo $skillWebDev['picture']['url'] ?>" alt="coming soon..." class="piece">
                     </div>
 
                 <?php } ?>
 
-
-                
-
             </div>
         </div>
         <div class="column small-12 medium-6">
             <div class="row small-up-2 list-skills">
 
-                <div class="column">
-                    <div class="skills-label">
-                        <h3>Adobe Illustrator</h3>
+                <?php
+                $skillsUxUi = get_field('uxui', $post->ID);
+                foreach($skillsUxUi as $skillUxUi) {?>
+
+                    <div class="column">
+                        <div class="skills-label">
+                            <h3><?php echo $skillUxUi['text'] ?></h3>
+                        </div>
                     </div>
-                </div>
-                <div class="column">
-                    <img src="img/long-top.png" alt="coming soon..." class="piece">
-                </div>
-
-                <div class="column">
-                    <div class="skills-label">
-                        <h3>Adobe Photoshop</h3>
+                    <div class="column">
+                        <img src="<?php echo $skillUxUi['picture']['url'] ?>" alt="coming soon..." class="piece">
                     </div>
-                </div>
-                <div class="column">
-                    <img src="img/short-top.png" alt="coming soon..." class="piece">
-                </div>
 
-                <div class="column">
-                    <div class="skills-label">
-                        <h3>Corel Draw</h3>
-                    </div>
-                </div>
-                <div class="column">
-                    <img src="img/long-bottom.png" alt="coming soon..." class="piece">
-                </div>
-            </div>
-
-            <div class="separator"></div>
-
-            <div class="row small-up-2 list-skills">
-                <div class="column">
-                    <div class="skills-label">
-                        <h3>Typography</h3>
-                    </div>
-                </div>
-                <div class="column">
-                    <img src="img/long-side.png" alt="coming soon..." class="piece">
-                </div>
-
-                <div class="column">
-                    <div class="skills-label">
-                        <h3>User journeys</h3>
-                    </div>
-                </div>
-                <div class="column">
-                    <img src="img/short-bottom.png" alt="coming soon..." class="piece">
-                </div>
-
-                <div class="column">
-                    <div class="skills-label">
-                        <h3>Wireframing</h3>
-                    </div>
-                </div>
-                <div class="column">
-                    <img src="img/long-bottom.png" alt="coming soon..." class="piece">
-                </div>
-
-                <div class="column">
-                    <div class="skills-label">
-                        <h3>Responsive design</h3>
-                    </div>
-                </div>
-                <div class="column">
-                    <img src="img/long-top.png" alt="coming soon..." class="piece">
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <div class="separator"></div>
-    <div class="row expanded to_animate">
-        <div class="column small-12 medium-6">
-            <div class="row small-up-2">
-
-
-
+                <?php } ?>
             </div>
         </div>
     </div>
