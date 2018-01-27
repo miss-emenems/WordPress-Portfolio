@@ -4,21 +4,24 @@
 Template Name: Works
 */
 
-$post = get_page_by_title('Works');
+$worksPage = get_page_by_title('Works');
 ?>
 
 
 <section class="section vp-works beginning-works sec_number" data-target='section3'>
     <div class="row expanded">
         <div class="column small-12 large-6 box_works-leftside">
-            <h1><?php echo get_the_title($post); ?></h1>
+            <h1><?php echo get_the_title($worksPage); ?></h1>
             <br>
             <br>
+            <br>
+            <br
+            <br>
+            <br>
+            <br>
+            <!-- First solution - foreach -->
             <?php
-            $test = the_sub_field('picture', $post->ID);
-            var_dump($test['url']);
-            $worksTeasers = get_field('work_teaser', $post->ID);
-            var_dump($worksTeasers);
+            $worksTeasers = get_field('work_teaser', $worksPage->ID);
             foreach($worksTeasers as $teaser) { ?>
 
                 <div class="to_animate box_works-<?php echo $teaser['layout_class_modifier'] ?>">
@@ -38,6 +41,23 @@ $post = get_page_by_title('Works');
                 </div>
 
             <?php } ?>
+
+
+            <!-- Second solution - while -->
+            <?php
+            if( have_rows('work_teaser', $worksPage->ID) ):
+                while ( have_rows('work_teaser', $worksPage->ID) ) : the_row(); ?>
+                    <h2><?php echo the_sub_field('project_name', $worksPage->ID); ?></h2>
+                    <?php
+                endwhile;
+            else:
+                //nothing
+            endif;
+
+
+
+
+            ?>
 
 
         </div>
