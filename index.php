@@ -8,10 +8,12 @@ include('nav.php');
 <div class="wrapper">
     <?php
 
+    include('intro.php');
     include('mood-board.php');
     include('about.php');
     include('works.php');
     include('skills.php');
+    include('outro.php');
 
 
 
