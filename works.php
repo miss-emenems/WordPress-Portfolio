@@ -14,11 +14,6 @@ $worksPage = get_page_by_title('Works');
             <h1><?php echo get_the_title($worksPage); ?></h1>
             <br>
             <br>
-            <br>
-            <br
-            <br>
-            <br>
-            <br>
             <!-- First solution - foreach -->
             <?php
             $worksTeasers = get_field('work_teaser', $worksPage->ID);
