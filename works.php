@@ -4,19 +4,19 @@
 Template Name: Works
 */
 
-$worksPage = get_page_by_title('Works');
+$section = get_page_by_title('Works');
 ?>
 
 
 <section class="section vp-works beginning-works sec_number" data-target='section3'>
     <div class="row expanded">
         <div class="column small-12 large-6 box_works-leftside">
-            <h1><?php echo get_the_title($worksPage); ?></h1>
+            <h1><?php echo get_field('title', $section->ID); ?></h1>
             <br>
             <br>
             <!-- First solution - foreach -->
             <?php
-            $worksTeasers = get_field('work_teaser', $worksPage->ID);
+            $worksTeasers = get_field('work_teaser', $section->ID);
             foreach($worksTeasers as $teaser) { ?>
 
                 <div class="to_animate box_works-<?php echo $teaser['layout_class_modifier'] ?>">
@@ -40,9 +40,9 @@ $worksPage = get_page_by_title('Works');
 
             <!-- Second solution - while -->
             <?php
-            if( have_rows('work_teaser', $worksPage->ID) ):
-                while ( have_rows('work_teaser', $worksPage->ID) ) : the_row(); ?>
-                    <h2><?php echo the_sub_field('project_name', $worksPage->ID); ?></h2>
+            if( have_rows('work_teaser', $section->ID) ):
+                while ( have_rows('work_teaser', $section->ID) ) : the_row(); ?>
+                    <h2><?php echo the_sub_field('project_name', $section->ID); ?></h2>
                     <?php
                 endwhile;
             else:

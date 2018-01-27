@@ -4,14 +4,14 @@
 Template Name: Skills
 */
 
-$post = get_page_by_title('Skills');
+$section = get_page_by_title('Skills');
 
 ?>
 
 <section class="section vp-skills beginning-skills sec_number" data-target='section4'>
     <div class="row expanded small-collapse">
         <div class="column small-12">
-            <h1><?php echo get_the_title($post); ?></h1>
+            <h1><?php echo get_field('title', $section->ID); ?></h1>
         </div>
     </div>
     <div class="row expanded small-collapse medium-uncollapse to_animate">
@@ -19,7 +19,7 @@ $post = get_page_by_title('Skills');
             <div class="row small-up-2 list-skills">
 
                 <?php
-                $skillsWebDev = get_field('webdev', $post->ID);
+                $skillsWebDev = get_field('webdev', $section->ID);
                 foreach($skillsWebDev as $skillWebDev) {?>
 
                     <div class="column">
@@ -39,7 +39,7 @@ $post = get_page_by_title('Skills');
             <div class="row small-up-2 list-skills">
 
                 <?php
-                $skillsUxUi = get_field('uxui', $post->ID);
+                $skillsUxUi = get_field('uxui', $section->ID);
                 foreach($skillsUxUi as $skillUxUi) {?>
 
                     <div class="column">
