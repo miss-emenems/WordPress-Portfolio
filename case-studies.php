@@ -4,10 +4,9 @@
 Template Name: Case Studies
 */
 
-//$post = get_page_by_title('Case Studies');
 ?>
 
-<section class="box-slider-works-example-XXXX">
+<section class="box-slider-works-example">
     <div class="slider-works-example">
 
 
@@ -15,14 +14,12 @@ Template Name: Case Studies
         $queryWorks = new WP_Query('cat=2');
 
         if ($queryWorks->have_posts()) : while ($queryWorks->have_posts()) : $queryWorks->the_post();
-            {
-                $projectInfo = get_field('project_info');
-                $projectPictures = get_field('pictures');
-                $projectCopy = get_field('copy');
-                $projectColors = get_field('colors');
-                $projectFonts = get_field('fonts');
-            }
 
+            $projectInfo = get_field('project_info');
+            $projectPictures = get_field('pictures');
+            $projectCopy = get_field('copy');
+            $projectColors = get_field('colors');
+            $projectFonts = get_field('fonts');
         ?>
         <div class="slide works-1">
             <div class="content-works content mCustomScrollbar">
@@ -51,7 +48,7 @@ Template Name: Case Studies
                     <div class="column small-12 medium-10 medium-centered">
                         <div class="box-padding align-center">
                             <h2>Wireframing</h2>
-                            <?php echo $projectCopy['wireframing'] ?>
+                            <?php echo $projectCopy['wireframing']; ?>
                         </div>
                     </div>
                     <div class="column small-12">
@@ -91,15 +88,53 @@ Template Name: Case Studies
                                 <?php } ?>
                             </div>
                         </div>
-
-
-
-
+                    </div>
+                </div>
+                <div class="row expanded medium-collapse">
+                    <div class="column small-12">
+                        <div class="box-padding align-center">
+                            <h2>Used frameworks and&nbsp;plugins</h2>
+                            <?php echo $projectCopy['technology']; ?>
+                        </div>
+                        <div class="box-padding align-center">
+                            <h2><?php echo $projectInfo['credits']['colaboration_type']; ?></h2>
+                            <?php echo $projectInfo['credits']['colaborators']; ?>
+                            <p><?php echo $projectInfo['credits']['date']; ?></p>
+                        </div>
                     </div>
                 </div>
 
-
-
+            </div>
+            <div class="bottom-works">
+                <div class="row expanded medium-collapse">
+                    <div class="column small-12 medium-7 large-8 panel-left">
+                        <ul class="controls">
+                            <li><button class="button prev-works">previous<span class='hide-on-small'> project</span></button></li>
+                            <li><button class="button next-works">next<span class='hide-on-small'> project</span></button></li>
+                        </ul>
+                    </div>
+                    <div class="column small-12 medium-5 large-4">
+                        <div class="row small-up-2 small-collapse medium-up-2">
+                            <div class="column">
+                                <ul class="responsive">
+                                    <?php
+                                    if (in_array('desktop', $projectInfo['responsiveness'])) {
+                                        echo '<li><div class="icon monitor"><span></span></div></li>';
+                                    }
+                                    if (in_array('tablet', $projectInfo['responsiveness'])) {
+                                        echo '<li><div class="icon ipad"><span></span></div></li>';
+                                    }
+                                    if (in_array('mobile', $projectInfo['responsiveness'])) {
+                                        echo '<li><div class="icon iphone"><span></span></div></li>';
+                                    } ?>
+                                </ul>
+                            </div>
+                            <div class="column">
+                                <a href='<?php echo $projectInfo['url']; ?>' target=_blank class="button">view live website *</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
