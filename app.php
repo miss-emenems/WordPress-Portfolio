@@ -15,7 +15,8 @@ include('nav.php');
     include('intro.php');
     include('mood-board.php');
     include('about.php');
-    include('works.php');
+    //include('works.php');
+    echo 'test';
     include('skills.php');
     include('outro.php');
 
