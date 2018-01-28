@@ -961,7 +961,7 @@
 				}
 			}
 		}
-		.frame ul, ul.bullet {
+		ul.bullet {
 			@extend ul.basic;
 			li {
 				&:before {
@@ -969,7 +969,7 @@
 				}
 			}
 		}
-		.align-center ul:not(.swatches), ul.bullet-inline {
+		ul.bullet-inline {
 			@extend ul.basic;
 			li {
 				display: inline-block;
@@ -990,9 +990,6 @@
 		}
 
 	//Objects
-.pos-relative {
-	position: relative;
-}
 
 		.video-demo {
 			display: block;
@@ -3035,11 +3032,11 @@
 					}
 				}			
 			.box-slider-moodboard {
-				//position: fixed;
-				//top: 0;
-				//right: -100%;
+				position: fixed;
+				top: 0;
+				right: -100%;
 				width: 100%;
-				min-height: 100vh;
+				height: 100vh;
 				z-index: 20;
 				@include transition(all 1s ease);
 				.slider-moodboard {
@@ -3551,15 +3548,15 @@
 			//2.2.3.1
 				.box-slider-works-example {
 					width: 100%;
-					min-height: 100vh;
-					//position: fixed;
-					//top: 0;
-					//right: -100%;
+					height: 100vh;
+					position: fixed;
+					top: 0;
+					right: -100%;
 					z-index: 20;
 					@include transition(all 2s ease);
 					.slider-works-example {
 						width: 100%;
-						min-height: calc(100vh - 1em - 50px);
+						height: calc(100vh - 1em - 50px);
 						.slide {
 							width: 100%;
 							position: relative;
@@ -3644,7 +3641,7 @@
 						padding: 50px 1.4em 1em 1em;
 						.slider-works-example {
 							.slide {
-								min-height: calc(100vh - 1em - 50px);
+								height: calc(100vh - 1em - 50px);
 								.content-works {
 									height: calc(100% - 120px - 0px);
 									.mCSB_container {
@@ -3701,7 +3698,7 @@
 						padding: 50px 1.2em 0em 1.5em;
 						.slider-works-example {
 							.slide {
-								min-height: calc(100vh - 3em);
+								height: calc(100vh - 3em);
 								.panel-left {
 									padding-right: 1em;
 								}									
@@ -3723,7 +3720,7 @@
 						padding: 60px 1em 2em 2em;
 						.slider-works-example {
 							.slide {
-								min-height: calc(100vh - 6em);
+								height: calc(100vh - 6em);
 								.panel-left {
 									padding-right: 2em;
 								}									
@@ -3748,12 +3745,12 @@
 						padding: 120px 2em 4em 4em;
 						.slider-works-example {
 							.slide {
-								min-height: calc(100vh - 6em);
+								height: calc(100vh - 6em);
 								.panel-left {
 									padding-right: 4em;
 								}									
 								.content-works {
-									min-height: calc(100% - 200px);
+									height: calc(100% - 200px);
 									.placeholder {
 										height: 408px;
 									}

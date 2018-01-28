@@ -5799,39 +5799,36 @@ p {
 a {
   text-decoration: none; }
 
-ul.basic, .frame ul, ul.bullet, .align-center ul:not(.swatches), ul.bullet-inline {
+ul.basic, ul.bullet, ul.bullet-inline {
   padding: 0;
   margin: 0 0 2em;
   list-style: none; }
-  ul.basic li, .frame ul li, ul.bullet li, .align-center ul:not(.swatches) li, ul.bullet-inline li {
+  ul.basic li, ul.bullet li, ul.bullet-inline li {
     position: relative;
     padding-left: 1.6em; }
-    ul.basic li:before, .frame ul li:before, ul.bullet li:before, .align-center ul:not(.swatches) li:before, ul.bullet-inline li:before {
+    ul.basic li:before, ul.bullet li:before, ul.bullet-inline li:before {
       position: absolute;
       left: 0;
       width: 1em;
       height: 1em;
       font-family: 'IonIcons'; }
 
-.frame ul li:before, ul.bullet li:before {
+ul.bullet li:before {
   content: '\f2c7'; }
 
-.align-center ul:not(.swatches) li, ul.bullet-inline li {
+ul.bullet-inline li {
   display: inline-block;
   margin: 0 1em 1em; }
-  .align-center ul:not(.swatches) li:before, ul.bullet-inline li:before {
+  ul.bullet-inline li:before {
     content: '\f2c7'; }
 @media (orientation: portrait) {
-  .align-center ul:not(.swatches), ul.bullet-inline {
+  ul.bullet-inline {
     width: 70%;
     margin-left: auto;
     margin-right: auto; }
-    .align-center ul:not(.swatches) li, ul.bullet-inline li {
+    ul.bullet-inline li {
       display: block;
       text-align: left !important; } }
-
-.pos-relative {
-  position: relative; }
 
 .video-demo {
   display: block;
@@ -7251,8 +7248,11 @@ ul.controls {
     filter: none !important;
     background-image: -ms-linear-gradient(left top, left bottom, #49bd99 0%, #b7cbdf 100%); } }
 .box-slider-moodboard {
+  position: fixed;
+  top: 0;
+  right: -100%;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   z-index: 20;
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
@@ -7811,7 +7811,10 @@ ul.controls {
 
 .box-slider-works-example {
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: -100%;
   z-index: 20;
   -webkit-transition: all 2s ease;
   -moz-transition: all 2s ease;
@@ -7819,7 +7822,7 @@ ul.controls {
   transition: all 2s ease; }
   .box-slider-works-example .slider-works-example {
     width: 100%;
-    min-height: calc(100vh - 1em - 50px); }
+    height: calc(100vh - 1em - 50px); }
     .box-slider-works-example .slider-works-example .slide {
       width: 100%;
       position: relative; }
@@ -7884,7 +7887,7 @@ ul.controls {
     .box-slider-works-example {
       padding: 50px 1.4em 1em 1em; }
       .box-slider-works-example .slider-works-example .slide {
-        min-height: calc(100vh - 1em - 50px); }
+        height: calc(100vh - 1em - 50px); }
         .box-slider-works-example .slider-works-example .slide .content-works {
           height: calc(100% - 120px - 0px); }
           .box-slider-works-example .slider-works-example .slide .content-works .mCSB_container {
@@ -7925,7 +7928,7 @@ ul.controls {
     .box-slider-works-example {
       padding: 50px 1.2em 0em 1.5em; }
       .box-slider-works-example .slider-works-example .slide {
-        min-height: calc(100vh - 3em); }
+        height: calc(100vh - 3em); }
         .box-slider-works-example .slider-works-example .slide .panel-left {
           padding-right: 1em; }
         .box-slider-works-example .slider-works-example .slide .content-works {
@@ -7940,7 +7943,7 @@ ul.controls {
     .box-slider-works-example {
       padding: 60px 1em 2em 2em; }
       .box-slider-works-example .slider-works-example .slide {
-        min-height: calc(100vh - 6em); }
+        height: calc(100vh - 6em); }
         .box-slider-works-example .slider-works-example .slide .panel-left {
           padding-right: 2em; }
         .box-slider-works-example .slider-works-example .slide .content-works {
@@ -7957,11 +7960,11 @@ ul.controls {
     .box-slider-works-example {
       padding: 120px 2em 4em 4em; }
       .box-slider-works-example .slider-works-example .slide {
-        min-height: calc(100vh - 6em); }
+        height: calc(100vh - 6em); }
         .box-slider-works-example .slider-works-example .slide .panel-left {
           padding-right: 4em; }
         .box-slider-works-example .slider-works-example .slide .content-works {
-          min-height: calc(100% - 200px); }
+          height: calc(100% - 200px); }
           .box-slider-works-example .slider-works-example .slide .content-works .placeholder {
             height: 408px; }
         .box-slider-works-example .slider-works-example .slide .bottom-works {
