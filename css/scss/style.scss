@@ -10,4161 +10,4164 @@
 
 
 
-	@import url('https://fonts.googleapis.com/css?family=Lato:400,900,700italic,900italic,700,400italic,300,300italic,100italic,100');
-	@import 'https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200,300,400,700&subset=latin-ext';
-	@import 'https://fonts.googleapis.com/css?family=Six+Caps';
-	
-	@import url('https://fonts.googleapis.com/css?family=Roboto:300');
-	@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,700');
-	@import url('https://fonts.googleapis.com/css?family=Merriweather:900');
-	@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,700');
-	@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
-	@import url('https://fonts.googleapis.com/css?family=Quicksand');
-	@import url('https://fonts.googleapis.com/css?family=Raleway:100,700');
-	@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,600');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,900,700italic,900italic,700,400italic,300,300italic,100italic,100');
+@import 'https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200,300,400,700&subset=latin-ext';
+@import 'https://fonts.googleapis.com/css?family=Six+Caps';
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,700');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:900');
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,600');
 
 
 //VARIABLES
-    //Fonts
-	$ff-header: 'Yanone Kaffeesatz', Helvetica, Sans-Serif;
-	$ff-numbers: 'Six Caps', Helvetica, Sans-Serif;
-	$ff-plain: 'Lato', Helvetica, Sans-Serif;
+//Fonts
+$ff-header: 'Yanone Kaffeesatz', Helvetica, Sans-Serif;
+$ff-numbers: 'Six Caps', Helvetica, Sans-Serif;
+$ff-plain: 'Lato', Helvetica, Sans-Serif;
 
-	//Colors
-	$white: #fafafa;
-	$black: #0a0a0a;
-	$paleblue: #b7cbdf;
-	$palegreen: #49bd99;
+//Colors
+$white: #fafafa;
+$black: #0a0a0a;
+$paleblue: #b7cbdf;
+$palegreen: #49bd99;
 
-	//geometry
-	$p_s-s: 2em;
-	$p_s-m: 3em;
-	$p_s-l: 4em;
+//geometry
+$p_s-s: 2em;
+$p_s-m: 3em;
+$p_s-l: 4em;
 
-	//Gradients
-	$gradient_frame-0: 45deg, 
-		rgba($paleblue,0.5) 0%,
-		rgba($palegreen,0.5) 100%;
-	$gradient_frame-1: 45deg, 
-		$palegreen 0%,
-		$paleblue 100%;
-	$gradient_nav: 45deg, 
-		lighten($palegreen,20%) 0%,
-		lighten($paleblue,10%) 100%;
-	$gradient_white-0: 90deg, 
-		rgba($white,1.0) 0%,
-		rgba($white,1.0) 100%;		
-	$gradient_white-1: 90deg, 
-		rgba($white,1.0) 0%,
-		rgba($white,0.1) 100%;	
+//Gradients
+$gradient_frame-0: 45deg,
+rgba($paleblue,0.5) 0%,
+rgba($palegreen,0.5) 100%;
+$gradient_frame-1: 45deg,
+$palegreen 0%,
+$paleblue 100%;
+$gradient_nav: 45deg,
+lighten($palegreen,20%) 0%,
+lighten($paleblue,10%) 100%;
+$gradient_white-0: 90deg,
+rgba($white,1.0) 0%,
+rgba($white,1.0) 100%;
+$gradient_white-1: 90deg,
+rgba($white,1.0) 0%,
+rgba($white,0.1) 100%;
 
 //MIXINS
-	@mixin transition($transition) {
-		-webkit-transition: ($transition);
-		   -moz-transition: ($transition);
-			 -o-transition: ($transition);
-				transition: ($transition);
-	}
-	@mixin border-radius($border-radius) {
-		-webkit-border-radius: ($border-radius);
-		   -moz-border-radius: ($border-radius);
-			 -o-border-radius: ($border-radius);
-				border-radius: ($border-radius);
-	}
-	@mixin background($gradient) {
-		background: -webkit-linear-gradient($gradient);
-		background:    -moz-linear-gradient($gradient);
-		background: 	 -o-linear-gradient($gradient);
-		background: 		linear-gradient($gradient);
-	}
+@mixin transition($transition) {
+	-webkit-transition: ($transition);
+	-moz-transition: ($transition);
+	-o-transition: ($transition);
+	transition: ($transition);
+}
+@mixin border-radius($border-radius) {
+	-webkit-border-radius: ($border-radius);
+	-moz-border-radius: ($border-radius);
+	-o-border-radius: ($border-radius);
+	border-radius: ($border-radius);
+}
+@mixin background($gradient) {
+	background: -webkit-linear-gradient($gradient);
+	background:    -moz-linear-gradient($gradient);
+	background: 	 -o-linear-gradient($gradient);
+	background: 		linear-gradient($gradient);
+}
 
-		$superslowanim: all 2s ease;
-		$slowanim: all 0.7s ease;
-		$midanim:  all 0.5s ease;
-		$fastanim: all 0.3s ease;
+$superslowanim: all 2s ease;
+$slowanim: all 0.7s ease;
+$midanim:  all 0.5s ease;
+$fastanim: all 0.3s ease;
 
 
 //1.0.GLOBAL STYLES ====================================================================
-	//1.1.General
-		html {
-			max-width: 100% !important;
-			width: 100% !important;
-			overflow-x: hidden !important;
-		}
-		body {
-			font-family: $ff-plain;
-			overflow-x: hidden;
-			width: 100vw;
-			@include mq($until:sph) {
-				font-size: 13px;
-			}
-			@include mq($from:sph, $until:tb) {
-				font-size: 13px;
-			}
-			@include mq($from:tb, $until: dsk-M) {
-				font-size: 13px;
-			}
-			@include mq($from: dsk-M, $until: dsk-L) {
-				font-size: 16px;
-			}
-			@include mq($from: dsk-L, $until: dsk-XL) {
-				font-size: 16px;
-			}
-			@include mq($from: dsk-XL) {
-				font-size: 26px;
-			}						
-		}
-		.scroll-off {overflow: hidden !important;}
-		.wrapper {
+//1.1.General
+html {
+	max-width: 100% !important;
+	width: 100% !important;
+	overflow-x: hidden !important;
+}
+body {
+	font-family: $ff-plain;
+	overflow-x: hidden;
+	width: 100vw;
+	@include mq($until:sph) {
+		font-size: 13px;
+	}
+	@include mq($from:sph, $until:tb) {
+		font-size: 13px;
+	}
+	@include mq($from:tb, $until: dsk-M) {
+		font-size: 13px;
+	}
+	@include mq($from: dsk-M, $until: dsk-L) {
+		font-size: 16px;
+	}
+	@include mq($from: dsk-L, $until: dsk-XL) {
+		font-size: 16px;
+	}
+	@include mq($from: dsk-XL) {
+		font-size: 26px;
+	}
+}
+.scroll-off {overflow: hidden !important;}
+.wrapper {
+	width: 100%;
+	position: relative;
+	float: right;
+	right: 0;
+	@include transition(all 0.8s ease);
+}
+button {
+	&:focus {
+		border: none;
+		outline: none;
+	}
+}
+.show_nav, .show_info {
+	text-align: center;
+	@include transition(all 0.4s ease);
+	@include mq($until:sph) {
+		position: fixed;
+		top: -60px;
+		z-index: 100;
+	}
+	@include mq($from:sph, $until:tb) {
+		position: absolute;
+		top: calc(50% - 40px);
+		top: 0;
+	}
+	@include mq($from:tb) {
+		position: absolute;
+		top: calc(50% - 40px);
+		top: 0;
+	}
+	@include mq($until:dsk-XL) {
+		width: 60px;
+		height: 60px;
+		line-height: 60px;
+		font-size: 30px;
+	}
+	@include mq($from:dsk-XL) {
+		width: 120px;
+		height: 120px;
+		line-height: 120px;
+		font-size: 60px;
+	}
+}
+.show_info {
+	left: -60px;
+}
+.nav_box, .info_box {
+	top: 0;
+	z-index: 100;
+	@include transition(all 0.8s ease);
+	@include mq($until:sph) {
+		position: fixed;
+	}
+	@include mq($from:sph, $until:tb) {
+		width: 75vw;
+		height: 100vh;
+		position: fixed;
+	}
+	@include mq($from:tb) {
+		width: 75vw;
+		height: 100vh;
+		position: fixed;
+	}
+}
+.nav_box {
+	.nav_body {
+		@include background($gradient_nav);
+		@include transition(all 0.8s ease);
+		filter: none !important; //nie dziala
+		nav ul {
+			list-style: none;
+			padding: 0 2em 2em;
+			margin: 0;
+			height: 100vh;
 			width: 100%;
-			position: relative;
-			float: right;
-			right: 0;
-			@include transition(all 0.8s ease);
-		}
-		button {
-			&:focus {
-				border: none;
-				outline: none;
-			}			
-		}
-		.show_nav, .show_info {
-			text-align: center;
-			@include transition(all 0.4s ease);
-			@include mq($until:sph) {
-				position: fixed;
-				top: -60px;	
-				z-index: 100;
-			}
-			@include mq($from:sph, $until:tb) {
-				position: absolute;
-				top: calc(50% - 40px);
-				top: 0;
-			}
-			@include mq($from:tb) {
-				position: absolute;
-				top: calc(50% - 40px);
-				top: 0;
-			}
-			@include mq($until:dsk-XL) {
-				width: 60px;
-				height: 60px;
-				line-height: 60px;
-				font-size: 30px;
-			}	
-			@include mq($from:dsk-XL) {
-				width: 120px;
-				height: 120px;
-				line-height: 120px;
-				font-size: 60px;
-			}
-		}
-		.show_info {
-			left: -60px;
-		}
-		.nav_box, .info_box {
-			top: 0;
-			z-index: 100;
-			@include transition(all 0.8s ease);
-			@include mq($until:sph) {
-				position: fixed;
-			}
-			@include mq($from:sph, $until:tb) {
-				width: 75vw;
-				height: 100vh;
-				position: fixed;				
-			}
-			@include mq($from:tb) {
-				width: 75vw;
-				height: 100vh;
-				position: fixed;
-			}
-		}
-		.nav_box {
-			.nav_body {
-				@include background($gradient_nav);
-				@include transition(all 0.8s ease);
-				filter: none !important; //nie dziala
-				nav ul {
-					list-style: none;
-					padding: 0 2em 2em;
-					margin: 0;
-					height: 100vh;
+			li {
+				width: 80%;
+				height: 20%;
+				line-height: 1;
+				.goto {
+					text-align: left;
+					display: block;
 					width: 100%;
-					li {
-						width: 80%;
-						height: 20%;
-						line-height: 1;
-						.goto {
-							text-align: left;
-							display: block;
-							width: 100%;
-							height: 100%;
-						}
-						span {
-							display: block;
-							text-align: left;
-						}
-						.number {
-							font-size: 3em;
-							color: rgba($black,0.1);
-							font-family: $ff-numbers;
-							@include transition(all 0.4s ease);
-						}
-						.title {
-							text-transform: uppercase;
-							font-weight: 900;
-							font-size: 1.4em;
-							font-family: $ff-header;
-							letter-spacing: 0.3em;
-							position: relative;
-							margin: 0.15em 0 0.6em;
-							display: inline-block;
-							&:after {
-								height: 2px;
-								width: 0px;
-								content: '';
-								position: absolute;
-								bottom: -6px;
-								left: 0px;
-								background: $black;
-								@include transition(all 0.3s ease);
-							}
-							&:hover {
-								&:after {
-									width: 100%;
-								}
-							}
-						}
-						.description {
-							font-size: 0.7em;
-						}
-						&:hover {
-							.number {color: rgba($palegreen,0.3);}
-						}
-						&:first-child .number {
-							-webkit-animation-delay: 0.3s;
-							   -moz-animation-delay: 0.3s;
-								 -o-animation-delay: 0.3s;
-									animation-delay: 0.3s;
-						}
-						&:nth-child(2) .number {
-							-webkit-animation-delay: 0.5s;
-							   -moz-animation-delay: 0.5s;
-								 -o-animation-delay: 0.5s;
-									animation-delay: 0.5s;
-						}
-						&:nth-child(3) .number {
-							-webkit-animation-delay: 0.7s;
-							   -moz-animation-delay: 0.7s;
-								 -o-animation-delay: 0.7s;
-									animation-delay: 0.7s;
-						}
-						&:nth-child(4) .number {
-							-webkit-animation-delay: 0.9s;
-							   -moz-animation-delay: 0.9s;
-								 -o-animation-delay: 0.9s;
-									animation-delay: 0.9s;
-						}
-						&:nth-child(5) .number {
-							-webkit-animation-delay: 1.1s;
-							   -moz-animation-delay: 1.1s;
-								 -o-animation-delay: 1.1s;
-									animation-delay: 1.1s;
-						}
-					}
+					height: 100%;
 				}
-				.box-contact_info , .box-references_info {
-					padding: 2em;
-					width: 100%;
-					.text-info {
-						position: relative;
-						height: 100%;
-					}
-				}				
-				.box-contact_info {
-					display: table;
-					@include transition(all 0.8s ease);
-					@include mq($until:sph) {
-						height: calc(100vh - 60px);
-					}
-					@include mq($from:sph) {
-						height: 100vh;
-					}				
-					.text-info {
-						display: table-cell;
-						vertical-align: middle;
-						h1, p, ul {
-							text-align: right;
-						}
-						h1 {margin-right: -0.6em;}
-						ul.contact_info {
-							padding: 0;
-							list-style: none;
-							li {
-								display: inline-block;
-								a {
-									color: $black;
-									font-weight: 700;
-									letter-spacing: 0.2em;
-									i {
-										font-size: 120%;
-										margin-right: 0.5em;
-									}
-								}
-							}
-						}
-					}
+				span {
+					display: block;
+					text-align: left;
 				}
-				.box-references_info {
-					height: 100vh;
-					padding-top: 60px;
-					a {
-						color: darken($palegreen,30%);
-						&:hover {
-							color: darken($palegreen,40%);
-						}
-					}
-				}				
-				.show_references, .hide_references {
-					position: absolute;
-					bottom: 0;
-					right: 0;
-					text-align: right;
-					cursor: pointer;
+				.number {
+					font-size: 3em;
+					color: rgba($black,0.1);
+					font-family: $ff-numbers;
+					@include transition(all 0.4s ease);
+				}
+				.title {
 					text-transform: uppercase;
 					font-weight: 900;
-					font-size: 1.2em;
+					font-size: 1.4em;
 					font-family: $ff-header;
 					letter-spacing: 0.3em;
-					i {
-						margin-right: 0.6em;
+					position: relative;
+					margin: 0.15em 0 0.6em;
+					display: inline-block;
+					&:after {
+						height: 2px;
+						width: 0px;
+						content: '';
+						position: absolute;
+						bottom: -6px;
+						left: 0px;
+						background: $black;
+						@include transition(all 0.3s ease);
 					}
-				}
-				.lifted {
-					margin-top: -100vh;
-				}
-			} 
-			@include mq($until:sph) {
-				.nav_body {
-					height: calc(100vh + 100px);
-					width: 200%;
-					left: -200%;
-					position: fixed;
-					padding-top: 60px;
-					padding-bottom: 100px;
-					nav ul {
-						height: calc(100vh - 120px);
-						li {
-							.number {
-								font-size: 2.6em;
-							}
-							.title {
-								margin-top: 0.4em;
-								margin-bottom: 0;
-							}
-						}
-					}
-					.show_references, .hide_references {
-						bottom: 60px;
-					}
-					.box-contact_info {
-						.text-info {
-							ul.contact_info {
-								li {
-									margin-left: 1em;
-									font-size: 13px;
-								}
-							}
-						}
-					}
-				}
-			}
-			@include mq($from:sph, $until:tb) {
-				left: -75vw;
-				.nav_body {
-					.box-contact_info {
-						.text-info {
-							ul.contact_info {
-								li {
-									font-size: 12px;
-								}
-							}
-
-						}
-					}					
-				}		
-			}
-			@include mq($from:tb) {
-				left: -75vw;
-				.nav_body {
-					.box-contact_info {
-						.text-info {
-							ul.contact_info {
-								li {
-									margin-left: 2em;
-								}
-							}
-
-						}
-					}					
-				}		
-			}
-		}
-			//IE	//nie dziala
-				//IE6, IE7, IE8
-				@media \0screen\,screen\9 {
-				.nav_box {
-					.nav_body {					
-							filter: none !important;
-							background-image: -ms-linear-gradient(left top, left bottom, $palegreen 0%, $paleblue 100%);
-						}
-					}
-				}
-				//IE9+
-				@media screen and (min-width:0\0) and (min-resolution: +72dpi) {
-					.nav_box {
-						.nav_body {					
-							filter: none !important;
-							background-image: -ms-linear-gradient(left top, left bottom, $palegreen 0%, $paleblue 100%);
-						}
-					}
-				}			
-		.loading {
-			width: 100%;
-			height: 100%;
-			position: fixed;
-			top: 0;
-			left: 0;
-			z-index: 30;
-			opacity: 1;
-			@include transition($superslowanim);
-			.loading_box {
-				height: 100%;
-				width: 100%;
-				overflow: hidden;
-				.left_box, .right_box {
-					width: 50%;
-					height: 100%;
-					float: left;
-					display: table;
-					@include transition($slowanim);
-					.vertical {
-						width: 100%;
-						padding: 2em;
-						display: table-cell;
-						vertical-align: middle;
-					}
-					.logo, .counter_box {
-						margin-bottom: 32px;
-					}
-					.logo {
-						overflow: hidden;
-						img, h1 {
-							display: inline-block;
-							float: left;
-						}
-						img {
-							margin-right: 1em;
-						}
-						h1 {
-							letter-spacing: 0;
-						}
-					}
-					.counter_box {
-						position: relative;
-						.counter {
-							font-family: $ff-header;
-							display: block;
-							font-weight: 700;
-							position: absolute;
+					&:hover {
+						&:after {
 							width: 100%;
 						}
-						.counter-bg, .counter-double, .counter-main {
-							@extend .counter;
-						}
-						.counter-bg {
-							color: rgba($white,0.04);
-						}
-						.counter-double {
-							color: rgba($white,0.2);
-						}
-						.counter-main {
-							color: rgba($white,0.4);
-						}
 					}
 				}
-				.left_box {
-					background: rgba($black,0.8);
-					color: $white;
+				.description {
+					font-size: 0.7em;
 				}
-				.right_box {
-					background: rgba($white,0.8);
-					color: $black;
-				}
-			}
-			@include mq($until:sph) {
-				padding: $p_s-s;
-				$scale: 0.5;
-				.loading_box {
-					.left_box, .right_box {
-						width: 100%;
-						height: 50%;
-						.vertical {
-							vertical-align: middle;
-							padding: 2em;
-						}
-						.logo, .counter_box {
-							margin-bottom: 32px*$scale;
-						}
-						.logo {
-							img {
-								width: 110px*$scale;
-								height: 160px*$scale;
-							}
-							h1 {
-								font-size: 32px*$scale;
-								margin-top: 60px*$scale;
-							}
-						}
-						h5 {
-							font-size: 0.6em;
-						}
-						.counter_box {
-							height: 160px*$scale;
-							.counter {
-								text-align: right;
-								height: 160px*$scale;
-								line-height: 160px*$scale;
-							}
-							.counter-bg {
-								font-size: 500px*$scale;
-							}
-							.counter-double {
-								font-size: 200px*$scale;
-							}
-							.counter-main {
-								font-size: 200px*$scale;
-							}
-						}
-					}
-					.left_box {
-						text-align: right;
-						box-shadow: inset 0 -50vh $black;
-						.vertical {
-							vertical-align: bottom;
-						}	
-					}
-					.right_box {
-						text-align: left;
-						box-shadow: inset 0 50vh $white;
-						.vertical {
-							vertical-align: top;
-						}
-					}					
-				}				
-			}
-			@include mq($from:sph) {
-				.loading_box {
-					.left_box, .right_box {
-						width: 50%;
-						height: 100%;
-						.vertical {
-							padding: 2em;
-							vertical-align: middle;
-							img, h1 {
-								float: left;
-							}
-						}
-						.counter_box {
-							.counter {
-								text-align: right;
-							}
-						}						
-					}
-					.left_box {
-						text-align: right;
-						box-shadow: inset -50vw 0 $black;
-					}
-					.right_box {
-						text-align: left;
-						box-shadow: inset 50vw 0 $white;
-					}					
-				}			
-			}
-			@include mq($from:sph, $until:tb) {
-				padding: $p_s-m;
-				$scale: 0.4;
-				.loading_box {
-					.left_box, .right_box {
-						.logo, .counter_box {
-							margin-bottom: 32px*$scale;
-						}
-						.logo {
-							img {
-								width: 110px*$scale;
-								height: 160px*$scale;
-							}
-							h1 {
-								font-size: 32px*$scale;
-								margin-top: 60px*$scale;
-							}
-						}
-						h5 {
-							font-size: 0.6em;
-						}
-						.counter_box {
-							height: 160px*$scale;
-							.counter {
-								height: 160px*$scale;
-								line-height: 160px*$scale;
-							}
-							.counter-bg {
-								font-size: 500px*$scale;
-							}
-							.counter-double {
-								font-size: 200px*$scale;
-							}
-							.counter-main {
-								font-size: 200px*$scale;
-							}
-						}
-					}
-				}				
-			}
-			@include mq($from:tb) {
-				padding: $p_s-l;
-			}
-			@include mq($from:tb, $until: dsk-M) {
-				$scale: 0.8;
-				.loading_box {
-					.left_box, .right_box {
-						.logo, .counter_box {
-							margin-bottom: 32px*$scale;
-						}
-						.logo {
-							img {
-								width: 110px*$scale;
-								height: 160px*$scale;
-							}
-							h1 {
-								font-size: 32px*$scale;
-								margin-top: 60px*$scale;
-							}
-						}
-						h5 {
-							font-size: 0.9em;
-						}
-						.counter_box {
-							height: 160px*$scale;
-							.counter {
-								height: 160px*$scale;
-								line-height: 160px*$scale;
-							}
-							.counter-bg {
-								font-size: 500px*$scale;
-							}
-							.counter-double {
-								font-size: 200px*$scale;
-							}
-							.counter-main {
-								font-size: 200px*$scale;
-							}
-						}
-					}
-				}
-			}
-			@include mq($from: dsk-M, $until: dsk-L) {	
-				$scale: 1.2;
-				.loading_box {
-					.left_box, .right_box {
-						.logo, .counter_box {
-							margin-bottom: 32px*$scale;
-						}
-						.logo {
-							img {
-								width: 110px*$scale;
-								height: 160px*$scale;
-							}
-							h1 {
-								font-size: 32px*$scale;
-								margin-top: 60px*$scale;
-							}
-						}
-						.counter_box {
-							height: 160px*$scale;
-							.counter {
-								height: 160px*$scale;
-								line-height: 160px*$scale;
-							}
-							.counter-bg {
-								font-size: 500px*$scale;
-							}
-							.counter-double {
-								font-size: 200px*$scale;
-							}
-							.counter-main {
-								font-size: 200px*$scale;
-							}
-						}
-					}
-				}					
-			}
-			@include mq($from: dsk-L, $until: dsk-XL) {
-				$scale: 1.4;
-				.loading_box {
-					.left_box, .right_box {
-						.logo, .counter_box {
-							margin-bottom: 32px*$scale;
-						}
-						.logo {
-							img {
-								width: 110px*$scale;
-								height: 160px*$scale;
-							}
-							h1 {
-								font-size: 32px*$scale;
-								margin-top: 60px*$scale;
-							}
-						}
-						.counter_box {
-							height: 160px*$scale;
-							.counter {
-								height: 160px*$scale;
-								line-height: 160px*$scale;
-							}
-							.counter-bg {
-								font-size: 500px*$scale;
-							}
-							.counter-double {
-								font-size: 200px*$scale;
-							}
-							.counter-main {
-								font-size: 200px*$scale;
-							}
-						}
-					}
-				}
-			}
-			@include mq($from: dsk-XL) {
-				$scale: 2;
-				.loading_box {
-					.left_box, .right_box {
-						.logo, .counter_box {
-							margin-bottom: 32px*$scale;
-						}
-						.logo {
-							img {
-								width: 110px*$scale;
-								height: 160px*$scale;
-							}
-							h1 {
-								font-size: 32px*$scale;
-								margin-top: 60px*$scale;
-							}
-						}
-						.counter_box {
-							height: 160px*$scale;
-							.counter {
-								height: 160px*$scale;
-								line-height: 160px*$scale;
-							}
-							.counter-bg {
-								font-size: 500px*$scale;
-							}
-							.counter-double {
-								font-size: 200px*$scale;
-							}
-							.counter-main {
-								font-size: 200px*$scale;
-							}
-						}
-					}
-				}
-			}
-		}
-		.fadeout-stage1 {
-			.left_box {
-				box-shadow: inset 0vw 0px $black !important;
-			}
-			.right_box {
-				box-shadow: inset 0vw 0px $white !important;
-			}
-		}
-		.fadeout-stage2 {
-			opacity: 0 !important;
-		}
-		.fadeout-stage3 {
-			top: -100% !important;
-		}
-		.fadein-stage3 {
-			opacity: 1 !important;
-		}
-		button {
-			@include border-radius(0);
-		}
-		.visible_nav {
-			@include mq($until:sph) {
-				.nav_body {
-					left: -100% !important;
-				}
-			}
-			@include mq($from:sph, $until:tb) {
-				left: calc(-500%/12) !important;
-			}
-			@include mq($from:tb) {
-				left: -50vw !important;
-			}
-		}
-		.visible_contact {
-			@include mq($until:sph) {
-				.nav_body {
-					left: 0 !important;
-				}
-			}
-			@include mq($from:sph) {
-				left: 0 !important;
-			}			
-		}
-		.visible_show_nav {
-			@include mq($until:sph) {
-				position: fixed !important;
-				top: 0 !important;			
-			}
-			@include mq($from:sph, $until:dsk-XL) {
-				right: -60px !important;
-			}
-			@include mq($from:dsk-XL) {
-				right: -120px !important;
-			}			
-		}
-		.wrapper_to_right-1 {
-			@include mq($from:sph) {
-				right: -25% !important;				
-			}		
-		}
-		.wrapper_to_right-2 {
-			@include mq($from:sph) {
-				right: -75% !important;				
-			}	
-		}
-		.nonscrollable_body {
-			overflow: hidden;
-		}
-		.hide-basic {
-			position: absolute;
-			top: 0px;
-			z-index: 20;
-			i {
-				height: inherit;
-				width: inherit;
-				display: block;
-			}
-			@include mq($until:sph) {
-				width: 50px;
-				height: 50px;
-				line-height: 50px;
-				top: 0;
-				right: 0;
-				font-size: 20px;
-			}
-			@include mq($from:sph, $until:tb) {
-				width: 50px;
-				height: 50px;
-				line-height: 50px;
-				top: 0;
-				right: 0;
-				font-size: 22px;
-			}
-			@include mq($from:tb, $until:dsk-XL) {
-				width: 56px;
-				height: 60px;
-				line-height: 60px;
-				top: 0;
-				right: 0;
-				font-size: 22px;
-			}	
-			@include mq($from:dsk-XL) {
-				width: 120px;
-				height: 120px;
-				line-height: 120px;
-				top: 0;
-				right: 0;				
-				font-size: 60px;
-			}					
-		}
-		.hide-moodboard, .hide-works {
-			@extend .hide-basic;
-		}
-		i.info {
-			font-weight: 900;
-			font-style: normal;
-			text-align: center;
-			display: inline-block;
-			@include border-radius(100%);
-			font-size: 20px;
-			border: 4px solid $white;
-			color: $white;
-			width: 44px;
-			height: 44px;
-			line-height: 36px;
-		}				
-		.empty {display: none;}
-
-	//1.2.Fonts	
-        h1 {font-size: 2.2em; font-weight: 900; margin: 0 0 0.8em; line-height: 1.2;}
-        h2 {font-size: 2.0em; font-weight: 900; margin: 0 0 0.4em; line-height: 1.0;}
-        h3 {font-size: 1.0em; font-weight: 400; margin: 0 0 0.0em; line-height: 1.0;}
-        h4 {font-size: 1.0em; font-weight: 700; margin: 0 0 1.0em; line-height: 1.8;}
-        h5 {font-size: 1.0em; font-weight: 300; margin: 0 0 1.0em; line-height: 1.4;}
-        h6 {font-size: 0.9em; font-weight: 700; margin: 0 0 0.0em; line-height: 1.6;}
-        p  {font-size: 0.9em; font-weight: 300; margin: 0 0 0.8em; line-height: 1.6;}
-        ul {font-size: 0.9em; font-weight: 300; margin: 0 0 0.8em; line-height: 1.6;}
-
-		h1 {
-			text-transform: uppercase;
-			letter-spacing: 0.6em;
-			font-family: $ff-header;
-		}
-		h2 {
-			text-transform: uppercase;
-			letter-spacing: 0.4em;
-			font-family: $ff-header;
-		}
-		h4 {
-			letter-spacing: 0.4em;
-		}
-		h5 {
-			text-transform: uppercase;
-			letter-spacing: 0.4em;
-		}
-		p {
-			text-align: justify;
-		}
-		a {
-			text-decoration: none;
-		}
-	//1.3.Lists
-		ul.basic {
-			padding: 0;
-			margin: 0 0 2em;
-			list-style: none;
-			li {
-				position: relative;
-				padding-left: 1.6em;
-				&:before {
-					position: absolute;
-					left: 0;
-					width: 1em;
-					height: 1em;
-					font-family: 'IonIcons';
-				}
-			}
-		}
-		ul.bullet {
-			@extend ul.basic;
-			li {
-				&:before {
-					content: '\f2c7';
-				}
-			}
-		}
-		ul.bullet-inline {
-			@extend ul.basic;
-			li {
-				display: inline-block;
-				margin: 0 1em 1em;
-				&:before {
-					content: '\f2c7';
-				}
-			}
-			@include mq($and: '(orientation:portrait)') {
-				width: 70%;
-				margin-left: auto;
-				margin-right: auto;
-				li {
-					display: block;
-					text-align: left !important;
-				}
-			}
-		}
-
-	//Objects
-
-		.video-demo {
-			display: block;
-			width: 100%;
-			background-color: $white;
-		}
-		.note {
-			border: 1px solid rgba(#888888,0.3);
-			padding: 0.6em 0.8em;
-		}
-		ul.responsive {
-			list-style: none;
-			padding: 0;
-			margin: 0;
-			li {
-				display: inline-block;
-				height: 50px;
-				width: auto;
-				position: relative;
-				.icon {
-					height: 50px;
-					position: relative;
-					span {
-						border: 4px solid;
-						display: block;
-						@include border-radius(1px);
-					}
-				}
-				.monitor {
-					span {
-						position: absolute;
-						top: 0;
-						&:after {
-							display: block;
-							content: '';
-							position: absolute;
-							margin: 0 10%;
-							width: 80%;
-						}
-					}
-				}
-				.ipad {
-					span {
-						position: absolute;
-						width: 100%;
-						bottom: 0;
-					}
-				}
-				.iphone {
-					span {
-						position: absolute;
-						width: 100%;
-						bottom: 0;
-					}
-				}
-				@include mq($until:sph) {
-					margin: 0 6px 0 0;
-					.icon {
-						span {
-							border: 3px solid !important;
-						}
-					}
-					.monitor {
-						width: 50px;
-						height: 40px !important;
-						span {
-							width: 50px;
-							height: 32px;
-							top: auto !important;
-							bottom: 0 !important;
-							&:after {
-								bottom: -12px;
-								height: 4px;
-							}
-						}
-					}
-					.ipad {
-						width: 22px;
-						span {
-							height: 30px;
-						}
-					}
-					.iphone {
-						width: 14px;
-						span {
-							height: 20px;
-						}
-					}					
-				}
-				@include mq($from:sph, $until:tb) {
-					margin: 0 6px 0 0;
-					.monitor {
-						width: 60px;
-						span {
-							width: 60px;
-							height: 42px;
-							&:after {
-								bottom: -12px;
-								height: 4px;
-							}
-						}
-					}
-					.ipad {
-						width: 30px;
-						span {
-							height: 40px;
-						}
-					}
-					.iphone {
-						width: 20px;
-						span {
-							height: 30px;
-						}
-					}
-				}
-				@include mq($from:tb, $until:dsk-XL) { //do sprawdzenia
-					margin: 0 6px 0 0;
-					.monitor {
-						width: 60px;
-						span {
-							width: 60px;
-							height: 42px;
-							&:after {
-								bottom: -12px;
-								height: 4px;
-							}
-						}
-					}
-					.ipad {
-						width: 30px;
-						span {
-							height: 40px;
-						}
-					}
-					.iphone {
-						width: 20px;
-						span {
-							height: 30px;
-						}
-					}
-				}
-				@include mq($from:dsk-XL) { //do sprawdzenia
-					margin: 0 12px 0 0;
-					height: 100px;
-					.icon {
-						height: 100px;
-					}
-					.monitor {
-						width: 120px;
-						span {
-							width: 120px;
-							height: 84px;
-							&:after {
-								bottom: -24px;
-								height: 8px;
-							}
-						}
-					}
-					.ipad {
-						width: 60px;
-						span {
-							height: 80px;
-						}
-					}
-					.iphone {
-						width: 40px;
-						span {
-							height: 60px;
-						}
-					}
-				}
-			}
-		} 
-
-		$swatch_size: 120px;
-		ul.swatches {
-			padding: 0;
-			margin: 0;
-			list-style: none;
-			li {
-				display: inline-block;
-				width: $swatch_size + 6px;
-				height: $swatch_size + 6px;
-				overflow: hidden;
-				margin: 0 20px 10px 0;
-				.swatch-main {
-					border: 3px solid;
-					width: 100%;
-					width: $swatch_size;
-					height: $swatch_size;
-					position: relative;
-					@include border-radius(50%);
-					overflow: hidden;
-					.swatch {
-						width: inherit;
-						height: inherit;
-						@include border-radius(50%);
-						@include transition($fastanim);
-					}
-					.hexcode {
-						position: absolute;
-						height: inherit;
-						line-height: $swatch_size;
-						width: 100%;
-						font-weight: 700;
-						text-align: center;
-						left: 0;
-						@include transition($fastanim);
-						@include border-radius(50%);
-						overflow: hidden;
-						text-transform: uppercase;
-
-					}
-				}
-				@include mq($until:tb) {
-					.swatch-main {
-						.hexcode {top: 0;}
-					}
-				}
-				@include mq($from:tb) {
-					top: $swatch_size;
-					.swatch-main {
-						.hexcode {
-							top: 100%;
-						}
-						&:hover {
-							.hexcode {top: 0;}
-						}
-					}
-				}
-			}
-		}
-		//swatches
-			.swatches-alg {
-				li:first-child {
-					color: $white;
-					.swatch-main {background: #231F20;}
-				}
-				li:nth-child(2) {
-					color: $black;
-					.swatch-main {background: #E6E7E8;}
-				}
-				li:nth-child(3) {
-					color: $black;
-					.swatch-main {background: #D1D3D4;}
-				}
-				li:nth-child(4) {
-					color: $black;
-					.swatch-main {background: #00A79D;}
-				}
-				li:nth-child(5) {
-					color: $white;
-					.swatch-main {background: #008e85;}
-				}
-			}
-			.swatches-brh {
-				li:first-child {
-					color: $white;
-					.swatch-main {background: #51a4bd;}
-				}
-				li:nth-child(2) {
-					color: $white;
-					.swatch-main {background: #3f7187;}
-				}
-				li:nth-child(3) {
-					color: $black;
-					.swatch-main {background: #eeeeee;}
-				}
-				li:nth-child(4) {
-					color: $black;
-					.swatch-main {background: #fafafa;}
-				}
-				li:nth-child(5) {
-					color: $white;
-					.swatch-main {background: #1e3c59;}
-				}
-			}
-			.swatches-franchise {
-				li:first-child {
-					color: $white;
-					.swatch-main {background: #333333;}
-				}
-				li:nth-child(2) {
-					color: $black;
-					.swatch-main {background: #88a6d3;}
-				}
-				li:nth-child(3) {
-					color: $black;
-					.swatch-main {background: #E7E7E7;}
-				}
-				li:nth-child(4) {
-					color: $white;
-					.swatch-main {background: #5a6772;}
-				}
-				li:nth-child(5) {
-					color: $black;
-					.swatch-main {background: #fafafa;}
-				}
-			}
-			.swatches-itn-homepage {
-				li:first-child {
-					color: $white;
-					.swatch-main {background: #ff931e;}
-				}
-				li:nth-child(2) {
-					color: $white;
-					.swatch-main {background: #32327f;}
-				}
-				li:nth-child(3) {
-					color: $black;
-					.swatch-main {background: #eaeaea;}
-				}
-				li:nth-child(4) {
-					color: $black;
-					.swatch-main {background: #ffffff;}
-				}
-				li:nth-child(5) {
-					color: $white;
-					.swatch-main {background: #80898d;}
-				}
-			}
-			.swatches-itn-profile {
-				li:first-child {
-					color: $white;
-					.swatch-main {background: #2fa78e;}
-				}
-				li:nth-child(2) {
-					color: $white;
-					.swatch-main {background: #ffb024;}
-				}
-				li:nth-child(3) {
-					color: $black;
-					.swatch-main {background: #f2f2f2;}
-				}
-				li:nth-child(4) {
-					color: $black;
-					.swatch-main {background: #ffffff;}
-				}
-				li:nth-child(5) {
-					color: $white;
-					.swatch-main {background: #4d4d4d;}
-				}
-			}
-			.swatches-kickstart {
-				li:first-child {
-					color: $white;
-					.swatch-main {background: #232323;}
-				}
-				li:nth-child(2) {
-					color: $white;
-					.swatch-main {background: #225a72;}
-				}
-				li:nth-child(3) {
-					color: $black;
-					.swatch-main {background: #bcbec0;}
-				}
-				li:nth-child(4) {
-					color: $black;
-					.swatch-main {background: #ff9016;}
-				}
-				li:nth-child(5) {
-					color: $black;
-					.swatch-main {background: #fafafa;}
-				}
-			}
-			.swatches-lavelle {
-				li:first-child {
-					color: $white;
-					.swatch-main {background: #a91e22;}
-				}
-				li:nth-child(2) {
-					color: $white;
-					.swatch-main {background: #e3ac49;}
-				}
-				li:nth-child(3) {
-					color: $black;
-					.swatch-main {background: #fafafa;}
-				}
-				li:nth-child(4) {
-					color: $black;
-					.swatch-main {background: #f7f9f9;}
-				}
-				li:nth-child(5) {
-					color: darken(#b8d7e4,30%);
-					.swatch-main {background: #b8d7e4;}
-				}
-			}
-			.swatches-manyautos {
-				li:first-child {
-					color: $white;
-					.swatch-main {background: #b9121b;}
-				}
-				li:nth-child(2) {
-					color: $white;
-					.swatch-main {background: #010101;}
-				}
-				li:nth-child(3) {
-					color: $black;
-					.swatch-main {background: #ffd58a;}
-				}
-				li:nth-child(4) {
-					color: $black;
-					.swatch-main {background: #fafafa;}
-				}
-			}
-			.swatches-mk {
-				li:first-child {
-					color: $white;
-					.swatch-main {background: #404042;}
-				}
-				li:nth-child(2) {
-					color: $black;
-					.swatch-main {background: #f1f2f2;}
-				}
-				li:nth-child(3) {
-					color: $white;
-					.swatch-main {background: #1c75bc;}
-				}
-				li:nth-child(4) {
-					color: $black;
-					.swatch-main {background: #fafafa;}
-				}
-				li:nth-child(5) {
-					color: $white;
-					.swatch-main {background: #6d6e71;}
-				}
-			}
-			.swatches-mmghomes {
-				li:first-child {
-					color: $white;
-					.swatch-main {background: #58595b;}
-				}
-				li:nth-child(2) {
-					color: $black;
-					.swatch-main {background: #fafafa;}
-				}
-				li:nth-child(3) {
-					color: $black;
-					.swatch-main {background: #a2b1ba;}
-				}
-				li:nth-child(4) {
-					color: $black;
-					.swatch-main {background: #819cb1;}
-				}
-			}
-			.swatches-momentum {
-				li:first-child {
-					color: $black;
-					.swatch-main {background: #dbb75b;}
-				}
-				li:nth-child(2) {
-					color: $white;
-					.swatch-main {background: #d33a20;}
-				}
-				li:nth-child(3) {
-					color: $black;
-					.swatch-main {background: #fafafa;}
-				}
-				li:nth-child(4) {
-					color: $black;
-					.swatch-main {background: #efefef;}
-				}
-				li:nth-child(5) {
-					color: $white;
-					.swatch-main {background: #4d4d4d;}
-				}
-			}
-			.swatches-nottinghamlodge {
-				li:first-child {
-					color: $black;
-					.swatch-main {background: #f9c73d;}
-				}
-				li:nth-child(2) {
-					color: $white;
-					.swatch-main {background: #1a600b;}
-				}
-				li:nth-child(3) {
-					color: $black;
-					.swatch-main {background: #fafafa;}
-				}
-				li:nth-child(4) {
-					color: $black;
-					.swatch-main {background: #efefef;}
-				}
-				li:nth-child(5) {
-					color: $white;
-					.swatch-main {background: #231f20;}
-				}
-			}
-		//-end
-
-		button.button, a.button {
-			display: inline-block;
-			text-transform: uppercase;
-			padding: 16px 0;
-			line-height: 1.3;
-			font-weight: 900;
-			letter-spacing: 0.3em;
-			position: relative;
-			&:after {
-				height: 4px;
-				width: 50px;
-				content: '';
-				position: absolute;
-				bottom: 0;
-				left: 0px;
-				@include transition(all 0.3s ease);
-			}
-			@include mq($from:sph) {
 				&:hover {
-					&:after {
-						width: calc(100% - 36px);
-						width: 100%;
-					}
+					.number {color: rgba($palegreen,0.3);}
 				}
-			}
-			@include mq($until:sph) {
-				font-size: 12px;
-			}
-			@include mq($from:sph, $until:tb) {
-				font-size: 12px;
-			}
-			@include mq($from:tb, $until: dsk-M) {
-				font-size: 12px;
-			}
-			@include mq($from: dsk-M, $until: dsk-L) {
-				font-size: 14px;
-			}
-			@include mq($from: dsk-L, $until: dsk-XL) {
-				font-size: 14px;
-			}
-			@include mq($from: dsk-XL) {
-				font-size: 24px;
-			}			
-		}
-
-		ul.controls {
-			padding: 0;
-			margin: 0;
-			list-style: none;
-			li {
-				display: inline-block;
-				margin-right: 2em;
-				&:last-child {
-					margin-right: 0;
+				&:first-child .number {
+					-webkit-animation-delay: 0.3s;
+					-moz-animation-delay: 0.3s;
+					-o-animation-delay: 0.3s;
+					animation-delay: 0.3s;
 				}
-				.prev-works {
-					&:after {
-						right: 0;
-						left: auto;
-					}
+				&:nth-child(2) .number {
+					-webkit-animation-delay: 0.5s;
+					-moz-animation-delay: 0.5s;
+					-o-animation-delay: 0.5s;
+					animation-delay: 0.5s;
+				}
+				&:nth-child(3) .number {
+					-webkit-animation-delay: 0.7s;
+					-moz-animation-delay: 0.7s;
+					-o-animation-delay: 0.7s;
+					animation-delay: 0.7s;
+				}
+				&:nth-child(4) .number {
+					-webkit-animation-delay: 0.9s;
+					-moz-animation-delay: 0.9s;
+					-o-animation-delay: 0.9s;
+					animation-delay: 0.9s;
+				}
+				&:nth-child(5) .number {
+					-webkit-animation-delay: 1.1s;
+					-moz-animation-delay: 1.1s;
+					-o-animation-delay: 1.1s;
+					animation-delay: 1.1s;
 				}
 			}
 		}
-
-		.box-padding {
-			@include mq($until:sph) {
-				padding: 2em 0;
-			}
-			@include mq($from:sph, $until:tb) {
-				padding: 3.5em 0;
-			}
-			@include mq($from:tb, $until: dsk-XL) {
-				padding: 5em;
-			}
-			@include mq($from: dsk-M, $until: dsk-L) {
-			}
-			@include mq($from: dsk-L, $until: dsk-XL) {
-			}
-			@include mq($from: dsk-XL) {
-				padding: 8em;
-			}			
-		}
-		.box-padding-vertical {
-			@include mq($until:sph) {
-				padding: 2em 0;
-			}
-			@include mq($from:sph, $until:tb) {
-				padding: 3.5em 0;
-			}
-			@include mq($from:tb, $until: dsk-XL) {
-				padding: 5em 0;
-			}
-			@include mq($from: dsk-M, $until: dsk-L) {
-			}
-			@include mq($from: dsk-L, $until: dsk-XL) {
-			}
-			@include mq($from: dsk-XL) {
-				padding: 8em 0;
-			}			
-		}
-		.box-frame {
+		.box-contact_info , .box-references_info {
 			padding: 2em;
-			margin: 0 0 2em 0;
-			border: 2px solid;
-			ul, p {
-				&:last-child {margin-bottom: 0 !important;}
+			width: 100%;
+			.text-info {
+				position: relative;
+				height: 100%;
 			}
-			.row {
-				.small-12 {				
-					margin-bottom: 2em;
-					&:last-child {
+		}
+		.box-contact_info {
+			display: table;
+			@include transition(all 0.8s ease);
+			@include mq($until:sph) {
+				height: calc(100vh - 60px);
+			}
+			@include mq($from:sph) {
+				height: 100vh;
+			}
+			.text-info {
+				display: table-cell;
+				vertical-align: middle;
+				h1, p, ul {
+					text-align: right;
+				}
+				h1 {margin-right: -0.6em;}
+				ul.contact_info {
+					padding: 0;
+					list-style: none;
+					li {
+						display: inline-block;
+						a {
+							color: $black;
+							font-weight: 700;
+							letter-spacing: 0.2em;
+							i {
+								font-size: 120%;
+								margin-right: 0.5em;
+							}
+						}
+					}
+				}
+			}
+		}
+		.box-references_info {
+			height: 100vh;
+			padding-top: 60px;
+			a {
+				color: darken($palegreen,30%);
+				&:hover {
+					color: darken($palegreen,40%);
+				}
+			}
+		}
+		.show_references, .hide_references {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			text-align: right;
+			cursor: pointer;
+			text-transform: uppercase;
+			font-weight: 900;
+			font-size: 1.2em;
+			font-family: $ff-header;
+			letter-spacing: 0.3em;
+			i {
+				margin-right: 0.6em;
+			}
+		}
+		.lifted {
+			margin-top: -100vh;
+		}
+	}
+	@include mq($until:sph) {
+		.nav_body {
+			height: calc(100vh + 100px);
+			width: 200%;
+			left: -200%;
+			position: fixed;
+			padding-top: 60px;
+			padding-bottom: 100px;
+			nav ul {
+				height: calc(100vh - 120px);
+				li {
+					.number {
+						font-size: 2.6em;
+					}
+					.title {
+						margin-top: 0.4em;
 						margin-bottom: 0;
 					}
 				}
 			}
+			.show_references, .hide_references {
+				bottom: 60px;
+			}
+			.box-contact_info {
+				.text-info {
+					ul.contact_info {
+						li {
+							margin-left: 1em;
+							font-size: 13px;
+						}
+					}
+				}
+			}
 		}
-		.v-end .box-frame {
-			border-color: $white;
-		}
-		.v-beginning .box-frame {
-			border-color: $black;
-		}
+	}
+	@include mq($from:sph, $until:tb) {
+		left: -75vw;
+		.nav_body {
+			.box-contact_info {
+				.text-info {
+					ul.contact_info {
+						li {
+							font-size: 12px;
+						}
+					}
 
-		.wireframing {
-			.column {padding: 0 2em;}
-			img {
-				margin-bottom: 2em;
+				}
 			}
 		}
-		.typography {
-			.column {
-				margin-bottom: 2em;
-			}
-			@include mq($until:sph) {
-				padding: 0;
-			}
-			@include mq($from:sph) {
-				padding: 0 3em;
-			}
-			span {
-				display: block;
-				margin-bottom: 0.5em;
-				&:last-child {
-					margin-bottom: 0 !important;
+	}
+	@include mq($from:tb) {
+		left: -75vw;
+		.nav_body {
+			.box-contact_info {
+				.text-info {
+					ul.contact_info {
+						li {
+							margin-left: 2em;
+						}
+					}
+
 				}
 			}
-			.font-family {
-				font-size: 1.8em;
-				line-height: 1.2;
-				margin-bottom: 0;
-			}
-			.font-weight {
-				font-size: 0.8em;
-				font-weight: 300;
-				margin-bottom: 1em;
-			}
-			//font-families
-				.Merriweather {
-					.font-family, .Aa, .all-caps, .all-low, .all-numbers {
-						font-family: 'Merriweather';
-					}				
-				}
-				.Poppins {
-					.font-family, .Aa, .all-caps, .all-low, .all-numbers {
-						font-family: 'Poppins';
-					}				
-				}
-				.Roboto-Condensed {
-					.font-family, .Aa, .all-caps, .all-low, .all-numbers {
-						font-family: 'Roboto Condensed';
-					}				
-				}
-				.Roboto {
-					.font-family, .Aa, .all-caps, .all-low, .all-numbers {
-						font-family: 'Roboto';
-					}				
-				}
-				.Playfair-Display {
-					.font-family, .Aa, .all-caps, .all-low, .all-numbers {
-						font-family: 'Playfair Display';
-					}				
-				}
-				.Quicksand {
-					.font-family, .Aa, .all-caps, .all-low, .all-numbers {
-						font-family: 'Quicksand';
-					}				
-				}
-				.Raleway {
-					.font-family, .Aa, .all-caps, .all-low, .all-numbers {
-						font-family: 'Raleway';
-					}				
-				}
-				.Lato {
-					.font-family, .Aa, .all-caps, .all-low, .all-numbers {
-						font-family: 'Lato';
-					}				
-				}
-				.Yanone-Kaffeesatz {
-					.font-family, .Aa, .all-caps, .all-low, .all-numbers {
-						font-family: 'Yanone Kaffeesatz';
-					}				
-				}
-				.Julius-Sans-One {
-					.font-family, .Aa, .all-caps, .all-low, .all-numbers {
-						font-family: 'Julius Sans One';
-					}				
-				}
-				.Open-Sans {
-					.font-family, .Aa, .all-caps, .all-low, .all-numbers {
-						font-family: 'Open Sans';
-					}
-				}
-			//-end
-			//font-weights
-				.fw-100 {
-					.font-family, .Aa, .all-caps, .all-low, .all-numbers {
-						font-weight: 100;
-					}
-				}
-				.fw-200 {
-					.font-family, .Aa, .all-caps, .all-low, .all-numbers {
-						font-weight: 200;
-					}
-				}
-				.fw-300 {
-					.font-family, .Aa, .all-caps, .all-low, .all-numbers {
-						font-weight: 300;
-					}
-				}
-				.fw-400 {
-					.font-family, .Aa, .all-caps, .all-low, .all-numbers {
-						font-weight: 400;
-					}
-				}
-				.fw-600 {
-					.font-family, .Aa, .all-caps, .all-low, .all-numbers {
-						font-weight: 600;
-					}
-				}
-				.fw-700 {
-					.font-family, .Aa, .all-caps, .all-low, .all-numbers {
-						font-weight: 700;
-					}
-				}
-				.fw-900 {
-					.font-family, .Aa, .all-caps, .all-low, .all-numbers {
-						font-weight: 900;
-					}
-				}
-			//-end
-			.Aa {
-				font-size: 2.4em;
-				font-weight: 700;
-				line-height: 1;
-			}
-			.all-caps, .all-low, .all-numbers {
-				font-size: 1.2em;
-			}
-			.all-caps {text-transform: uppercase;}
 		}
-	
-	//Hover aware
-		.dh-container {
-			position: relative;
-			overflow: hidden;
+	}
+}
+//IE	//nie dziala
+//IE6, IE7, IE8
+@media \0screen\,screen\9 {
+	.nav_box {
+		.nav_body {
+			filter: none !important;
+			background-image: -ms-linear-gradient(left top, left bottom, $palegreen 0%, $paleblue 100%);
 		}
-		.dh-overlay {
-			width: 100%;
+	}
+}
+//IE9+
+@media screen and (min-width:0\0) and (min-resolution: +72dpi) {
+	.nav_box {
+		.nav_body {
+			filter: none !important;
+			background-image: -ms-linear-gradient(left top, left bottom, $palegreen 0%, $paleblue 100%);
+		}
+	}
+}
+.loading {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 30;
+	opacity: 1;
+	@include transition($superslowanim);
+	.loading_box {
+		height: 100%;
+		width: 100%;
+		overflow: hidden;
+		.left_box, .right_box {
+			width: 50%;
 			height: 100%;
-			text-align: center;
-			color: #fff;
-			position: absolute;
-			@include mq($until:sph) {
-				opacity: 0;
-				top: 0;
-				@include transition(all 0.3s ease);
-				i {
-					opacity: 0;
-				}
-			}
-			@include mq($from:sph) {
-				top: -100%;
-				@include background($gradient_frame-0);
-			}
-		}
-
-//2.0.CONSTRUCTION ====================================================================
-	//2.1.Main
-		.section {
-			min-height: 100vh;
-			position: relative;
-		}
-
-
-	//2.2.Sepcific
-
-		//2.2.1. Welcome
-			.wrapper {
-				max-height: 100% !important;
-				$audio_control_size: 1em*3.75;
-				.audio_control {
-					position: fixed;
-					z-index: 15;
-					width: $audio_control_size;
-					height: $audio_control_size*2;
-					right: $audio_control_size/10;
-					bottom: $audio_control_size/10;
-					line-height: $audio_control_size;
-					overflow: hidden;
-					opacity: 0;
-					@include transition($slowanim);
-					.button_wrapper {
-						position: absolute;
-						width: inherit;
-						top: 0;
-						left: 0;
-						@include transition($slowanim);
-						height: $audio_control_size*3;
-						padding-top: $audio_control_size;
-						button {
-							width: inherit;
-							display: block;
-							text-align: center;
-							opacity: 0.8;
-							@include transition($slowanim);
-							height: $audio_control_size;
-						}
-						i {
-							color: $paleblue;
-							font-size: $audio_control_size/2;
-						}
-					}
-					.audio_on {
-						top: -$audio_control_size !important;
-						#play {
-							opacity: 0 !important;
-						}
-					}
-				}
-				.vp-welcome {
-					overflow: hidden;
-					.scroll_box {
-						width: 100%;
-						position: absolute;
-						bottom: -44px;
-						opacity: 0;
-						@include transition($slowanim);
-						.scroll-down {
-							display: block;
-							margin: 0 auto;
-							text-align: center;
-							width: 44px;
-							height: 44px;
-							i {
-								height: inherit;
-								width: 44px;
-								line-height: 44px;
-								font-size: 30px;
-							}
-							&:hover i {
-								color: cadetblue;
-							}
-						}
-					}
-					.welcome-left, .welcome-right {
-						float: left;
-						display: table;
-						@include transition($slowanim);
-						.video_box {
-							//position: absolute;
-							overflow: hidden;
-							position: fixed;
-							video {
-								bottom: 0;
-								width: 100%;
-								object-fit: cover;
-								object-position: 50% 80%;
-								position: relative;
-								&[poster] {
-									position: absolute !important;
-									top: -10% !important;
-									left: 0 !important;
-									width: 100% !important;
-									height: 120% !important;
-									object-fit: cover;
-									object-position: 50% 80%;
-								}
-							}
-							@include mq($until:sph, $and:'(orientation:portrait)') {
-								width: 100%;
-								height: 50vh;
-								video {
-									height: 50vh;
-								}
-							}
-							@include mq($from:sph, $and:'(orientation:portrait)') {
-								width: 50%;
-								height: 100vh;
-								video {
-									height: 100vh;
-									&[poster] {
-										position: absolute !important;
-										top: 0% !important;
-										left: -20 !important;
-										width: 140% !important;
-										height: 100% !important;
-									}
-								}
-							}
-							@include mq($and:'(orientation:landscape)') {
-								width: 50%;
-								height: 100vh;
-								video {
-									height: 100vh;
-								}
-							}
-						}
-						.welcome-vertical {
-							display: table-cell;
-							position: relative;
-							width: 100%;
-							.welcome-logo {
-								@include transition($slowanim);
-								opacity: 0;
-								.button-welcome {
-									font-family: $ff-header;
-									font-weight: 700;
-									text-transform: uppercase;
-									letter-spacing: 0.5em;
-									position: absolute;
-									padding-bottom: 16px;
-									@include transition($slowanim);
-									&:after {
-										content: '';
-										position: absolute;
-										bottom: 0;
-										@include transition($fastanim);
-										@include border-radius(1px);
-									}
-								}
-								.logo {
-									display: inline-block;
-									position: absolute;
-									@include transition($slowanim);
-								}
-							}
-						}
-					}
-					.welcome-left {
-						background: $white;
-						color: $black;
-						.welcome-vertical {
-							background: rgba($white,0.8);
-							vertical-align: bottom;
-							.welcome-logo {
-								.button-welcome {
-									&:after {
-										background: $black;
-									}
-								}
-
-							}
-						}
-					}
-					.welcome-right {
-						background: $white;
-						color: $white;
-						.welcome-vertical {
-							background: rgba($black,0.8);
-							.welcome-logo {
-								left: 0;
-								.button-welcome {
-									text-align: left;
-									&:after {
-										background: $white;
-									}
-								}
-							}
-						}
-					}
-				}
-				@include mq($and:'(orintation:portrait)') {
-					.vp-welcome {
-						.welcome-left {
-							.welcome-vertical {
-								vertical-align: bottom;
-							}
-						}
-					}
-				}
-				@include mq($until:sph) {
-					.welcome-left, .welcome-right {
-						width: 100%;
-						height: 50vh;
-						position: absolute;
-						.welcome-logo {
-							width: 90%;
-							margin: 0 auto;
-							position: relative;
-							.logo {
-								left: 1em;
-							}
-							.button-welcome {
-								right: auto;
-								text-align: left;
-							}
-						}
-					}
-					.welcome-left {
-						top: 0;							
-						.welcome-logo {
-							bottom: 0;
-							.logo {
-								background: url('../images/logo_logo-full-black.png') no-repeat;
-								bottom: 0;
-							}
-							.button-welcome {
-								bottom: 10px;
-							}
-						}
-					}
-					.welcome-right {
-						bottom: 0;							
-						.welcome-logo {
-							top: 0;
-							.logo {
-								background: url('../images/logo_logo-full-white.png') no-repeat;
-								top: 0;
-							}
-							.button-welcome {
-								top: 10px;
-							}
-						}
-					}											
-					@include mq($until: iP5) {
-						.welcome-left, .welcome-right {
-							.welcome-logo {
-								height: 48px;
-								width: 90%;
-								max-width: 260px;
-								.logo {
-									width: 66px;
-									height: 96px;
-									background-size: 66px 96px;
-									top: -48px;
-								}
-								.button-welcome {
-									font-size: 1.1em;
-									left: 94px;
-									width: calc(100% - 94px);
-									max-width: 200px;
-								}
-							}
-						}
-						.welcome-left {
-							.welcome-vertical {
-								padding-top: calc(50vh - 48px);
-							}							
-							.welcome-logo {
-								.logo {
-									background-position: center 48px;
-									bottom: 0;
-								}
-								.button-welcome {
-									bottom: 6px;
-								}
-							}
-						}
-						.welcome-right {
-							.welcome-logo {
-								.logo {
-									background-position: center -48px;
-									top: 0;
-								}
-								.button-welcome {
-									top: 6px;
-								}
-							}
-						}
-					}
-					@include mq($from: iP5) {
-						.welcome-left, .welcome-right {
-							.welcome-logo {
-								height: 65px;
-								max-width: 320px;
-								.logo {
-									width: 90px;
-									height: 130px;
-									background-size: 90px 130px;
-									top: -65px;
-								}
-								.button-welcome {
-									font-size: 1.3em;
-									left: 120px;
-									width: calc(100% - 120px);
-									max-width: 200px;
-								}
-							}
-						}
-						.welcome-left {
-							.welcome-vertical {
-								padding-top: calc(50vh - 65px);
-							}
-							.welcome-logo {
-								.logo {
-									background-position: center 65px;
-									bottom: 0;
-								}
-								.button-welcome {
-									bottom: 10px;
-								}
-							}
-						}
-						.welcome-right {
-							.welcome-vertical {
-								padding-bottom: calc(50vh - 65px);
-							}
-							.welcome-logo {
-								.logo {
-									background-position: center -65px;
-									top: 0;
-								}
-								.button-welcome {
-									top: 10px;
-								}
-							}
-						}
-					}
-				}
-				@include mq($from:sph) {
-					.vp-welcome {
-						.welcome-left, .welcome-right {
-							width: 50%;
-							min-height: inherit;
-							position: relative;
-							.welcome-vertical {
-								vertical-align: middle;
-							}
-							.welcome-logo {
-								top: 0;
-								width: 100%;
-								position: absolute;
-								height: 100vh;
-								.button-welcome {
-									font-size: 1.4em;
-									top: calc(50% - 30px);								
-								}
-								.logo {
-									width: 56px;
-									height: 160px;
-									top: calc(50% - 100px);
-								}									
-							}
-						}
-						.welcome-left {
-							.welcome-logo {
-								.button-welcome {
-									text-align: right;
-									right: calc(80px - 0.5em);
-									&:after {
-										right: 0.5em;
-									}
-								}
-								.logo {
-									right: 0;
-									background: url('../images/logo_logo-full-black.png') left no-repeat;
-									background-size: 110px 160px;
-								}
-							}							
-						}
-						.welcome-right {
-							.welcome-logo {
-								.button-welcome{
-									text-align: left;
-									left: 80px;
-									&:after {
-										left: 0;
-									}									
-								}
-								.logo {
-									left: 0;
-									background: url('../images/logo_logo-full-white.png') right no-repeat;
-									background-size: 110px 160px;
-								}
-							}							
-						}						
-					}
-				}
-				@include mq($from:sph, $until:tb) {
-					.vp-welcome {
-						.welcome-left, .welcome-right {
-							height: 100vh;
-							.welcome-logo {
-								.button-welcome {
-									font-size: 1.1em;
-									width: calc(100% - 138px - 1em);
-									&:after {
-										width: 80px;
-										height: 2px;
-									}
-									&:hover {
-										&:after {
-											width: 140px;
-										}
-									}
-								}
-							}
-						}
-						.welcome-left {
-							.welcome-logo {
-								.button-welcome {
-									max-width: 170px;	
-								}						
-							}
-						}
-						.welcome-right {
-							.welcome-logo {
-								.button-welcome {
-									max-width: 130px;	
-								}
-							}
-						}
-					}
-				}
-				@include mq($from:tb) {
-					.vp-welcome {
-						.welcome-left, .welcome-right {
-							height: 100vh;
-							.welcome-logo {
-								height: 100vh;
-							}
-						}
-					}
-				}
-				@include mq($from:tb, $until:dsk-S) {
-					.vp-welcome {
-						.welcome-left, .welcome-right {
-							.welcome-logo {
-								.button-welcome {
-									width: calc(100% - 80px - 1em);
-									&:after {
-										height: 3px;
-										width: 80px;
-									}
-									&:hover {
-										&:after {
-											width: 140px;
-										}
-									}
-								}
-							}
-						}
-						.welcome-left {
-							.welcome-logo {
-								.button-welcome {
-									max-width: 210px;	
-								}						
-							}
-						}
-						.welcome-right {
-							.welcome-logo {
-								.button-welcome {
-									max-width: 180px;	
-								}
-							}
-						}
-					}
-				}
-				@include mq($from: dsk-S, $until:dsk-M) {
-					.vp-welcome {
-						.welcome-left, .welcome-right {
-							.welcome-logo {
-								.button-welcome {
-									width: calc(100% - 80px - 1em);
-									&:after {
-										height: 3px;
-										width: 100px;
-									}
-									&:hover {
-										&:after {
-											width: 200px;
-										}
-									}									
-								}
-							}
-						}
-						.welcome-left {
-							.welcome-logo {
-								.button-welcome {
-									max-width: 370px;	
-								}						
-							}
-						}
-						.welcome-right {
-							.welcome-logo {
-								.button-welcome {
-									max-width: 276px;	
-								}
-							}
-						}
-					}
-				}
-				@include mq($from:dsk-M, $until:dsk-XL) {
-					.vp-welcome {
-						.welcome-right, .welcome-left {
-							.welcome-logo {
-								.button-welcome {
-									font-size: 1.1em;
-									width: calc(100% - 120px - 1em);	
-									&:after {
-										height: 3px;
-										width: 100px;
-									}
-									&:hover {
-										&:after {
-											width: 200px;
-										}
-									}									
-								}						
-							}
-						}							
-						.welcome-left {
-							.welcome-logo {
-								.button-welcome {
-									max-width: 400px;	
-								}						
-							}
-						}
-						.welcome-right {
-							.welcome-logo {
-								.button-welcome {
-									max-width: 300px;	
-								}						
-							}
-						}					
-					}
-				}
-				@include mq($until:dsk-XL) {
-						.scroll_box {
-							bottom: -44px;
-							.scroll-down {
-								width: 44px;
-								height: 44px;
-								i {
-									width: 44px;
-									line-height: 44px;
-									font-size: 30px;
-								}
-							}
-						}
-				}
-				@include mq($from:dsk-XL) {
-					.vp-welcome {
-						.welcome-right, .welcome-left {
-							.welcome-logo {
-								.button-welcome {
-									font-size: 2.2em;
-									width: calc(100% - 240px - 2em);	
-									&:after {
-										height: 6px;
-										width: 200px;
-									}
-									&:hover {
-										&:after {
-											width: 400px;
-										}
-									}									
-								}						
-								.logo {
-									width: 112px;
-									height: 320px;
-								}
-							}
-						}													
-						.welcome-left {
-							.welcome-logo {
-								.button-welcome {
-									max-width: 800px;	
-									text-align: right;
-									right: calc(160px - 0.5em);
-								}						
-								.logo {
-									right: 0;
-									background: url('../images/logo_logo-full-black.png') left no-repeat;
-									background-size: 220px 320px;
-								}
-							}
-						}
-						.welcome-right {
-							.welcome-logo {
-								.button-welcome {
-									max-width: 600px;
-									text-align: left;
-									left: 160px;
-								}
-								.logo {
-									left: 0;
-									background: url('../images/logo_logo-full-white.png') right no-repeat;
-									background-size: 220px 320px;
-								}
-							}
-						}
-						.scroll_box {
-							bottom: -88px;
-							.scroll-down {
-								width: 88px;
-								height: 88px;
-								i {
-									width: 88px;
-									line-height: 88px;
-									font-size: 60px;
-								}
-							}
-						}
-					}
-				}				
-			}
-			//IE6, IE7, IE8
-			@media \0screen\,screen\9 {
-				.wrapper {
-					.vp-welcome {
-						.welcome-left, .welcome-right {
-							.video_box {				
-								video {
-									@include mq($and:'(orientation:landscape)') {
-										@include mq($from: sph, $until:dsk-S) {
-											$video-w: 140%;
-											$video-l: -20%;
-											width: $video-w !important;
-											left: $video-l !important;
-											&[poster] {
-												width: $video-w !important;
-												left: $video-l !important;
-											}
-											@media screen and (min-height: 768px) {
-												$video-w: 170%;
-												$video-l: -35%;
-												width: $video-w !important;
-												left: $video-l !important;
-												$video-h: 128%;
-												$video-t: -14%;
-												&[poster] {
-													width: $video-w !important;
-													left: $video-l !important;
-													height: $video-h !important;
-													top: $video-t !important;
-												}
-											}
-										}										
-										@include mq($from: dsk-S, $until:dsk-M) {
-											$video-w: 140%;
-											$video-l: -20%;
-											width: $video-w !important;
-											left: $video-l !important;
-											&[poster] {
-												width: $video-w !important;
-												left: $video-l !important;
-											}
-										}										
-										@include mq($from: dsk-M) {
-											$video-w: 120%;
-											$video-l: -10%;
-											width: $video-w !important;
-											left: $video-l !important;
-											&[poster] {
-												width: $video-w !important;
-												left: $video-l !important;
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-				}				
-			}
-			//IE9+
-			@media screen and (min-width:0\0) and (min-resolution: +72dpi) {
-				.wrapper {
-					.vp-welcome {
-						.welcome-left, .welcome-right {
-							.video_box {				
-								video {
-									@include mq($and:'(orientation:landscape)') {
-										@include mq($from: sph, $until:dsk-S) {
-											$video-w: 140%;
-											$video-l: -20%;
-											width: $video-w !important;
-											left: $video-l !important;
-											&[poster] {
-												width: $video-w !important;
-												left: $video-l !important;
-											}
-											@media screen and (min-height: 768px) {
-												$video-w: 170%;
-												$video-l: -35%;
-												width: $video-w !important;
-												left: $video-l !important;
-												$video-h: 128%;
-												$video-t: -14%;
-												&[poster] {
-													width: $video-w !important;
-													left: $video-l !important;
-													height: $video-h !important;
-													top: $video-t !important;
-												}
-											}
-										}										
-										@include mq($from: dsk-S, $until:dsk-M) {
-											$video-w: 140%;
-											$video-l: -20%;
-											width: $video-w !important;
-											left: $video-l !important;
-											&[poster] {
-												width: $video-w !important;
-												left: $video-l !important;
-											}
-										}										
-										@include mq($from: dsk-M) {
-											$video-w: 120%;
-											$video-l: -10%;
-											width: $video-w !important;
-											left: $video-l !important;
-											&[poster] {
-												width: $video-w !important;
-												left: $video-l !important;
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-				}				
-			}
-			//IE12+, EDGE
-			@supports (-ms-ime-align:auto) {
-				.wrapper {
-					.vp-welcome {
-						.welcome-left, .welcome-right {
-							.video_box {				
-								video {
-									@include mq($and:'(orientation:landscape)') {
-										@include mq($from: sph, $until:dsk-S) {
-											$video-w: 140%;
-											$video-l: -20%;
-											width: $video-w !important;
-											left: $video-l !important;
-											&[poster] {
-												width: $video-w !important;
-												left: $video-l !important;
-											}
-											@media screen and (min-height: 768px) {
-												$video-w: 170%;
-												$video-l: -35%;
-												width: $video-w !important;
-												left: $video-l !important;
-												$video-h: 128%;
-												$video-t: -14%;
-												&[poster] {
-													width: $video-w !important;
-													left: $video-l !important;
-													height: $video-h !important;
-													top: $video-t !important;
-												}
-											}
-										}										
-										@include mq($from: dsk-S, $until:dsk-M) {
-											$video-w: 140%;
-											$video-l: -20%;
-											width: $video-w !important;
-											left: $video-l !important;
-											&[poster] {
-												width: $video-w !important;
-												left: $video-l !important;
-											}
-										}										
-										@include mq($from: dsk-M) {
-											$video-w: 120%;
-											$video-l: -10%;
-											width: $video-w !important;
-											left: $video-l !important;
-											&[poster] {
-												width: $video-w !important;
-												left: $video-l !important;
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-			}			
-			.v-beginning, .v-end {
-				.welcome-vertical {
-					vertical-align: middle !important;
-				}
-			}
-			.v-beginning {
-				.vp-welcome {
-					.welcome-right {
-						* {display: none !important;}
-					}
-					.welcome-left {
-						width: 100%;
-						.video_box {
-							width: 100% !important;
-							@include mq($and:'(orientation:portrait)') {
-								height: 100vh;
-								video {
-									height: 100vh;
-									object-fit: contain;
-									object-position: 50% 100%;									
-								}
-							}
-						}
-						.welcome-vertical {
-							.welcome-logo {
-								.logo {
-									right: 0;
-								}
-								.button-welcome {
-									right: calc(140px - 0.5em);
-									&:after {
-										width: calc(100% - 0.5em) !important;
-										max-width: 220px;
-									}
-								}							
-							}
-						}
-					}
-					.scroll_box {
-						opacity: 1 !important;
-						bottom: 60px !important;
-						color: $black;					
-					}				
-				}
-				@include mq($until:sph) {
-					.vp-welcome {
-						.welcome-vertical {
-							padding-top: 0 !important;
-						}						
-						.welcome-right {
-							height: 0 !important;
-						}
-						.welcome-left {
-							height: 100vh !important;
-							.logo {
-								background-position: center 0px !important;
-							}
-						}
-					}
-					@include mq($until: iP5) {
-						.welcome-left {
-							.welcome-logo {
-								.logo {
-									width: 66px;
-									height: 96px !important;
-									top: -40px !important;
-								}
-							}
-						}
-					}
-					@include mq($from: iP5) {
-						.welcome-left {
-							.welcome-logo {
-								.logo {
-									width: 90px;
-									height: 130px !important;
-									top: -40px !important;
-								}
-							}
-						}
-					}
-				}
-				@include mq($from:sph) {
-					.vp-welcome {
-						.welcome-right {
-							width: 0 !important;
-						}
-						.welcome-left {
-							.welcome-vertical {
-								.welcome-logo {
-									.logo {
-										width: 110px;
-									}							
-								}
-							}
-						}
-					}
-				}
-				@include mq($from:sph, $until:tb) {
-					.vp-welcome {
-						@include mq($and: '(orientation: porttrait)') {
-							.welcome-vertical {
-								padding-top: 0 !important;
-							}							
-						}
-						.welcome-left {
-							.welcome-logo {
-								right: calc(50% - 230px) !important;					
-								.button-welcome {
-									width: calc(100% - 118px - 1em);
-									max-width: 500px !important;
-								}
-							}
-						}					
-					}
-				}
-				@include mq($from:tb, $until:dsk-M) {
-					.vp-welcome {
-						.welcome-left {
-							.welcome-logo {
-								right: calc(50% - 250px) !important;					
-								.button-welcome {
-									max-width: 364px !important;
-								}
-							}
-						}					
-					}					
-				}
-				@include mq($from:dsk-M, $until:dsk-XL) {
-					.vp-welcome {
-						.welcome-left {
-							.welcome-logo {
-								right: calc(50% - 260px) !important;					
-								.button-welcome {
-									max-width: 364px !important;
-								}
-							}
-						}
-					}
-				}
-				@include mq($from:dsk-XL) {
-					.vp-welcome {
-						.welcome-left {
-							.welcome-logo {
-								right: calc(50% - 460px) !important;					
-								.button-welcome {
-									max-width: 364px*2 !important;
-									    right: calc(280px - 0.5em) !important;
-								}
-								.logo {
-									width: 220px !important;
-								}
-							}
-						}
-					}
-				}
-			}			
-			.v-end {
-				.vp-welcome {
-					.welcome-left {
-						* {display: none !important;}
-					}
-					.welcome-right {
-						width: 100%;
-						.video_box {
-							width: 100% !important;
-							@include mq($and:'(orientation:portrait)') {
-								height: 100vh;
-								video {
-									height: 100vh;
-									object-fit: contain;
-									object-position: 50% 100%;
-								}
-							}							
-							.welcome-logo {
-								.logo {
-									left: 0;
-								}
-								.button-welcome {
-									&:after {
-										width: calc(100% - 0.5em) !important;
-										max-width: 220px;
-									}
-								}							
-							}
-						}
-					}
-					.scroll_box {
-						opacity: 1 !important;
-						bottom: 60px !important;
-						color: $white;					
-					}				
-				}
-				@include mq($until:sph) {
-					.vp-welcome {
-						.welcome-vertical {
-							padding-bottom: 0 !important;
-						}
-						.welcome-left {
-							height: 0 !important;
-						}
-						.welcome-right {
-							height: 100vh !important;
-							.logo {
-								left: 1em !important;
-								background-position: center 0px !important;
-							}
-						}
-					}
-					@include mq($until: iP5) {
-						.welcome-right {
-							.welcome-vertical {
-								padding-bottom: calc(50vh - 48px);
-							}
-							.welcome-logo {
-								.logo {
-									width: 66px;
-									height: 96px !important;
-									top: -40px !important;
-								}
-							}
-						}
-					}
-					@include mq($from: iP5) {
-						.welcome-right {
-							.welcome-vertical {
-								padding-bottom: calc(50vh - 48px);
-							}
-							.welcome-logo {
-								.logo {
-									width: 90px;
-									height: 130px !important;
-									top: -40px !important;
-								}
-							}
-						}
-					}
-				}
-				@include mq($from:sph) {
-					.vp-welcome {
-						.welcome-left {
-							width: 0 !important;
-						}
-						.welcome-right {
-							.welcome-vertical {
-								.welcome-logo {
-									.logo {
-										width: 110px;
-									}
-									.button-welcome {
-										left: calc(140px - 0.5em);
-									}							
-								}
-							}
-						}
-					}
-				}				
-				@include mq($from:sph, $until:tb) {
-					.vp-welcome {
-						@include mq($and: '(orientation: porttrait)') {
-							.welcome-vertical {
-								padding-bottom: 0 !important;
-							}
-						}						
-						.welcome-right {
-							.welcome-logo {
-								left: calc(50% - 150px) !important;					
-								.button-welcome {
-									width: calc(100% - 118px - 1em);
-								}
-							}
-						}					
-					}
-				}
-				@include mq($from:tb, $until:dsk-M) {
-					.vp-welcome {
-						.welcome-right {
-							.welcome-logo {
-								left: calc(50% - 180px) !important;
-							}
-						}
-					}
-				}
-				@include mq($from:dsk-M, $until:dsk-XL) {
-					.vp-welcome {
-						.welcome-right {
-							.welcome-logo {
-								left: calc(50% - 200px) !important;
-							}
-						}
-					}
-				}
-				@include mq($from:dsk-XL) {
-					.vp-welcome {
-						.welcome-right {
-							.welcome-logo {
-								left: calc(50% - 400px) !important;
-								.logo {
-									width: 220px !important;
-								}
-								.button-welcome {
-									left: calc(280px - 0.5em) !important;
-								}							
-							}
-						}						
-					}
-				}				
-			}
-
-		//2.2.2.Moodboard
-			.vp-moodboard {
-				min-height: auto;
-			}
-			.vp-moodboard, .box-slider-moodboard {
-				.title_box {
-					@include background($gradient_frame-1);
-					@include transition($slowanim);					
-					transform: scale(0.8);
-					filter: none !important;
-					span {
-						display: block;
-						width: 100%;
-						height: 100%;
-						h2 {
-							letter-spacing: 0.2em;
-							margin: 0;
-						}
-					}
-				}
-				.slide:hover {
-					.title_box {
-						transform: scale(1);
-					}
-				}
-				.mb-text {
-					height: 100%;
-					@include mq($until:sph) {
-						padding: 0 2em 2em;
-					}
-					@include mq($from:sph) {
-						padding: 3em;
-					}
-				}
-				.mb-text-main {
-					@extend .mb-text;
-					padding: 2em;
-					p, h1 {
-						position: relative;
-					}
-					@include mq($until:dsk-XL) {
-						padding-top: 60px;
-					}
-					@include mq($from:dsk-XL) {
-						padding-top: 120px;
-					}
-				}
-
-				.mb-architecture {background: url('../images/mb-architecture.jpg') center no-repeat;}
-				.mb-architecture {background: url('../images/mb-architecture.jpg') center no-repeat;}
-				.mb-plants {background: url('../images/mb-plants.jpg') center no-repeat;}
-				.mb-yoga {background: url('../images/mb-yoga.jpg') center no-repeat;}
-				.mb-eclectism {background: url('../images/mb-eclectism.jpg') center no-repeat;}
-				.mb-art {background: url('../images/mb-art.jpg') center no-repeat;}
-				.mb-landscapearch {background: url('../images/mb-landscapearch.jpg') center no-repeat;}
-				.mb-innovations {background: url('../images/mb-innovations.jpg') center no-repeat;}
-				.mb-climbing {background: url('../images/mb-climbing.jpg') center no-repeat;}
-				.mb {
-					width: 100%;
-					background-size: cover;
-					.seemore {
-						i.info {
-							font-weight: 900;
-							color: $white;
-							font-style: normal;
-							font-size: 20px;
-							width: 44px;
-							height: 44px;
-							line-height: 36px;
-							text-align: center;
-							border: 4px solid $white;
-							display: inline-block;
-							@include border-radius(100%);
-						}
-					}
-					@include mq($until:sph) {
-						min-height: 180px;
-						height: 30vh;
-					};
-					@include mq($from:sph, $until:tb) {
-						min-height: 300px;
-					};
-					@include mq($from:tb, $until:dsk-S) {
-						min-height: 200px;
-					};
-					@include mq($from:dsk-S, $until:dsk-M) {
-						min-height: 220px;
-					};
-					@include mq($from:dsk-M, $until:dsk-L) {
-						min-height: 300px;
-					};
-					@include mq($from:dsk-L, $until:dsk-XL) {
-						min-height: 330px;
-					};
-					@include mq($from:dsk-XL) {
-						min-height: 470px;
-					};
-				}
-				.mb-text, .mb-architecture, .mb-plants, .mb-yoga, .mb-eclectism, .mb-art, .mb-landscapearch, .mb-innovations, .mb-climbing {
-					@extend .mb;
-				}
-				.moodboard-text {
-					@include mq($until:sph) {
-						min-height: 230px;
-						.mb-text-main {
-							height: auto !important;
-						}
-					};
-					@include mq($from:sph, $until:tb) {
-						min-height: 300px;
-					};
-					@include mq($from:tb, $until:dsk-S) {
-						height: 230px;
-					};
-					@include mq($from:dsk-S, $until:dsk-M) {
-						height: 230px;
-					};
-					@include mq($from:dsk-M, $until:dsk-L) {
-						height: 300px;
-					};
-					@include mq($from:dsk-L, $until:dsk-XL) {
-						height: 330px;
-					};
-					@include mq($from:dsk-XL) {
-						height: 470px;
-					};				
-				}				
-			}
-			//IE	
-				//IE6, IE7, IE8
-				@media \0screen\,screen\9 {
-					.vp-moodboard, .box-slider-moodboard {
-						.title_box {					
-							filter: none !important;
-							background-image: -ms-linear-gradient(left top, left bottom, $palegreen 0%, $paleblue 100%);
-						}
-					}
-				}
-				//IE9+
-				@media screen and (min-width:0\0) and (min-resolution: +72dpi) {
-					.vp-moodboard, .box-slider-moodboard {
-						.title_box {					
-							filter: none !important;
-							background-image: -ms-linear-gradient(left top, left bottom, $palegreen 0%, $paleblue 100%);
-						}
-					}
-				}			
-			.box-slider-moodboard {
-				position: fixed;
-				top: 0;
-				right: -100%;
+			float: left;
+			display: table;
+			@include transition($slowanim);
+			.vertical {
 				width: 100%;
-				height: 100vh;
-				z-index: 20;
-				@include transition(all 1s ease);
-				.slider-moodboard {
-					width: 100%;
-					.slide {
-						width: 100%;
-						height: 100vh;
-						.mb_slidepic {
-							width: 100%;
-						}
-					}
-					.slick-prev, .slick-next {
-						position: absolute;
-						bottom: 0;
-						z-index: 10;
-						@include transition(all 0.4s ease);
-						&:before {
-							opacity: 1;
-							content: '';
-							display: block;
-							width: inherit;
-							font-family: 'FontAwesome'; 
-							@include transition(all 0.4s ease);
-						}
-					}
-					.slick-prev {
-						&:before {
-							content: '\f104';
-						}
-					}
-					.slick-next {
-						&:before {
-							content: '\f105';
-						}
-					}
-					@include mq($until:sph) {
-						.slick-prev, .slick-next {
-							width: 44px;
-							height: 44px;
-							top: calc(25vh + 20px);
-							&:before {
-								width: inherit;
-								height: inherit;
-								line-height: 44px;
-							}							
-						}							
-						.slick-prev  {
-							left: 0;
-						}
-						.slick-next  {
-							right: 0;
-						}
-					}
-					@include mq($from:sph, $until:tb) {
-						.slick-prev, .slick-next {
-							width: 50px;
-							height: 30px;
-							right: 0;
-							&:before {
-								height: inherit;
-								line-height: 30px;
-							}							
-						}
-						.slick-prev  {
-							bottom: 30px;
-						}
-					}						
-					@include mq($from:tb) {
-						.slick-prev, .slick-next {
-							width: 56px;
-							height: 40px;
-							right: 0;
-							&:before {
-								height: inherit;
-								line-height: 40px;
-							}								
-						}
-						.slick-prev  {
-							bottom: 40px;
-						}
-					}										
-				}
-				@include mq($until:sph) {
-					.title_box {
-						width: 120px;
-						height: 120px;
-						border: 6px solid;
-						padding: 4px;
-						margin: -60px auto 0;
-						span {
-							padding: 0.4em 1em 1em 1.1em;
-							h2 {
-								font-size: 1.6em;
-								line-height: 1.4;
-							}
-						}
-					}
-					.mb-text-main {
-						height: auto;
-						padding: $p_s-s;
-					}
-					.slider-moodboard {
-						.slide {
-							background: $white;
-							.mb_slidepic {
-								height: 25vh;
-								min-height: initial;
-							}
-							.content {
-								padding: $p_s-s $p_s-s $p_s-s $p_s-s;
-								padding-bottom: 80px;
-								height: 75vh;
-								height: calc(76vh - 80px);
-								.mCSB_container {
-									margin-right: 0 !important;
-								}
-							}
-						}
-					}
-					.slide-architecture .title_box h2 {font-size: 1.5em; line-height: 1.4; padding: 0.2em 0 0 0.2em;}
-					.slide-plants .title_box h2 {font-size: 1.9em; line-height: 1.6; padding: 0.2em 0 0 0.3em;}
-					.slide-yoga .title_box h2 {font-size: 2.0em; line-height: 1.4; padding: 0.4em 0 0 0.5em; letter-spacing: 0.3em;}
-					.slide-eclectism .title_box h2 {font-size: 1.4em; line-height: 1.5; padding: 0.2em 0 0 0.1em; letter-spacing: 0.3em;}
-					.slide-art .title_box h2 {font-size: 2.0em; line-height: 1.4; padding: 0.4em 0 0 0.5em; letter-spacing: 0.3em;}
-					.slide-landscapearch .title_box h2 {font-size: 1.0em; line-height: 1.6; padding: 0.3em 0 0 0.2em;}
-					.slide-innovations .title_box h2 {font-size: 1.2em; line-height: 1.7; padding: 0.4em 0 0 0.1em;}
-					.slide-climbing .title_box h2 {font-size: 1.5em; line-height: 1.4; padding: 0.2em 0 0 0.4em; letter-spacing: 0.3em;}				
-				}
-				@include mq($from:sph) {
-					.content {
-						padding: $p_s-l;
-						height: 100vh;
-					}					
-					.mb-text-main {
-						height: 300px;
-						padding: $p_s-l;
-					}				
-					.slider-moodboard {
-						.slide {
-							.mb_slidepic {
-								height: 100vh;
-							}
-						}
-					}
-				}				
-				@include mq($from:sph, $until:tb) {
-					.title_box {
-						width: 180px;
-						height: 180px;
-						margin-left: -90px;
-						border: 8px solid;
-						padding: 6px;
-						margin-top: 26vh;
-						span {
-							padding: 1.2em 1.8em 1.8em 2.2em;
-						}						
-					}
-					.slide-architecture .title_box h2 {font-size: 1.9em; line-height: 1.6; padding: 0.1em 0 0 0;}
-					.slide-plants .title_box h2 {font-size: 2.8em; line-height: 1.6; padding: 0.1em 0 0 0.1em;}
-					.slide-yoga .title_box h2 {font-size: 3.0em; line-height: 1.4; padding: 0.2em 0 0 0.4em; letter-spacing: 0.3em;}
-					.slide-eclectism .title_box h2 {font-size: 2.0em; line-height: 1.6; padding: 0; letter-spacing: 0.3em;}
-					.slide-art .title_box h2 {font-size: 3.0em; line-height: 1.4; padding: 0.2em 0 0 0.4em; letter-spacing: 0.3em;}
-					.slide-landscapearch .title_box h2 {font-size: 1.3em; line-height: 1.6; padding: 0.3em 0 0 0; letter-spacing: 0.25em;}
-					.slide-innovations .title_box h2 {font-size: 1.7em; line-height: 1.7; padding: 0.3em 0 0 0;}
-					.slide-climbing .title_box h2 {font-size: 2.0em; line-height: 1.5; padding: 0.2em 0 0 0.5em; letter-spacing: 0.3em;}					
-				}
-				@include mq($from:tb, $until:dsk-S) {
-					.title_box {
-						width: 240px;
-						height: 240px;
-						margin-left: -120px;
-						border: 10px solid;
-						padding: 6px;
-						margin-top: 30vh;
-						span {
-							padding: 1.4em 2em 2em 2.4em;
-						}
-					}
-					.slide-architecture .title_box h2 {font-size: 2.8em; line-height: 1.6;}
-					.slide-plants .title_box h2 {font-size: 4.0em; line-height: 1.6; padding: 0.1em 0 0 0.2em;}
-					.slide-yoga .title_box h2 {font-size: 5.0em; line-height: 1.2;  padding: 0.2em 0 0 0.4em;}
-					.slide-eclectism .title_box h2 {font-size: 2.6em; line-height: 1.7; padding: 0 0 0 0.3em; letter-spacing: 0.3em;}
-					.slide-art .title_box h2 {font-size: 5.0em; line-height: 1.2;  padding: 0.2em 0 0 0.4em;}
-					.slide-landscapearch .title_box h2 {font-size: 2.1em; line-height: 1.6; padding: 0 0 0 0.1em;}
-					.slide-innovations .title_box h2 {font-size: 2.6em; line-height: 1.7;}
-					.slide-climbing .title_box h2 {font-size: 2.8em; line-height: 1.5; padding: 0.2em 0 0 0.7em; letter-spacing: 0.3em;}					
-				}
-				@include mq($from:dsk-S, $until:dsk-M) {
-					.title_box {
-						width: 240px;
-						height: 240px;
-						margin-left: -120px;
-						border: 10px solid;
-						padding: 6px;
-						margin-top: 30vh;
-						span {
-							padding: 1.4em 2em 2em 2.4em;
-						}
-					}
-					.slide-architecture .title_box h2 {font-size: 2.7em; line-height: 1.6; padding: 0.1em 0 0 0.2em;}
-					.slide-plants .title_box h2 {font-size: 4.0em; line-height: 1.6; padding: 0.1em 0 0 0.2em;}
-					.slide-yoga .title_box h2 {font-size: 5.0em; line-height: 1.2; padding: 0.2em 0 0 0.4em;}
-					.slide-eclectism .title_box h2 {font-size: 2.6em; line-height: 1.7; padding: 0 0 0 0.2em; letter-spacing: 0.3em;}
-					.slide-art .title_box h2 {font-size: 5.0em; line-height: 1.2; padding: 0.2em 0 0 0.4em;}
-					.slide-landscapearch .title_box h2 {font-size: 2.1em; line-height: 1.5; padding: 0.1em 0 0 0.1em;}
-					.slide-innovations .title_box h2 {font-size: 2.6em; line-height: 1.7; padding: 0.1em 0 0 0;}
-					.slide-climbing .title_box h2 {font-size: 2.8em; line-height: 1.5; padding: 0.2em 0 0 0.7em; letter-spacing: 0.3em;}					
-				}
-				@include mq($from:dsk-M, $until:dsk-XL) {
-					.title_box {
-						width: 240px;
-						height: 240px;
-						margin-left: -120px;
-						border: 10px solid;
-						padding: 6px;
-						margin-top: 30vh;
-						span {
-							padding: 1.4em 2em 2em 2.4em;
-						}
-					}
-					.slide-architecture .title_box h2 {font-size: 2.2em; line-height: 1.6;}
-					.slide-plants .title_box h2 {font-size: 3.0em; line-height: 1.6; padding: 0.1em 0 0 0.2em;}
-					.slide-yoga .title_box h2 {font-size: 4.0em; line-height: 1.3; padding-left: 0.3em;}
-					.slide-eclectism .title_box h2 {font-size: 2.1em; line-height: 1.7; padding: 0 0 0 0.2em; letter-spacing: 0.3em;}
-					.slide-art .title_box h2 {font-size: 4.0em; line-height: 1.3; padding-left: 0.3em;}
-					.slide-landscapearch .title_box h2 {font-size: 1.7em; line-height: 1.5;}
-					.slide-innovations .title_box h2 {font-size: 1.9em; line-height: 1.7; padding: 0.1em 0 0 0.1em;}
-					.slide-climbing .title_box h2 {font-size: 2.4em; line-height: 1.3; padding: 0.3em 0 0 0.5em; letter-spacing: 0.3em;}					
-				}
-				@include mq($from:dsk-XL) {
-					.title_box {
-						width: 340px;
-						height: 340px;
-						margin-left: -170px;
-						border: 10px solid;
-						padding: 6px;
-						margin-top: 30vh;
-						span {
-							padding: 1.4em 2em 2em 2.4em;
-						}						
-					}
-					.slide-architecture .title_box h2 {font-size: 1.9em; line-height: 1.6; padding: 0.1em 0 0 0;}
-					.slide-plants .title_box h2 {font-size: 2.8em; line-height: 1.6; padding: 0.1em 0 0 0.1em;}
-					.slide-yoga .title_box h2 {font-size: 3.0em; line-height: 1.4; padding: 0.2em 0 0 0.4em; letter-spacing: 0.3em;}
-					.slide-eclectism .title_box h2 {font-size: 2.0em; line-height: 1.6; padding: 0; letter-spacing: 0.3em;}
-					.slide-art .title_box h2 {font-size: 3.0em; line-height: 1.4; padding: 0.2em 0 0 0.4em; letter-spacing: 0.3em;}
-					.slide-landscapearch .title_box h2 {font-size: 1.3em; line-height: 1.6; padding: 0.3em 0 0 0; letter-spacing: 0.25em;}
-					.slide-innovations .title_box h2 {font-size: 1.7em; line-height: 1.7; padding: 0.3em 0 0 0;}
-					.slide-climbing .title_box h2 {font-size: 2.0em; line-height: 1.5; padding: 0.2em 0 0 0.5em; letter-spacing: 0.3em;}					
-				}				
+				padding: 2em;
+				display: table-cell;
+				vertical-align: middle;
 			}
-			.slider-on {
-				right: 0 !important;
+			.logo, .counter_box {
+				margin-bottom: 32px;
 			}
-				
-		//2.2.3.About me
-			.vp-about {
-				.about-pic {
-					margin: 6em 0;
-					position: relative;
-					.frame {
-						padding: 8px;
-						@include background($gradient_frame-0);
-						position: absolute;
-						width: 80%;
-						height: 100%;
-						margin: 0 10%;
-						span {
-							background: $white;
-							width: 100%;
-							height: 100%;
-							display: block;
-						}
-						&:before {
-							@include background($gradient_frame-1);
-							content: '';    
-							display: block;
-							width: 100%;
-							height: 100%;
-							position: absolute;
-							top: 0;
-							left: 0;
-							opacity: 0;
-							z-index: -10;
-							@include transition($slowanim);
-						}
-					}
-					img {
-						position: relative;
-						margin: 3em 0;
-						width: 100%;
-					}
-					&:hover {
-						.frame:before {
-							opacity: 1;
-						}
-					}
+			.logo {
+				overflow: hidden;
+				img, h1 {
+					display: inline-block;
+					float: left;
 				}
-				.about4, .about5 {
-					margin: 2em 0 3em;
-				}
-				@include mq($until:sph) {
-					padding: $p_s-s;
-				}
-				@include mq($from:sph) {
-					padding: $p_s-l;
-					padding-bottom: $p_s-l*2;
-				}
-				@include mq($until:dsk-XL) {
-					padding-top: 60px;
-				}
-				@include mq($from:dsk-XL) {
-					padding-top: 120px;
-				}
-			}
-
-		//2.2.3.Works
-			.vp-works {
-				$padding-bw: 1.6em;
-				.box_works {
-					padding: 4px;
-					width: 80%;
-					margin: 0 auto 6em;
-					@include background($gradient_frame-0);
-					position: relative;
-					z-index: 10;
-					&:before {
-						@include background($gradient_frame-1);
-						content: '';
-						display: block;
-						width: 100%;
-						height: 100%;
-						position: absolute;
-						top: 0;
-						left: 0;
-						opacity: 0;
-						z-index: -10;
-						@include transition($slowanim);
-					}
-					&:hover {
-						&:before {
-							opacity: 1;
-						}
-					}
-					.box_works-body {
-						padding: $padding-bw;
-						position: relative;
-						background: $black;
-						color: $white;
-					}
-					.details {
-						ul.controls {
-							li {
-								margin-bottom: 1em;
-							}
-						}
-					}
-					img {
-						position: relative;
-						margin-top: -4em;
-						width: calc(100% + 4em);
-						max-width: none;
-					}
-					h2 {
-						font-size: 1.8em;
-					}
-					h4 {
-						font-weight: 300;
-					}
-					@include mq($until: mb) {
-						width: 90%;
-						.small-5, .small-7 {
-							width: 100%;
-						}
-						img {
-							margin-top: 0;
-							margin-bottom: $padding-bw;
-						}
-					}
-					@include mq($from: dsk-M, $until: dsk-L) {
-					}
-					@include mq($from: dsk-L, $until: dsk-XL) {
-					}
-					@include mq($from: dsk-XL) {
-					}
-				}
-				.box_works-top-right {
-					@extend .box_works;
-					@include mq($until: mb) {
-						img {
-							margin-top: 0;
-						}
-					}
-					@include mq($from: mb) {
-						img {
-							margin-bottom: $padding-bw;
-						}
-					}
-				}
-				.box_works-top-left {
-					@extend .box_works;
-					img {
-						margin-left: -4em;
-					}
-					@include mq($until: mb) {
-						img {
-							margin-top: 0;
-						}
-					}
-					@include mq($from: mb) {
-						img {
-							margin-bottom: $padding-bw;
-						}
-					}
-				}
-				.box_works-right-top {
-					@extend .box_works;
-					.details {
-						text-align: right;
-						padding-right: $padding-bw;
-						ul.controls {
-							margin-top: $padding-bw;
-							li {
-								display: block;
-								margin-right: 0;
-								margin-left: $padding-bw;
-								margin: 0 0 1em 0;
-							}
-							button.button:after, a.button:after {
-								left: initial;
-								right: 0;
-							}
-						}
-					}
-					img {
-						margin-right: -5em;
-					}
-					@include mq($until: mb) {
-						img {
-							margin-top: $padding-bw;
-							margin-bottom: 0;
-						}
-					}
-				}
-				.box_works-left-top {
-					@extend .box_works;
-					.details {
-						text-align: left;
-						padding-left: $padding-bw;
-						ul.controls {
-							margin-top: $padding-bw;
-							li {
-								margin-right: 0;
-								margin-left: $padding-bw;
-								margin: 0 0 1em 0;
-							}
-						}
-					}
-					img {
-						margin-left: -4em;
-					}
-					@include mq($until: mb) {
-						img {
-							margin-top: 0;
-						}
-					}
-					@include mq($from: mb) {
-						img {
-							margin-top: -4em;
-						}
-					}
-				}
-				.box_works-left-circle {
-					@extend .box_works;
-					.details {
-						text-align: left;
-						padding-left: $padding-bw;
-						ul.controls {
-							margin-top: $padding-bw;
-							li {
-								display: block;
-								margin-right: 0;
-								margin-left: $padding-bw;
-								margin: 0 0 1em 0;
-							}
-						}
-					}
-					img {
-						margin-left: -5em;
-						margin-top: -6em;
-					}
-				}
-				@include mq($until:sph) {
-					padding: $p_s-s;
-				}
-				@include mq($from:sph, $until:tb) {
-					padding: $p_s-l;
-				}
-				@include mq($from:tb) {
-					padding: $p_s-l;
-				}
-				@include mq($until:dsk-XL) {
-					padding-top: 60px;
-				}
-				@include mq($from:dsk-XL) {
-					padding-top: 120px;
-				}
-			}
-			//2.2.3.1
-				.box-slider-works-example {
-					width: 100%;
-					height: 100vh;
-					position: fixed;
-					top: 0;
-					right: -100%;
-					z-index: 20;
-					@include transition(all 2s ease);
-					.slider-works-example {
-						width: 100%;
-						height: calc(100vh - 1em - 50px);
-						.slide {
-							width: 100%;
-							position: relative;
-							.title_fixed {
-								width: calc(100% - 30px);
-								margin-right: 30px;
-								position: relative;
-								top: 0;
-								right: -100%;
-								z-index: 10;
-								pointer-events: none;
-								@include transition(all 0s ease);
-								.column {
-									padding-bottom: 1em;
-									padding-right: 30px;
-									position: relative;
-									&:after {
-										width: 100%;
-										height: 20px;
-										position: absolute;
-										bottom: -20px;
-										z-index: 10;
-										content: '';
-										display: block;
-									}
-								}
-							}
-							.content-works {
-								width: 100%;
-								position: relative;
-								.panel-left {
-									img {
-										margin-bottom: 1em;
-									}
-								}
-								.box-padding h2 {
-									margin-bottom: 2.4em;
-								}
-								h4.title {
-									margin-bottom: 3.4em;
-									font-weight: 300;
-								}
-								.box-frame h2, h2.title {
-									margin-bottom: 0.4em;
-								}				
-							}
-							.bottom-works {
-								width: 100%;
-								position: absolute;
-								bottom: 0;
-								ul.controls { //do usuniecie? podwojone
-									padding: 0;
-									margin: 0;
-									list-style: none;
-									li {
-										display: inline-block;										&:last-child {
-											margin-right: 0;
-										}
-										.prev-works {
-											&:after {
-												right: 0;
-												left: auto;
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-					.slide .content-works .project-part .box-padding {
-						h2 {
-							margin-bottom: 0.4em;
-						}
-						h4.part-title {
-							margin-bottom: 3em;
-						}
-						.swatches {
-							margin-bottom: 3em;
-						}
-					}
-					@include mq($until:sph) {
-						padding: 50px 1.4em 1em 1em;
-						.slider-works-example {
-							.slide {
-								height: calc(100vh - 1em - 50px);
-								.content-works {
-									height: calc(100% - 120px - 0px);
-									.mCSB_container {
-										margin-right: 0 !important;
-									}
-									.small-12 {
-										padding: 0 $p_s-m*0.8 !important;
-									}
-								}
-								.bottom-works {
-									height: 120px + 	0px;
-									padding-top: 0.5em;
-									.small-12 {
-										padding: 0 $p_s-m*0.8 !important;
-									}
-									ul.controls {
-										li {margin-right: 1em;}//???
-									}
-								}												
-							}
-							.controls {
-								display: none;
-							}
-							button.slick-prev, button.slick-next {
-								position: absolute;
-								bottom: 30px;
-								height: 50px;
-								width: 50px;
-								&:before {
-									width: inherit;
-									height: inherit;
-									line-height: 50px;
-									font-size: 20px;
-									text-align: center;
-									display: block;
-									font-family: 'IonIcons';
-								}
-							}
-							button.slick-prev {
-								left: -20px;
-								&:before {
-									content: '\f3cf';
-								}
-							}
-							button.slick-next {
-								right: -20px;
-								&:before {
-									content: '\f3d1';
-								}
-							}
-						}
-					}
-					@include mq($from:sph, $until:tb) {
-						padding: 50px 1.2em 0em 1.5em;
-						.slider-works-example {
-							.slide {
-								height: calc(100vh - 3em);
-								.panel-left {
-									padding-right: 1em;
-								}									
-								.content-works {
-									height: calc(100% - 100px);
-								}								
-								.bottom-works {
-									height: 100px;
-									padding-top: 1em;
-									padding-right: 30px;
-									ul.controls {
-										li {margin-right: 1em;}
-									}									
-								}													
-							}
-						}
-					}
-					@include mq($from:tb, $until:dsk-XL) {
-						padding: 60px 1em 2em 2em;
-						.slider-works-example {
-							.slide {
-								height: calc(100vh - 6em);
-								.panel-left {
-									padding-right: 2em;
-								}									
-								.content-works {
-									height: calc(100% - 100px);
-									.placeholder {
-										height: 204px;
-									}
-								}								
-								.bottom-works {
-									height: 100px;
-									padding-top: 2em;
-									padding-right: 30px;
-									ul.controls {
-										li {margin-right: 2em;}
-									}									
-								}													
-							}
-						}
-					}
-					@include mq($from:dsk-XL) {
-						padding: 120px 2em 4em 4em;
-						.slider-works-example {
-							.slide {
-								height: calc(100vh - 6em);
-								.panel-left {
-									padding-right: 4em;
-								}									
-								.content-works {
-									height: calc(100% - 200px);
-									.placeholder {
-										height: 408px;
-									}
-								}								
-								.bottom-works {
-									height: 200px;
-									padding-top: 3em;
-									padding-right: 60px;
-									ul.controls {
-										li {margin-right: 2em;}
-									}									
-								}													
-							}
-						}
-					}
-				}
-				.visible-works {
-					right: 0 !important;
-					.title_fixed {
-						right: 0 !important;
-					}
-				}
-
-		//2.2.4.Skils
-			.vp-skills {
-				.list-skills {
-					.column-separator {
-						width: 100%;
-					}
-				}
-				.separator {
-					height: 2em;
+				img {
+					margin-right: 1em;
 				}
 				h1 {
-					margin-bottom: 2em;
+					letter-spacing: 0;
 				}
-				.column {
-					.skills-label {
-						min-height: 40px;
-						display: table;
-						width: 100%;
-						h3 {
-							display: table-cell;
-							vertical-align: middle;
-							letter-spacing: 0.3em;
-							text-align: right;
-						}
-					}
-				}
-				img.piece {
-					height: 40px;
-					margin-bottom: 20px;
-				}
-				@include mq($until:sph) {
-					padding: $p_s-s;
-				}
-				@include mq($from:sph, $until:tb) {
-					padding: $p_s-m;
-				}
-				@include mq($from:tb) {
-					padding: $p_s-l;
-				}
-				@include mq($until:dsk-XL) {
-					padding-top: 60px;
-				}
-				@include mq($from:dsk-XL) {
-					padding-top: 120px;
-				}				
 			}
-		
-		//2.2.5.Thank you
-			.vp-thankyou {
-				min-height: 100vh;
+			.counter_box {
 				position: relative;
-				* {
-					text-align: center;
-				}
-				.vertical {
-					display: table;
-					width: 100%;
-					.box-frame {
-						display: table-cell;
-						vertical-align: middle;
-					}
-				}
-				.site-info {
+				.counter {
+					font-family: $ff-header;
+					display: block;
+					font-weight: 700;
 					position: absolute;
-					bottom: 0;
-					left: 0;
-					right: 0;
 					width: 100%;
-					p {
-						text-transform: uppercase;
-						font-size: 0.8em;
-						letter-spacing: 0.2em;
+				}
+				.counter-bg, .counter-double, .counter-main {
+					@extend .counter;
+				}
+				.counter-bg {
+					color: rgba($white,0.04);
+				}
+				.counter-double {
+					color: rgba($white,0.2);
+				}
+				.counter-main {
+					color: rgba($white,0.4);
+				}
+			}
+		}
+		.left_box {
+			background: rgba($black,0.8);
+			color: $white;
+		}
+		.right_box {
+			background: rgba($white,0.8);
+			color: $black;
+		}
+	}
+	@include mq($until:sph) {
+		padding: $p_s-s;
+		$scale: 0.5;
+		.loading_box {
+			.left_box, .right_box {
+				width: 100%;
+				height: 50%;
+				.vertical {
+					vertical-align: middle;
+					padding: 2em;
+				}
+				.logo, .counter_box {
+					margin-bottom: 32px*$scale;
+				}
+				.logo {
+					img {
+						width: 110px*$scale;
+						height: 160px*$scale;
+					}
+					h1 {
+						font-size: 32px*$scale;
+						margin-top: 60px*$scale;
 					}
 				}
-				@include mq($until:sph) {
-					padding: 60px $p_s-s $p_s-s;
-					.vertical {
-						height: calc(100vh - 2em - 60px);
-					}
+				h5 {
+					font-size: 0.6em;
 				}
-				@include mq($from:sph, $until:tb) {
-					padding: $p_s-m;
-					.vertical {
-						height: calc(100vh - 6em);
+				.counter_box {
+					height: 160px*$scale;
+					.counter {
+						text-align: right;
+						height: 160px*$scale;
+						line-height: 160px*$scale;
 					}
-				}
-				@include mq($from:tb) {
-					padding: $p_s-l;
-					.vertical {
-						height: calc(100vh - 8em);
+					.counter-bg {
+						font-size: 500px*$scale;
+					}
+					.counter-double {
+						font-size: 200px*$scale;
+					}
+					.counter-main {
+						font-size: 200px*$scale;
 					}
 				}
 			}
-	//2.3.Numbers
-		.sec_number {
+			.left_box {
+				text-align: right;
+				box-shadow: inset 0 -50vh $black;
+				.vertical {
+					vertical-align: bottom;
+				}
+			}
+			.right_box {
+				text-align: left;
+				box-shadow: inset 0 50vh $white;
+				.vertical {
+					vertical-align: top;
+				}
+			}
+		}
+	}
+	@include mq($from:sph) {
+		.loading_box {
+			.left_box, .right_box {
+				width: 50%;
+				height: 100%;
+				.vertical {
+					padding: 2em;
+					vertical-align: middle;
+					img, h1 {
+						float: left;
+					}
+				}
+				.counter_box {
+					.counter {
+						text-align: right;
+					}
+				}
+			}
+			.left_box {
+				text-align: right;
+				box-shadow: inset -50vw 0 $black;
+			}
+			.right_box {
+				text-align: left;
+				box-shadow: inset 50vw 0 $white;
+			}
+		}
+	}
+	@include mq($from:sph, $until:tb) {
+		padding: $p_s-m;
+		$scale: 0.4;
+		.loading_box {
+			.left_box, .right_box {
+				.logo, .counter_box {
+					margin-bottom: 32px*$scale;
+				}
+				.logo {
+					img {
+						width: 110px*$scale;
+						height: 160px*$scale;
+					}
+					h1 {
+						font-size: 32px*$scale;
+						margin-top: 60px*$scale;
+					}
+				}
+				h5 {
+					font-size: 0.6em;
+				}
+				.counter_box {
+					height: 160px*$scale;
+					.counter {
+						height: 160px*$scale;
+						line-height: 160px*$scale;
+					}
+					.counter-bg {
+						font-size: 500px*$scale;
+					}
+					.counter-double {
+						font-size: 200px*$scale;
+					}
+					.counter-main {
+						font-size: 200px*$scale;
+					}
+				}
+			}
+		}
+	}
+	@include mq($from:tb) {
+		padding: $p_s-l;
+	}
+	@include mq($from:tb, $until: dsk-M) {
+		$scale: 0.8;
+		.loading_box {
+			.left_box, .right_box {
+				.logo, .counter_box {
+					margin-bottom: 32px*$scale;
+				}
+				.logo {
+					img {
+						width: 110px*$scale;
+						height: 160px*$scale;
+					}
+					h1 {
+						font-size: 32px*$scale;
+						margin-top: 60px*$scale;
+					}
+				}
+				h5 {
+					font-size: 0.9em;
+				}
+				.counter_box {
+					height: 160px*$scale;
+					.counter {
+						height: 160px*$scale;
+						line-height: 160px*$scale;
+					}
+					.counter-bg {
+						font-size: 500px*$scale;
+					}
+					.counter-double {
+						font-size: 200px*$scale;
+					}
+					.counter-main {
+						font-size: 200px*$scale;
+					}
+				}
+			}
+		}
+	}
+	@include mq($from: dsk-M, $until: dsk-L) {
+		$scale: 1.2;
+		.loading_box {
+			.left_box, .right_box {
+				.logo, .counter_box {
+					margin-bottom: 32px*$scale;
+				}
+				.logo {
+					img {
+						width: 110px*$scale;
+						height: 160px*$scale;
+					}
+					h1 {
+						font-size: 32px*$scale;
+						margin-top: 60px*$scale;
+					}
+				}
+				.counter_box {
+					height: 160px*$scale;
+					.counter {
+						height: 160px*$scale;
+						line-height: 160px*$scale;
+					}
+					.counter-bg {
+						font-size: 500px*$scale;
+					}
+					.counter-double {
+						font-size: 200px*$scale;
+					}
+					.counter-main {
+						font-size: 200px*$scale;
+					}
+				}
+			}
+		}
+	}
+	@include mq($from: dsk-L, $until: dsk-XL) {
+		$scale: 1.4;
+		.loading_box {
+			.left_box, .right_box {
+				.logo, .counter_box {
+					margin-bottom: 32px*$scale;
+				}
+				.logo {
+					img {
+						width: 110px*$scale;
+						height: 160px*$scale;
+					}
+					h1 {
+						font-size: 32px*$scale;
+						margin-top: 60px*$scale;
+					}
+				}
+				.counter_box {
+					height: 160px*$scale;
+					.counter {
+						height: 160px*$scale;
+						line-height: 160px*$scale;
+					}
+					.counter-bg {
+						font-size: 500px*$scale;
+					}
+					.counter-double {
+						font-size: 200px*$scale;
+					}
+					.counter-main {
+						font-size: 200px*$scale;
+					}
+				}
+			}
+		}
+	}
+	@include mq($from: dsk-XL) {
+		$scale: 2;
+		.loading_box {
+			.left_box, .right_box {
+				.logo, .counter_box {
+					margin-bottom: 32px*$scale;
+				}
+				.logo {
+					img {
+						width: 110px*$scale;
+						height: 160px*$scale;
+					}
+					h1 {
+						font-size: 32px*$scale;
+						margin-top: 60px*$scale;
+					}
+				}
+				.counter_box {
+					height: 160px*$scale;
+					.counter {
+						height: 160px*$scale;
+						line-height: 160px*$scale;
+					}
+					.counter-bg {
+						font-size: 500px*$scale;
+					}
+					.counter-double {
+						font-size: 200px*$scale;
+					}
+					.counter-main {
+						font-size: 200px*$scale;
+					}
+				}
+			}
+		}
+	}
+}
+.fadeout-stage1 {
+	.left_box {
+		box-shadow: inset 0vw 0px $black !important;
+	}
+	.right_box {
+		box-shadow: inset 0vw 0px $white !important;
+	}
+}
+.fadeout-stage2 {
+	opacity: 0 !important;
+}
+.fadeout-stage3 {
+	top: -100% !important;
+}
+.fadein-stage3 {
+	opacity: 1 !important;
+}
+button {
+	@include border-radius(0);
+}
+.visible_nav {
+	@include mq($until:sph) {
+		.nav_body {
+			left: -100% !important;
+		}
+	}
+	@include mq($from:sph, $until:tb) {
+		left: calc(-500%/12) !important;
+	}
+	@include mq($from:tb) {
+		left: -50vw !important;
+	}
+}
+.visible_contact {
+	@include mq($until:sph) {
+		.nav_body {
+			left: 0 !important;
+		}
+	}
+	@include mq($from:sph) {
+		left: 0 !important;
+	}
+}
+.visible_show_nav {
+	@include mq($until:sph) {
+		position: fixed !important;
+		top: 0 !important;
+	}
+	@include mq($from:sph, $until:dsk-XL) {
+		right: -60px !important;
+	}
+	@include mq($from:dsk-XL) {
+		right: -120px !important;
+	}
+}
+.wrapper_to_right-1 {
+	@include mq($from:sph) {
+		right: -25% !important;
+	}
+}
+.wrapper_to_right-2 {
+	@include mq($from:sph) {
+		right: -75% !important;
+	}
+}
+.nonscrollable_body {
+	overflow: hidden;
+}
+.hide-basic {
+	position: absolute;
+	top: 0px;
+	z-index: 20;
+	i {
+		height: inherit;
+		width: inherit;
+		display: block;
+	}
+	@include mq($until:sph) {
+		width: 50px;
+		height: 50px;
+		line-height: 50px;
+		top: 0;
+		right: 0;
+		font-size: 20px;
+	}
+	@include mq($from:sph, $until:tb) {
+		width: 50px;
+		height: 50px;
+		line-height: 50px;
+		top: 0;
+		right: 0;
+		font-size: 22px;
+	}
+	@include mq($from:tb, $until:dsk-XL) {
+		width: 56px;
+		height: 60px;
+		line-height: 60px;
+		top: 0;
+		right: 0;
+		font-size: 22px;
+	}
+	@include mq($from:dsk-XL) {
+		width: 120px;
+		height: 120px;
+		line-height: 120px;
+		top: 0;
+		right: 0;
+		font-size: 60px;
+	}
+}
+.hide-moodboard, .hide-works {
+	@extend .hide-basic;
+}
+i.info {
+	font-weight: 900;
+	font-style: normal;
+	text-align: center;
+	display: inline-block;
+	@include border-radius(100%);
+	font-size: 20px;
+	border: 4px solid $white;
+	color: $white;
+	width: 44px;
+	height: 44px;
+	line-height: 36px;
+}
+.empty {display: none;}
+
+//1.2.Fonts
+h1 {font-size: 2.2em; font-weight: 900; margin: 0 0 0.8em; line-height: 1.2;}
+h2 {font-size: 2.0em; font-weight: 900; margin: 0 0 0.4em; line-height: 1.0;}
+h3 {font-size: 1.0em; font-weight: 400; margin: 0 0 0.0em; line-height: 1.0;}
+h4 {font-size: 1.0em; font-weight: 700; margin: 0 0 1.0em; line-height: 1.8;}
+h5 {font-size: 1.0em; font-weight: 300; margin: 0 0 1.0em; line-height: 1.4;}
+h6 {font-size: 0.9em; font-weight: 700; margin: 0 0 0.0em; line-height: 1.6;}
+p  {font-size: 0.9em; font-weight: 300; margin: 0 0 0.8em; line-height: 1.6;}
+ul {font-size: 0.9em; font-weight: 300; margin: 0 0 0.8em; line-height: 1.6;}
+
+h1 {
+	text-transform: uppercase;
+	letter-spacing: 0.6em;
+	font-family: $ff-header;
+}
+h2 {
+	text-transform: uppercase;
+	letter-spacing: 0.4em;
+	font-family: $ff-header;
+}
+h4 {
+	letter-spacing: 0.4em;
+}
+h5 {
+	text-transform: uppercase;
+	letter-spacing: 0.4em;
+}
+p {
+	text-align: justify;
+}
+a {
+	text-decoration: none;
+}
+//1.3.Lists
+ul.basic {
+	padding: 0;
+	margin: 0 0 2em;
+	list-style: none;
+	li {
+		position: relative;
+		padding-left: 1.6em;
+		&:before {
+			position: absolute;
+			left: 0;
+			width: 1em;
+			height: 1em;
+			font-family: 'IonIcons';
+		}
+	}
+}
+.frame ul, ul.bullet {
+	@extend ul.basic;
+	li {
+		&:before {
+			content: '\f2c7';
+		}
+	}
+}
+.align-center ul:not(.swatches), ul.bullet-inline {
+	@extend ul.basic;
+	li {
+		display: inline-block;
+		margin: 0 1em 1em;
+		&:before {
+			content: '\f2c7';
+		}
+	}
+	@include mq($and: '(orientation:portrait)') {
+		width: 70%;
+		margin-left: auto;
+		margin-right: auto;
+		li {
+			display: block;
+			text-align: left !important;
+		}
+	}
+}
+
+//Objects
+.pos-relative {
+	position: relative;
+}
+
+.video-demo {
+	display: block;
+	width: 100%;
+	background-color: $white;
+}
+.note {
+	border: 1px solid rgba(#888888,0.3);
+	padding: 0.6em 0.8em;
+}
+ul.responsive {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	li {
+		display: inline-block;
+		height: 50px;
+		width: auto;
+		position: relative;
+		.icon {
+			height: 50px;
 			position: relative;
-			.row {position: relative;}
-			&:before {
-				font-family: $ff-plain;
-				font-family: $ff-numbers;
-				//font-weight: 900;
-				font-size: 200px;
-				line-height: 140px;
+			span {
+				border: 4px solid;
 				display: block;
+				@include border-radius(1px);
+			}
+		}
+		.monitor {
+			span {
 				position: absolute;
-				top: 40px;
-				left: 20px;
-				z-index: 0;
+				top: 0;
+				&:after {
+					display: block;
+					content: '';
+					position: absolute;
+					margin: 0 10%;
+					width: 80%;
+				}
 			}
 		}
-
-		.vp-contact:before {content: '05.';}
-		.beginning-moodboard .sec_number:before {content: '01.';}
-		.beginning-about:before {content: '02.';}
-		.beginning-works:before {content: '03.';}
-		.beginning-skills:before {content: '04.';}
-
-		.end-moodboard .sec_number:before {content: '05.';}
-		.end-about:before {content: '04.';}
-		.end-works .sec_number:before {content: '03.';}
-		.end-skills:before {content: '02.';}
-
-		
-	//2.4.Colours versions
-		.v-beginning, .sliders-beginning  {
-			.section, .mb-text, .apla {
-				background: $white !important;
-				color: $black !important;				
-			}
-			button.button, a.button {
-				color: $black;
-				&:after {
-					background: $black;
-				}
-			}			
-			ul.responsive {
-				li {
-					.icon {
-						span {
-							border-color: $black;
-						}
-					}
-					.monitor {
-						span {
-							&:after {
-								background: $black;
-							}
-						}
-					}
-				}
-			}					
-			.mCS-light.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {background-color: lighten($black,30%);}
-			.mCS-light.mCSB_scrollTools .mCSB_draggerRail {background-color: darken($white,10%);}				
-			.slider-works-example, .slider-moodboard {
-				.slick-prev, .slick-next {
-					@include mq($until:sph) {
-						&:before {
-							color: $black;
-						}
-					}
-					@include mq($from:sph, $until:tb) {
-						&:before {
-							color: $black;
-						}						
-					}
-					@include mq($from:tb) {
-						&:before {
-							color: $black;
-						}
-					}					
-				}
-			}
-			.box-slider-moodboard {
-				.slider-moodboard {
-					background: $white;
-				}
-				.title_box {
-					border-color: $white;
-					span {
-						background: $white;
-					}
-				}				
-			}
-			.vp-about {
-				.about-pic {
-					.frame {
-						span {
-							background: $white;
-						}
-					}
-				}
-			}					
-			.vp-works {
-				.box_works {
-					.box_works-body {
-						background: $white;
-						color: $black;
-					}
-				}				
-			}
-			.box-slider-works-example {
-				background: $white;
-				color: $black;
-				.slider-works-example {
-					.slide {
-						.title_fixed {
-							.column {
-								background: $white;
-								&:after {
-									background: rgba($white,0.5);
-								}
-							}
-						}
-					}
-				}
-				ul.swatches {
-					li {
-						.swatch-main {
-							border-color: rgba($black,0.3);
-						}
-					}
-				}							
-			}
-			.sec_number {
-				&:before {
-					color: darken($white,5%);
-				}
-			}
-			.vp-works .sec_number {
-				&:before, &:after {
-				}
-			}
-			p, ul.bullet, ul.bullet-inline, h4 {
-				a {
-					color: darken($palegreen,30%);
-					&:hover {
-						color: darken($paleblue,30%);
-					}
-				}
-			}
-			.vp-thankyou {
-				background: rgba($white,0.7);
-				color: $black;
+		.ipad {
+			span {
+				position: absolute;
+				width: 100%;
+				bottom: 0;
 			}
 		}
-		.v-end, .sliders-end {
-			.show_nav {
-				text-shadow: 0 0 10px $white;
-			}			
-			.section, .mb-text, .apla {
-				background: $black !important;
-				color: $white !important;				
+		.iphone {
+			span {
+				position: absolute;
+				width: 100%;
+				bottom: 0;
 			}
-			button.button, a.button {
-				color: $white;
-				&:after {
-					background: $white;
-				}				
+		}
+		@include mq($until:sph) {
+			margin: 0 6px 0 0;
+			.icon {
+				span {
+					border: 3px solid !important;
+				}
 			}
-			ul.responsive {
-				li {
-					.icon {
-						span {
-							border-color: $white;
+			.monitor {
+				width: 50px;
+				height: 40px !important;
+				span {
+					width: 50px;
+					height: 32px;
+					top: auto !important;
+					bottom: 0 !important;
+					&:after {
+						bottom: -12px;
+						height: 4px;
+					}
+				}
+			}
+			.ipad {
+				width: 22px;
+				span {
+					height: 30px;
+				}
+			}
+			.iphone {
+				width: 14px;
+				span {
+					height: 20px;
+				}
+			}
+		}
+		@include mq($from:sph, $until:tb) {
+			margin: 0 6px 0 0;
+			.monitor {
+				width: 60px;
+				span {
+					width: 60px;
+					height: 42px;
+					&:after {
+						bottom: -12px;
+						height: 4px;
+					}
+				}
+			}
+			.ipad {
+				width: 30px;
+				span {
+					height: 40px;
+				}
+			}
+			.iphone {
+				width: 20px;
+				span {
+					height: 30px;
+				}
+			}
+		}
+		@include mq($from:tb, $until:dsk-XL) { //do sprawdzenia
+			margin: 0 6px 0 0;
+			.monitor {
+				width: 60px;
+				span {
+					width: 60px;
+					height: 42px;
+					&:after {
+						bottom: -12px;
+						height: 4px;
+					}
+				}
+			}
+			.ipad {
+				width: 30px;
+				span {
+					height: 40px;
+				}
+			}
+			.iphone {
+				width: 20px;
+				span {
+					height: 30px;
+				}
+			}
+		}
+		@include mq($from:dsk-XL) { //do sprawdzenia
+			margin: 0 12px 0 0;
+			height: 100px;
+			.icon {
+				height: 100px;
+			}
+			.monitor {
+				width: 120px;
+				span {
+					width: 120px;
+					height: 84px;
+					&:after {
+						bottom: -24px;
+						height: 8px;
+					}
+				}
+			}
+			.ipad {
+				width: 60px;
+				span {
+					height: 80px;
+				}
+			}
+			.iphone {
+				width: 40px;
+				span {
+					height: 60px;
+				}
+			}
+		}
+	}
+}
+
+$swatch_size: 120px;
+ul.swatches {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	li {
+		display: inline-block;
+		width: $swatch_size + 6px;
+		height: $swatch_size + 6px;
+		overflow: hidden;
+		margin: 0 20px 10px 0;
+		.swatch-main {
+			border: 3px solid;
+			width: 100%;
+			width: $swatch_size;
+			height: $swatch_size;
+			position: relative;
+			@include border-radius(50%);
+			overflow: hidden;
+			.swatch {
+				width: inherit;
+				height: inherit;
+				@include border-radius(50%);
+				@include transition($fastanim);
+			}
+			.hexcode {
+				position: absolute;
+				height: inherit;
+				line-height: $swatch_size;
+				width: 100%;
+				font-weight: 700;
+				text-align: center;
+				left: 0;
+				@include transition($fastanim);
+				@include border-radius(50%);
+				overflow: hidden;
+				text-transform: uppercase;
+
+			}
+		}
+		@include mq($until:tb) {
+			.swatch-main {
+				.hexcode {top: 0;}
+			}
+		}
+		@include mq($from:tb) {
+			top: $swatch_size;
+			.swatch-main {
+				.hexcode {
+					top: 100%;
+				}
+				&:hover {
+					.hexcode {top: 0;}
+				}
+			}
+		}
+	}
+}
+//swatches
+.swatches-alg {
+	li:first-child {
+		color: $white;
+		.swatch-main {background: #231F20;}
+	}
+	li:nth-child(2) {
+		color: $black;
+		.swatch-main {background: #E6E7E8;}
+	}
+	li:nth-child(3) {
+		color: $black;
+		.swatch-main {background: #D1D3D4;}
+	}
+	li:nth-child(4) {
+		color: $black;
+		.swatch-main {background: #00A79D;}
+	}
+	li:nth-child(5) {
+		color: $white;
+		.swatch-main {background: #008e85;}
+	}
+}
+.swatches-brh {
+	li:first-child {
+		color: $white;
+		.swatch-main {background: #51a4bd;}
+	}
+	li:nth-child(2) {
+		color: $white;
+		.swatch-main {background: #3f7187;}
+	}
+	li:nth-child(3) {
+		color: $black;
+		.swatch-main {background: #eeeeee;}
+	}
+	li:nth-child(4) {
+		color: $black;
+		.swatch-main {background: #fafafa;}
+	}
+	li:nth-child(5) {
+		color: $white;
+		.swatch-main {background: #1e3c59;}
+	}
+}
+.swatches-franchise {
+	li:first-child {
+		color: $white;
+		.swatch-main {background: #333333;}
+	}
+	li:nth-child(2) {
+		color: $black;
+		.swatch-main {background: #88a6d3;}
+	}
+	li:nth-child(3) {
+		color: $black;
+		.swatch-main {background: #E7E7E7;}
+	}
+	li:nth-child(4) {
+		color: $white;
+		.swatch-main {background: #5a6772;}
+	}
+	li:nth-child(5) {
+		color: $black;
+		.swatch-main {background: #fafafa;}
+	}
+}
+.swatches-itn-homepage {
+	li:first-child {
+		color: $white;
+		.swatch-main {background: #ff931e;}
+	}
+	li:nth-child(2) {
+		color: $white;
+		.swatch-main {background: #32327f;}
+	}
+	li:nth-child(3) {
+		color: $black;
+		.swatch-main {background: #eaeaea;}
+	}
+	li:nth-child(4) {
+		color: $black;
+		.swatch-main {background: #ffffff;}
+	}
+	li:nth-child(5) {
+		color: $white;
+		.swatch-main {background: #80898d;}
+	}
+}
+.swatches-itn-profile {
+	li:first-child {
+		color: $white;
+		.swatch-main {background: #2fa78e;}
+	}
+	li:nth-child(2) {
+		color: $white;
+		.swatch-main {background: #ffb024;}
+	}
+	li:nth-child(3) {
+		color: $black;
+		.swatch-main {background: #f2f2f2;}
+	}
+	li:nth-child(4) {
+		color: $black;
+		.swatch-main {background: #ffffff;}
+	}
+	li:nth-child(5) {
+		color: $white;
+		.swatch-main {background: #4d4d4d;}
+	}
+}
+.swatches-kickstart {
+	li:first-child {
+		color: $white;
+		.swatch-main {background: #232323;}
+	}
+	li:nth-child(2) {
+		color: $white;
+		.swatch-main {background: #225a72;}
+	}
+	li:nth-child(3) {
+		color: $black;
+		.swatch-main {background: #bcbec0;}
+	}
+	li:nth-child(4) {
+		color: $black;
+		.swatch-main {background: #ff9016;}
+	}
+	li:nth-child(5) {
+		color: $black;
+		.swatch-main {background: #fafafa;}
+	}
+}
+.swatches-lavelle {
+	li:first-child {
+		color: $white;
+		.swatch-main {background: #a91e22;}
+	}
+	li:nth-child(2) {
+		color: $white;
+		.swatch-main {background: #e3ac49;}
+	}
+	li:nth-child(3) {
+		color: $black;
+		.swatch-main {background: #fafafa;}
+	}
+	li:nth-child(4) {
+		color: $black;
+		.swatch-main {background: #f7f9f9;}
+	}
+	li:nth-child(5) {
+		color: darken(#b8d7e4,30%);
+		.swatch-main {background: #b8d7e4;}
+	}
+}
+.swatches-manyautos {
+	li:first-child {
+		color: $white;
+		.swatch-main {background: #b9121b;}
+	}
+	li:nth-child(2) {
+		color: $white;
+		.swatch-main {background: #010101;}
+	}
+	li:nth-child(3) {
+		color: $black;
+		.swatch-main {background: #ffd58a;}
+	}
+	li:nth-child(4) {
+		color: $black;
+		.swatch-main {background: #fafafa;}
+	}
+}
+.swatches-mk {
+	li:first-child {
+		color: $white;
+		.swatch-main {background: #404042;}
+	}
+	li:nth-child(2) {
+		color: $black;
+		.swatch-main {background: #f1f2f2;}
+	}
+	li:nth-child(3) {
+		color: $white;
+		.swatch-main {background: #1c75bc;}
+	}
+	li:nth-child(4) {
+		color: $black;
+		.swatch-main {background: #fafafa;}
+	}
+	li:nth-child(5) {
+		color: $white;
+		.swatch-main {background: #6d6e71;}
+	}
+}
+.swatches-mmghomes {
+	li:first-child {
+		color: $white;
+		.swatch-main {background: #58595b;}
+	}
+	li:nth-child(2) {
+		color: $black;
+		.swatch-main {background: #fafafa;}
+	}
+	li:nth-child(3) {
+		color: $black;
+		.swatch-main {background: #a2b1ba;}
+	}
+	li:nth-child(4) {
+		color: $black;
+		.swatch-main {background: #819cb1;}
+	}
+}
+.swatches-momentum {
+	li:first-child {
+		color: $black;
+		.swatch-main {background: #dbb75b;}
+	}
+	li:nth-child(2) {
+		color: $white;
+		.swatch-main {background: #d33a20;}
+	}
+	li:nth-child(3) {
+		color: $black;
+		.swatch-main {background: #fafafa;}
+	}
+	li:nth-child(4) {
+		color: $black;
+		.swatch-main {background: #efefef;}
+	}
+	li:nth-child(5) {
+		color: $white;
+		.swatch-main {background: #4d4d4d;}
+	}
+}
+.swatches-nottinghamlodge {
+	li:first-child {
+		color: $black;
+		.swatch-main {background: #f9c73d;}
+	}
+	li:nth-child(2) {
+		color: $white;
+		.swatch-main {background: #1a600b;}
+	}
+	li:nth-child(3) {
+		color: $black;
+		.swatch-main {background: #fafafa;}
+	}
+	li:nth-child(4) {
+		color: $black;
+		.swatch-main {background: #efefef;}
+	}
+	li:nth-child(5) {
+		color: $white;
+		.swatch-main {background: #231f20;}
+	}
+}
+//-end
+
+button.button, a.button {
+	display: inline-block;
+	text-transform: uppercase;
+	padding: 16px 0;
+	line-height: 1.3;
+	font-weight: 900;
+	letter-spacing: 0.3em;
+	position: relative;
+	&:after {
+		height: 4px;
+		width: 50px;
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0px;
+		@include transition(all 0.3s ease);
+	}
+	@include mq($from:sph) {
+		&:hover {
+			&:after {
+				width: calc(100% - 36px);
+				width: 100%;
+			}
+		}
+	}
+	@include mq($until:sph) {
+		font-size: 12px;
+	}
+	@include mq($from:sph, $until:tb) {
+		font-size: 12px;
+	}
+	@include mq($from:tb, $until: dsk-M) {
+		font-size: 12px;
+	}
+	@include mq($from: dsk-M, $until: dsk-L) {
+		font-size: 14px;
+	}
+	@include mq($from: dsk-L, $until: dsk-XL) {
+		font-size: 14px;
+	}
+	@include mq($from: dsk-XL) {
+		font-size: 24px;
+	}
+}
+
+ul.controls {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	li {
+		display: inline-block;
+		margin-right: 2em;
+		&:last-child {
+			margin-right: 0;
+		}
+		.prev-works {
+			&:after {
+				right: 0;
+				left: auto;
+			}
+		}
+	}
+}
+
+.box-padding {
+	@include mq($until:sph) {
+		padding: 2em 0;
+	}
+	@include mq($from:sph, $until:tb) {
+		padding: 3.5em 0;
+	}
+	@include mq($from:tb, $until: dsk-XL) {
+		padding: 5em;
+	}
+	@include mq($from: dsk-M, $until: dsk-L) {
+	}
+	@include mq($from: dsk-L, $until: dsk-XL) {
+	}
+	@include mq($from: dsk-XL) {
+		padding: 8em;
+	}
+}
+.box-padding-vertical {
+	@include mq($until:sph) {
+		padding: 2em 0;
+	}
+	@include mq($from:sph, $until:tb) {
+		padding: 3.5em 0;
+	}
+	@include mq($from:tb, $until: dsk-XL) {
+		padding: 5em 0;
+	}
+	@include mq($from: dsk-M, $until: dsk-L) {
+	}
+	@include mq($from: dsk-L, $until: dsk-XL) {
+	}
+	@include mq($from: dsk-XL) {
+		padding: 8em 0;
+	}
+}
+.box-frame {
+	padding: 2em;
+	margin: 0 0 2em 0;
+	border: 2px solid;
+	ul, p {
+		&:last-child {margin-bottom: 0 !important;}
+	}
+	.row {
+		.small-12 {
+			margin-bottom: 2em;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+.v-end .box-frame {
+	border-color: $white;
+}
+.v-beginning .box-frame {
+	border-color: $black;
+}
+
+.wireframing {
+	.column {padding: 0 2em;}
+	img {
+		margin-bottom: 2em;
+	}
+}
+.typography {
+	.column {
+		margin-bottom: 2em;
+	}
+	@include mq($until:sph) {
+		padding: 0;
+	}
+	@include mq($from:sph) {
+		padding: 0 3em;
+	}
+	span {
+		display: block;
+		margin-bottom: 0.5em;
+		&:last-child {
+			margin-bottom: 0 !important;
+		}
+	}
+	.font-family {
+		font-size: 1.8em;
+		line-height: 1.2;
+		margin-bottom: 0;
+	}
+	.font-weight {
+		font-size: 0.8em;
+		font-weight: 300;
+		margin-bottom: 1em;
+	}
+	//font-families
+	.Merriweather {
+		.font-family, .Aa, .all-caps, .all-low, .all-numbers {
+			font-family: 'Merriweather';
+		}
+	}
+	.Poppins {
+		.font-family, .Aa, .all-caps, .all-low, .all-numbers {
+			font-family: 'Poppins';
+		}
+	}
+	.Roboto-Condensed {
+		.font-family, .Aa, .all-caps, .all-low, .all-numbers {
+			font-family: 'Roboto Condensed';
+		}
+	}
+	.Roboto {
+		.font-family, .Aa, .all-caps, .all-low, .all-numbers {
+			font-family: 'Roboto';
+		}
+	}
+	.Playfair-Display {
+		.font-family, .Aa, .all-caps, .all-low, .all-numbers {
+			font-family: 'Playfair Display';
+		}
+	}
+	.Quicksand {
+		.font-family, .Aa, .all-caps, .all-low, .all-numbers {
+			font-family: 'Quicksand';
+		}
+	}
+	.Raleway {
+		.font-family, .Aa, .all-caps, .all-low, .all-numbers {
+			font-family: 'Raleway';
+		}
+	}
+	.Lato {
+		.font-family, .Aa, .all-caps, .all-low, .all-numbers {
+			font-family: 'Lato';
+		}
+	}
+	.Yanone-Kaffeesatz {
+		.font-family, .Aa, .all-caps, .all-low, .all-numbers {
+			font-family: 'Yanone Kaffeesatz';
+		}
+	}
+	.Julius-Sans-One {
+		.font-family, .Aa, .all-caps, .all-low, .all-numbers {
+			font-family: 'Julius Sans One';
+		}
+	}
+	.Open-Sans {
+		.font-family, .Aa, .all-caps, .all-low, .all-numbers {
+			font-family: 'Open Sans';
+		}
+	}
+	//-end
+	//font-weights
+	.fw-100 {
+		.font-family, .Aa, .all-caps, .all-low, .all-numbers {
+			font-weight: 100;
+		}
+	}
+	.fw-200 {
+		.font-family, .Aa, .all-caps, .all-low, .all-numbers {
+			font-weight: 200;
+		}
+	}
+	.fw-300 {
+		.font-family, .Aa, .all-caps, .all-low, .all-numbers {
+			font-weight: 300;
+		}
+	}
+	.fw-400 {
+		.font-family, .Aa, .all-caps, .all-low, .all-numbers {
+			font-weight: 400;
+		}
+	}
+	.fw-600 {
+		.font-family, .Aa, .all-caps, .all-low, .all-numbers {
+			font-weight: 600;
+		}
+	}
+	.fw-700 {
+		.font-family, .Aa, .all-caps, .all-low, .all-numbers {
+			font-weight: 700;
+		}
+	}
+	.fw-900 {
+		.font-family, .Aa, .all-caps, .all-low, .all-numbers {
+			font-weight: 900;
+		}
+	}
+	//-end
+	.Aa {
+		font-size: 2.4em;
+		font-weight: 700;
+		line-height: 1;
+	}
+	.all-caps, .all-low, .all-numbers {
+		font-size: 1.2em;
+	}
+	.all-caps {text-transform: uppercase;}
+}
+
+//Hover aware
+.dh-container {
+	position: relative;
+	overflow: hidden;
+}
+.dh-overlay {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	color: #fff;
+	position: absolute;
+	@include mq($until:sph) {
+		opacity: 0;
+		top: 0;
+		@include transition(all 0.3s ease);
+		i {
+			opacity: 0;
+		}
+	}
+	@include mq($from:sph) {
+		top: -100%;
+		@include background($gradient_frame-0);
+	}
+}
+
+//2.0.CONSTRUCTION ====================================================================
+//2.1.Main
+.section {
+	min-height: 100vh;
+	position: relative;
+}
+
+
+//2.2.Sepcific
+
+//2.2.1. Welcome
+.wrapper {
+	max-height: 100% !important;
+	$audio_control_size: 1em*3.75;
+	.audio_control {
+		position: fixed;
+		z-index: 15;
+		width: $audio_control_size;
+		height: $audio_control_size*2;
+		right: $audio_control_size/10;
+		bottom: $audio_control_size/10;
+		line-height: $audio_control_size;
+		overflow: hidden;
+		opacity: 0;
+		@include transition($slowanim);
+		.button_wrapper {
+			position: absolute;
+			width: inherit;
+			top: 0;
+			left: 0;
+			@include transition($slowanim);
+			height: $audio_control_size*3;
+			padding-top: $audio_control_size;
+			button {
+				width: inherit;
+				display: block;
+				text-align: center;
+				opacity: 0.8;
+				@include transition($slowanim);
+				height: $audio_control_size;
+			}
+			i {
+				color: $paleblue;
+				font-size: $audio_control_size/2;
+			}
+		}
+		.audio_on {
+			top: -$audio_control_size !important;
+			#play {
+				opacity: 0 !important;
+			}
+		}
+	}
+	.vp-welcome {
+		overflow: hidden;
+		.scroll_box {
+			width: 100%;
+			position: absolute;
+			bottom: -44px;
+			opacity: 0;
+			@include transition($slowanim);
+			.scroll-down {
+				display: block;
+				margin: 0 auto;
+				text-align: center;
+				width: 44px;
+				height: 44px;
+				i {
+					height: inherit;
+					width: 44px;
+					line-height: 44px;
+					font-size: 30px;
+				}
+				&:hover i {
+					color: cadetblue;
+				}
+			}
+		}
+		.welcome-left, .welcome-right {
+			float: left;
+			display: table;
+			@include transition($slowanim);
+			.video_box {
+				//position: absolute;
+				overflow: hidden;
+				position: fixed;
+				video {
+					bottom: 0;
+					width: 100%;
+					object-fit: cover;
+					object-position: 50% 80%;
+					position: relative;
+					&[poster] {
+						position: absolute !important;
+						top: -10% !important;
+						left: 0 !important;
+						width: 100% !important;
+						height: 120% !important;
+						object-fit: cover;
+						object-position: 50% 80%;
+					}
+				}
+				@include mq($until:sph, $and:'(orientation:portrait)') {
+					width: 100%;
+					height: 50vh;
+					video {
+						height: 50vh;
+					}
+				}
+				@include mq($from:sph, $and:'(orientation:portrait)') {
+					width: 50%;
+					height: 100vh;
+					video {
+						height: 100vh;
+						&[poster] {
+							position: absolute !important;
+							top: 0% !important;
+							left: -20 !important;
+							width: 140% !important;
+							height: 100% !important;
 						}
 					}
-					.monitor {
-						span {
-							&:after {
-								background: $white;
-							}
-						}
+				}
+				@include mq($and:'(orientation:landscape)') {
+					width: 50%;
+					height: 100vh;
+					video {
+						height: 100vh;
 					}
 				}
 			}
-			.mCS-light.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {background-color: darken($white,30%);}
-			.mCS-light.mCSB_scrollTools .mCSB_draggerRail {background-color: lighten($black,10%);}				
-			.slider-works-example, .slider-moodboard {
-				.slick-prev, .slick-next {
-					@include mq($until:sph) {
-						&:before {
-							color: rgba($white,1);
+			.welcome-vertical {
+				display: table-cell;
+				position: relative;
+				width: 100%;
+				.welcome-logo {
+					@include transition($slowanim);
+					opacity: 0;
+					.button-welcome {
+						font-family: $ff-header;
+						font-weight: 700;
+						text-transform: uppercase;
+						letter-spacing: 0.5em;
+						position: absolute;
+						padding-bottom: 16px;
+						@include transition($slowanim);
+						&:after {
+							content: '';
+							position: absolute;
+							bottom: 0;
+							@include transition($fastanim);
+							@include border-radius(1px);
 						}
 					}
-					@include mq($from:sph, $until:tb) {
-						&:before {
-							color: rgba($white,1);
-						}						
+					.logo {
+						display: inline-block;
+						position: absolute;
+						@include transition($slowanim);
 					}
-					@include mq($from:tb) {
-						&:before {
-							color: rgba($white,1);
-						}						
-					}	
 				}
 			}
-			.box-slider-moodboard {
-				.slider-moodboard {
-					background: $black;
-					.slide {
-						background: $black;
-					}
-				}
-				.hide-moodboard {
-					@include mq($until:sph) {
-						color: $black;
-					}
-					@include mq($from:sph) {
-						color: $white;
-					}
-				}
-				.title_box {
-					border-color: $black;
-					span {
-						background: $black;
-						color: $white;
-					}
-				}
-			}			
-			.vp-about {
-				.about-pic {
-					.frame {
-						span {
+		}
+		.welcome-left {
+			background: $white;
+			color: $black;
+			.welcome-vertical {
+				background: rgba($white,0.8);
+				vertical-align: bottom;
+				.welcome-logo {
+					.button-welcome {
+						&:after {
 							background: $black;
 						}
 					}
-				}			
+
+				}
 			}
-			.vp-works {
-				.box_works {
-					.box_works-body {
-						background: $black;
-						color: $white;
+		}
+		.welcome-right {
+			background: $white;
+			color: $white;
+			.welcome-vertical {
+				background: rgba($black,0.8);
+				.welcome-logo {
+					left: 0;
+					.button-welcome {
+						text-align: left;
+						&:after {
+							background: $white;
+						}
 					}
 				}
 			}
-			.box-slider-works-example {
-				background: $black;
-				color: $white;
-				.slider-works-example {
-					.slide {
-						.title_fixed {
-							.column {
-								background: $black;
-								&:after {
-									background: rgba($black,0.5);
+		}
+	}
+	@include mq($and:'(orintation:portrait)') {
+		.vp-welcome {
+			.welcome-left {
+				.welcome-vertical {
+					vertical-align: bottom;
+				}
+			}
+		}
+	}
+	@include mq($until:sph) {
+		.welcome-left, .welcome-right {
+			width: 100%;
+			height: 50vh;
+			position: absolute;
+			.welcome-logo {
+				width: 90%;
+				margin: 0 auto;
+				position: relative;
+				.logo {
+					left: 1em;
+				}
+				.button-welcome {
+					right: auto;
+					text-align: left;
+				}
+			}
+		}
+		.welcome-left {
+			top: 0;
+			.welcome-logo {
+				bottom: 0;
+				.logo {
+					background: url('../images/logo_logo-full-black.png') no-repeat;
+					bottom: 0;
+				}
+				.button-welcome {
+					bottom: 10px;
+				}
+			}
+		}
+		.welcome-right {
+			bottom: 0;
+			.welcome-logo {
+				top: 0;
+				.logo {
+					background: url('../images/logo_logo-full-white.png') no-repeat;
+					top: 0;
+				}
+				.button-welcome {
+					top: 10px;
+				}
+			}
+		}
+		@include mq($until: iP5) {
+			.welcome-left, .welcome-right {
+				.welcome-logo {
+					height: 48px;
+					width: 90%;
+					max-width: 260px;
+					.logo {
+						width: 66px;
+						height: 96px;
+						background-size: 66px 96px;
+						top: -48px;
+					}
+					.button-welcome {
+						font-size: 1.1em;
+						left: 94px;
+						width: calc(100% - 94px);
+						max-width: 200px;
+					}
+				}
+			}
+			.welcome-left {
+				.welcome-vertical {
+					padding-top: calc(50vh - 48px);
+				}
+				.welcome-logo {
+					.logo {
+						background-position: center 48px;
+						bottom: 0;
+					}
+					.button-welcome {
+						bottom: 6px;
+					}
+				}
+			}
+			.welcome-right {
+				.welcome-logo {
+					.logo {
+						background-position: center -48px;
+						top: 0;
+					}
+					.button-welcome {
+						top: 6px;
+					}
+				}
+			}
+		}
+		@include mq($from: iP5) {
+			.welcome-left, .welcome-right {
+				.welcome-logo {
+					height: 65px;
+					max-width: 320px;
+					.logo {
+						width: 90px;
+						height: 130px;
+						background-size: 90px 130px;
+						top: -65px;
+					}
+					.button-welcome {
+						font-size: 1.3em;
+						left: 120px;
+						width: calc(100% - 120px);
+						max-width: 200px;
+					}
+				}
+			}
+			.welcome-left {
+				.welcome-vertical {
+					padding-top: calc(50vh - 65px);
+				}
+				.welcome-logo {
+					.logo {
+						background-position: center 65px;
+						bottom: 0;
+					}
+					.button-welcome {
+						bottom: 10px;
+					}
+				}
+			}
+			.welcome-right {
+				.welcome-vertical {
+					padding-bottom: calc(50vh - 65px);
+				}
+				.welcome-logo {
+					.logo {
+						background-position: center -65px;
+						top: 0;
+					}
+					.button-welcome {
+						top: 10px;
+					}
+				}
+			}
+		}
+	}
+	@include mq($from:sph) {
+		.vp-welcome {
+			.welcome-left, .welcome-right {
+				width: 50%;
+				min-height: inherit;
+				position: relative;
+				.welcome-vertical {
+					vertical-align: middle;
+				}
+				.welcome-logo {
+					top: 0;
+					width: 100%;
+					position: absolute;
+					height: 100vh;
+					.button-welcome {
+						font-size: 1.4em;
+						top: calc(50% - 30px);
+					}
+					.logo {
+						width: 56px;
+						height: 160px;
+						top: calc(50% - 100px);
+					}
+				}
+			}
+			.welcome-left {
+				.welcome-logo {
+					.button-welcome {
+						text-align: right;
+						right: calc(80px - 0.5em);
+						&:after {
+							right: 0.5em;
+						}
+					}
+					.logo {
+						right: 0;
+						background: url('../images/logo_logo-full-black.png') left no-repeat;
+						background-size: 110px 160px;
+					}
+				}
+			}
+			.welcome-right {
+				.welcome-logo {
+					.button-welcome{
+						text-align: left;
+						left: 80px;
+						&:after {
+							left: 0;
+						}
+					}
+					.logo {
+						left: 0;
+						background: url('../images/logo_logo-full-white.png') right no-repeat;
+						background-size: 110px 160px;
+					}
+				}
+			}
+		}
+	}
+	@include mq($from:sph, $until:tb) {
+		.vp-welcome {
+			.welcome-left, .welcome-right {
+				height: 100vh;
+				.welcome-logo {
+					.button-welcome {
+						font-size: 1.1em;
+						width: calc(100% - 138px - 1em);
+						&:after {
+							width: 80px;
+							height: 2px;
+						}
+						&:hover {
+							&:after {
+								width: 140px;
+							}
+						}
+					}
+				}
+			}
+			.welcome-left {
+				.welcome-logo {
+					.button-welcome {
+						max-width: 170px;
+					}
+				}
+			}
+			.welcome-right {
+				.welcome-logo {
+					.button-welcome {
+						max-width: 130px;
+					}
+				}
+			}
+		}
+	}
+	@include mq($from:tb) {
+		.vp-welcome {
+			.welcome-left, .welcome-right {
+				height: 100vh;
+				.welcome-logo {
+					height: 100vh;
+				}
+			}
+		}
+	}
+	@include mq($from:tb, $until:dsk-S) {
+		.vp-welcome {
+			.welcome-left, .welcome-right {
+				.welcome-logo {
+					.button-welcome {
+						width: calc(100% - 80px - 1em);
+						&:after {
+							height: 3px;
+							width: 80px;
+						}
+						&:hover {
+							&:after {
+								width: 140px;
+							}
+						}
+					}
+				}
+			}
+			.welcome-left {
+				.welcome-logo {
+					.button-welcome {
+						max-width: 210px;
+					}
+				}
+			}
+			.welcome-right {
+				.welcome-logo {
+					.button-welcome {
+						max-width: 180px;
+					}
+				}
+			}
+		}
+	}
+	@include mq($from: dsk-S, $until:dsk-M) {
+		.vp-welcome {
+			.welcome-left, .welcome-right {
+				.welcome-logo {
+					.button-welcome {
+						width: calc(100% - 80px - 1em);
+						&:after {
+							height: 3px;
+							width: 100px;
+						}
+						&:hover {
+							&:after {
+								width: 200px;
+							}
+						}
+					}
+				}
+			}
+			.welcome-left {
+				.welcome-logo {
+					.button-welcome {
+						max-width: 370px;
+					}
+				}
+			}
+			.welcome-right {
+				.welcome-logo {
+					.button-welcome {
+						max-width: 276px;
+					}
+				}
+			}
+		}
+	}
+	@include mq($from:dsk-M, $until:dsk-XL) {
+		.vp-welcome {
+			.welcome-right, .welcome-left {
+				.welcome-logo {
+					.button-welcome {
+						font-size: 1.1em;
+						width: calc(100% - 120px - 1em);
+						&:after {
+							height: 3px;
+							width: 100px;
+						}
+						&:hover {
+							&:after {
+								width: 200px;
+							}
+						}
+					}
+				}
+			}
+			.welcome-left {
+				.welcome-logo {
+					.button-welcome {
+						max-width: 400px;
+					}
+				}
+			}
+			.welcome-right {
+				.welcome-logo {
+					.button-welcome {
+						max-width: 300px;
+					}
+				}
+			}
+		}
+	}
+	@include mq($until:dsk-XL) {
+		.scroll_box {
+			bottom: -44px;
+			.scroll-down {
+				width: 44px;
+				height: 44px;
+				i {
+					width: 44px;
+					line-height: 44px;
+					font-size: 30px;
+				}
+			}
+		}
+	}
+	@include mq($from:dsk-XL) {
+		.vp-welcome {
+			.welcome-right, .welcome-left {
+				.welcome-logo {
+					.button-welcome {
+						font-size: 2.2em;
+						width: calc(100% - 240px - 2em);
+						&:after {
+							height: 6px;
+							width: 200px;
+						}
+						&:hover {
+							&:after {
+								width: 400px;
+							}
+						}
+					}
+					.logo {
+						width: 112px;
+						height: 320px;
+					}
+				}
+			}
+			.welcome-left {
+				.welcome-logo {
+					.button-welcome {
+						max-width: 800px;
+						text-align: right;
+						right: calc(160px - 0.5em);
+					}
+					.logo {
+						right: 0;
+						background: url('../images/logo_logo-full-black.png') left no-repeat;
+						background-size: 220px 320px;
+					}
+				}
+			}
+			.welcome-right {
+				.welcome-logo {
+					.button-welcome {
+						max-width: 600px;
+						text-align: left;
+						left: 160px;
+					}
+					.logo {
+						left: 0;
+						background: url('../images/logo_logo-full-white.png') right no-repeat;
+						background-size: 220px 320px;
+					}
+				}
+			}
+			.scroll_box {
+				bottom: -88px;
+				.scroll-down {
+					width: 88px;
+					height: 88px;
+					i {
+						width: 88px;
+						line-height: 88px;
+						font-size: 60px;
+					}
+				}
+			}
+		}
+	}
+}
+//IE6, IE7, IE8
+@media \0screen\,screen\9 {
+	.wrapper {
+		.vp-welcome {
+			.welcome-left, .welcome-right {
+				.video_box {
+					video {
+						@include mq($and:'(orientation:landscape)') {
+							@include mq($from: sph, $until:dsk-S) {
+								$video-w: 140%;
+								$video-l: -20%;
+								width: $video-w !important;
+								left: $video-l !important;
+								&[poster] {
+									width: $video-w !important;
+									left: $video-l !important;
+								}
+								@media screen and (min-height: 768px) {
+									$video-w: 170%;
+									$video-l: -35%;
+									width: $video-w !important;
+									left: $video-l !important;
+									$video-h: 128%;
+									$video-t: -14%;
+									&[poster] {
+										width: $video-w !important;
+										left: $video-l !important;
+										height: $video-h !important;
+										top: $video-t !important;
+									}
+								}
+							}
+							@include mq($from: dsk-S, $until:dsk-M) {
+								$video-w: 140%;
+								$video-l: -20%;
+								width: $video-w !important;
+								left: $video-l !important;
+								&[poster] {
+									width: $video-w !important;
+									left: $video-l !important;
+								}
+							}
+							@include mq($from: dsk-M) {
+								$video-w: 120%;
+								$video-l: -10%;
+								width: $video-w !important;
+								left: $video-l !important;
+								&[poster] {
+									width: $video-w !important;
+									left: $video-l !important;
 								}
 							}
 						}
 					}
 				}
-				ul.swatches {
-					li {
-						.swatch-main {
-							border-color: rgba($white,0.3);
+			}
+		}
+	}
+}
+//IE9+
+@media screen and (min-width:0\0) and (min-resolution: +72dpi) {
+	.wrapper {
+		.vp-welcome {
+			.welcome-left, .welcome-right {
+				.video_box {
+					video {
+						@include mq($and:'(orientation:landscape)') {
+							@include mq($from: sph, $until:dsk-S) {
+								$video-w: 140%;
+								$video-l: -20%;
+								width: $video-w !important;
+								left: $video-l !important;
+								&[poster] {
+									width: $video-w !important;
+									left: $video-l !important;
+								}
+								@media screen and (min-height: 768px) {
+									$video-w: 170%;
+									$video-l: -35%;
+									width: $video-w !important;
+									left: $video-l !important;
+									$video-h: 128%;
+									$video-t: -14%;
+									&[poster] {
+										width: $video-w !important;
+										left: $video-l !important;
+										height: $video-h !important;
+										top: $video-t !important;
+									}
+								}
+							}
+							@include mq($from: dsk-S, $until:dsk-M) {
+								$video-w: 140%;
+								$video-l: -20%;
+								width: $video-w !important;
+								left: $video-l !important;
+								&[poster] {
+									width: $video-w !important;
+									left: $video-l !important;
+								}
+							}
+							@include mq($from: dsk-M) {
+								$video-w: 120%;
+								$video-l: -10%;
+								width: $video-w !important;
+								left: $video-l !important;
+								&[poster] {
+									width: $video-w !important;
+									left: $video-l !important;
+								}
+							}
 						}
 					}
 				}
 			}
-			.vp-skills {
-			}
-			.sec_number {
-				&:before {
-					color: lighten($black,5%);
-				}
-			}
-			p, ul.bullet, ul.bullet-inline, h4 {
-				a {
-					color: $palegreen;
-					&:hover {
-						color: $paleblue;
+		}
+	}
+}
+//IE12+, EDGE
+@supports (-ms-ime-align:auto) {
+	.wrapper {
+		.vp-welcome {
+			.welcome-left, .welcome-right {
+				.video_box {
+					video {
+						@include mq($and:'(orientation:landscape)') {
+							@include mq($from: sph, $until:dsk-S) {
+								$video-w: 140%;
+								$video-l: -20%;
+								width: $video-w !important;
+								left: $video-l !important;
+								&[poster] {
+									width: $video-w !important;
+									left: $video-l !important;
+								}
+								@media screen and (min-height: 768px) {
+									$video-w: 170%;
+									$video-l: -35%;
+									width: $video-w !important;
+									left: $video-l !important;
+									$video-h: 128%;
+									$video-t: -14%;
+									&[poster] {
+										width: $video-w !important;
+										left: $video-l !important;
+										height: $video-h !important;
+										top: $video-t !important;
+									}
+								}
+							}
+							@include mq($from: dsk-S, $until:dsk-M) {
+								$video-w: 140%;
+								$video-l: -20%;
+								width: $video-w !important;
+								left: $video-l !important;
+								&[poster] {
+									width: $video-w !important;
+									left: $video-l !important;
+								}
+							}
+							@include mq($from: dsk-M) {
+								$video-w: 120%;
+								$video-l: -10%;
+								width: $video-w !important;
+								left: $video-l !important;
+								&[poster] {
+									width: $video-w !important;
+									left: $video-l !important;
+								}
+							}
+						}
 					}
 				}
 			}
-			.vp-thankyou {
-				background: rgba($black,0.7);
-				color: $white;
-			}								
 		}
-	//
+	}
+}
+.v-beginning, .v-end {
+	.welcome-vertical {
+		vertical-align: middle !important;
+	}
+}
+.v-beginning {
+	.vp-welcome {
+		.welcome-right {
+			* {display: none !important;}
+		}
+		.welcome-left {
+			width: 100%;
+			.video_box {
+				width: 100% !important;
+				@include mq($and:'(orientation:portrait)') {
+					height: 100vh;
+					video {
+						height: 100vh;
+						object-fit: contain;
+						object-position: 50% 100%;
+					}
+				}
+			}
+			.welcome-vertical {
+				.welcome-logo {
+					.logo {
+						right: 0;
+					}
+					.button-welcome {
+						right: calc(140px - 0.5em);
+						&:after {
+							width: calc(100% - 0.5em) !important;
+							max-width: 220px;
+						}
+					}
+				}
+			}
+		}
+		.scroll_box {
+			opacity: 1 !important;
+			bottom: 60px !important;
+			color: $black;
+		}
+	}
+	@include mq($until:sph) {
+		.vp-welcome {
+			.welcome-vertical {
+				padding-top: 0 !important;
+			}
+			.welcome-right {
+				height: 0 !important;
+			}
+			.welcome-left {
+				height: 100vh !important;
+				.logo {
+					background-position: center 0px !important;
+				}
+			}
+		}
+		@include mq($until: iP5) {
+			.welcome-left {
+				.welcome-logo {
+					.logo {
+						width: 66px;
+						height: 96px !important;
+						top: -40px !important;
+					}
+				}
+			}
+		}
+		@include mq($from: iP5) {
+			.welcome-left {
+				.welcome-logo {
+					.logo {
+						width: 90px;
+						height: 130px !important;
+						top: -40px !important;
+					}
+				}
+			}
+		}
+	}
+	@include mq($from:sph) {
+		.vp-welcome {
+			.welcome-right {
+				width: 0 !important;
+			}
+			.welcome-left {
+				.welcome-vertical {
+					.welcome-logo {
+						.logo {
+							width: 110px;
+						}
+					}
+				}
+			}
+		}
+	}
+	@include mq($from:sph, $until:tb) {
+		.vp-welcome {
+			@include mq($and: '(orientation: porttrait)') {
+				.welcome-vertical {
+					padding-top: 0 !important;
+				}
+			}
+			.welcome-left {
+				.welcome-logo {
+					right: calc(50% - 230px) !important;
+					.button-welcome {
+						width: calc(100% - 118px - 1em);
+						max-width: 500px !important;
+					}
+				}
+			}
+		}
+	}
+	@include mq($from:tb, $until:dsk-M) {
+		.vp-welcome {
+			.welcome-left {
+				.welcome-logo {
+					right: calc(50% - 250px) !important;
+					.button-welcome {
+						max-width: 364px !important;
+					}
+				}
+			}
+		}
+	}
+	@include mq($from:dsk-M, $until:dsk-XL) {
+		.vp-welcome {
+			.welcome-left {
+				.welcome-logo {
+					right: calc(50% - 260px) !important;
+					.button-welcome {
+						max-width: 364px !important;
+					}
+				}
+			}
+		}
+	}
+	@include mq($from:dsk-XL) {
+		.vp-welcome {
+			.welcome-left {
+				.welcome-logo {
+					right: calc(50% - 460px) !important;
+					.button-welcome {
+						max-width: 364px*2 !important;
+						right: calc(280px - 0.5em) !important;
+					}
+					.logo {
+						width: 220px !important;
+					}
+				}
+			}
+		}
+	}
+}
+.v-end {
+	.vp-welcome {
+		.welcome-left {
+			* {display: none !important;}
+		}
+		.welcome-right {
+			width: 100%;
+			.video_box {
+				width: 100% !important;
+				@include mq($and:'(orientation:portrait)') {
+					height: 100vh;
+					video {
+						height: 100vh;
+						object-fit: contain;
+						object-position: 50% 100%;
+					}
+				}
+				.welcome-logo {
+					.logo {
+						left: 0;
+					}
+					.button-welcome {
+						&:after {
+							width: calc(100% - 0.5em) !important;
+							max-width: 220px;
+						}
+					}
+				}
+			}
+		}
+		.scroll_box {
+			opacity: 1 !important;
+			bottom: 60px !important;
+			color: $white;
+		}
+	}
+	@include mq($until:sph) {
+		.vp-welcome {
+			.welcome-vertical {
+				padding-bottom: 0 !important;
+			}
+			.welcome-left {
+				height: 0 !important;
+			}
+			.welcome-right {
+				height: 100vh !important;
+				.logo {
+					left: 1em !important;
+					background-position: center 0px !important;
+				}
+			}
+		}
+		@include mq($until: iP5) {
+			.welcome-right {
+				.welcome-vertical {
+					padding-bottom: calc(50vh - 48px);
+				}
+				.welcome-logo {
+					.logo {
+						width: 66px;
+						height: 96px !important;
+						top: -40px !important;
+					}
+				}
+			}
+		}
+		@include mq($from: iP5) {
+			.welcome-right {
+				.welcome-vertical {
+					padding-bottom: calc(50vh - 48px);
+				}
+				.welcome-logo {
+					.logo {
+						width: 90px;
+						height: 130px !important;
+						top: -40px !important;
+					}
+				}
+			}
+		}
+	}
+	@include mq($from:sph) {
+		.vp-welcome {
+			.welcome-left {
+				width: 0 !important;
+			}
+			.welcome-right {
+				.welcome-vertical {
+					.welcome-logo {
+						.logo {
+							width: 110px;
+						}
+						.button-welcome {
+							left: calc(140px - 0.5em);
+						}
+					}
+				}
+			}
+		}
+	}
+	@include mq($from:sph, $until:tb) {
+		.vp-welcome {
+			@include mq($and: '(orientation: porttrait)') {
+				.welcome-vertical {
+					padding-bottom: 0 !important;
+				}
+			}
+			.welcome-right {
+				.welcome-logo {
+					left: calc(50% - 150px) !important;
+					.button-welcome {
+						width: calc(100% - 118px - 1em);
+					}
+				}
+			}
+		}
+	}
+	@include mq($from:tb, $until:dsk-M) {
+		.vp-welcome {
+			.welcome-right {
+				.welcome-logo {
+					left: calc(50% - 180px) !important;
+				}
+			}
+		}
+	}
+	@include mq($from:dsk-M, $until:dsk-XL) {
+		.vp-welcome {
+			.welcome-right {
+				.welcome-logo {
+					left: calc(50% - 200px) !important;
+				}
+			}
+		}
+	}
+	@include mq($from:dsk-XL) {
+		.vp-welcome {
+			.welcome-right {
+				.welcome-logo {
+					left: calc(50% - 400px) !important;
+					.logo {
+						width: 220px !important;
+					}
+					.button-welcome {
+						left: calc(280px - 0.5em) !important;
+					}
+				}
+			}
+		}
+	}
+}
+
+//2.2.2.Moodboard
+.vp-moodboard {
+	min-height: auto;
+}
+.vp-moodboard, .box-slider-moodboard {
+	.title_box {
+		@include background($gradient_frame-1);
+		@include transition($slowanim);
+		transform: scale(0.8);
+		filter: none !important;
+		span {
+			display: block;
+			width: 100%;
+			height: 100%;
+			h2 {
+				letter-spacing: 0.2em;
+				margin: 0;
+			}
+		}
+	}
+	.slide:hover {
+		.title_box {
+			transform: scale(1);
+		}
+	}
+	.mb-text {
+		height: 100%;
+		@include mq($until:sph) {
+			padding: 0 2em 2em;
+		}
+		@include mq($from:sph) {
+			padding: 3em;
+		}
+	}
+	.mb-text-main {
+		@extend .mb-text;
+		padding: 2em;
+		p, h1 {
+			position: relative;
+		}
+		@include mq($until:dsk-XL) {
+			padding-top: 60px;
+		}
+		@include mq($from:dsk-XL) {
+			padding-top: 120px;
+		}
+	}
+
+	.mb-architecture {background: url('../images/mb-architecture.jpg') center no-repeat;}
+	.mb-architecture {background: url('../images/mb-architecture.jpg') center no-repeat;}
+	.mb-plants {background: url('../images/mb-plants.jpg') center no-repeat;}
+	.mb-yoga {background: url('../images/mb-yoga.jpg') center no-repeat;}
+	.mb-eclectism {background: url('../images/mb-eclectism.jpg') center no-repeat;}
+	.mb-art {background: url('../images/mb-art.jpg') center no-repeat;}
+	.mb-landscapearch {background: url('../images/mb-landscapearch.jpg') center no-repeat;}
+	.mb-innovations {background: url('../images/mb-innovations.jpg') center no-repeat;}
+	.mb-climbing {background: url('../images/mb-climbing.jpg') center no-repeat;}
+	.mb {
+		width: 100%;
+		background-size: cover;
+		.seemore {
+			i.info {
+				font-weight: 900;
+				color: $white;
+				font-style: normal;
+				font-size: 20px;
+				width: 44px;
+				height: 44px;
+				line-height: 36px;
+				text-align: center;
+				border: 4px solid $white;
+				display: inline-block;
+				@include border-radius(100%);
+			}
+		}
+		@include mq($until:sph) {
+			min-height: 180px;
+			height: 30vh;
+		};
+		@include mq($from:sph, $until:tb) {
+			min-height: 300px;
+		};
+		@include mq($from:tb, $until:dsk-S) {
+			min-height: 200px;
+		};
+		@include mq($from:dsk-S, $until:dsk-M) {
+			min-height: 220px;
+		};
+		@include mq($from:dsk-M, $until:dsk-L) {
+			min-height: 300px;
+		};
+		@include mq($from:dsk-L, $until:dsk-XL) {
+			min-height: 330px;
+		};
+		@include mq($from:dsk-XL) {
+			min-height: 470px;
+		};
+	}
+	.mb-text, .mb-architecture, .mb-plants, .mb-yoga, .mb-eclectism, .mb-art, .mb-landscapearch, .mb-innovations, .mb-climbing {
+		@extend .mb;
+	}
+	.moodboard-text {
+		@include mq($until:sph) {
+			min-height: 230px;
+			.mb-text-main {
+				height: auto !important;
+			}
+		};
+		@include mq($from:sph, $until:tb) {
+			min-height: 300px;
+		};
+		@include mq($from:tb, $until:dsk-S) {
+			height: 230px;
+		};
+		@include mq($from:dsk-S, $until:dsk-M) {
+			height: 230px;
+		};
+		@include mq($from:dsk-M, $until:dsk-L) {
+			height: 300px;
+		};
+		@include mq($from:dsk-L, $until:dsk-XL) {
+			height: 330px;
+		};
+		@include mq($from:dsk-XL) {
+			height: 470px;
+		};
+	}
+}
+//IE
+//IE6, IE7, IE8
+@media \0screen\,screen\9 {
+	.vp-moodboard, .box-slider-moodboard {
+		.title_box {
+			filter: none !important;
+			background-image: -ms-linear-gradient(left top, left bottom, $palegreen 0%, $paleblue 100%);
+		}
+	}
+}
+//IE9+
+@media screen and (min-width:0\0) and (min-resolution: +72dpi) {
+	.vp-moodboard, .box-slider-moodboard {
+		.title_box {
+			filter: none !important;
+			background-image: -ms-linear-gradient(left top, left bottom, $palegreen 0%, $paleblue 100%);
+		}
+	}
+}
+.box-slider-moodboard {
+	//position: fixed;
+	//top: 0;
+	//right: -100%;
+	width: 100%;
+	min-height: 100vh;
+	z-index: 20;
+	@include transition(all 1s ease);
+	.slider-moodboard {
+		width: 100%;
+		.slide {
+			width: 100%;
+			height: 100vh;
+			.mb_slidepic {
+				width: 100%;
+			}
+		}
+		.slick-prev, .slick-next {
+			position: absolute;
+			bottom: 0;
+			z-index: 10;
+			@include transition(all 0.4s ease);
+			&:before {
+				opacity: 1;
+				content: '';
+				display: block;
+				width: inherit;
+				font-family: 'FontAwesome';
+				@include transition(all 0.4s ease);
+			}
+		}
+		.slick-prev {
+			&:before {
+				content: '\f104';
+			}
+		}
+		.slick-next {
+			&:before {
+				content: '\f105';
+			}
+		}
+		@include mq($until:sph) {
+			.slick-prev, .slick-next {
+				width: 44px;
+				height: 44px;
+				top: calc(25vh + 20px);
+				&:before {
+					width: inherit;
+					height: inherit;
+					line-height: 44px;
+				}
+			}
+			.slick-prev  {
+				left: 0;
+			}
+			.slick-next  {
+				right: 0;
+			}
+		}
+		@include mq($from:sph, $until:tb) {
+			.slick-prev, .slick-next {
+				width: 50px;
+				height: 30px;
+				right: 0;
+				&:before {
+					height: inherit;
+					line-height: 30px;
+				}
+			}
+			.slick-prev  {
+				bottom: 30px;
+			}
+		}
+		@include mq($from:tb) {
+			.slick-prev, .slick-next {
+				width: 56px;
+				height: 40px;
+				right: 0;
+				&:before {
+					height: inherit;
+					line-height: 40px;
+				}
+			}
+			.slick-prev  {
+				bottom: 40px;
+			}
+		}
+	}
+	@include mq($until:sph) {
+		.title_box {
+			width: 120px;
+			height: 120px;
+			border: 6px solid;
+			padding: 4px;
+			margin: -60px auto 0;
+			span {
+				padding: 0.4em 1em 1em 1.1em;
+				h2 {
+					font-size: 1.6em;
+					line-height: 1.4;
+				}
+			}
+		}
+		.mb-text-main {
+			height: auto;
+			padding: $p_s-s;
+		}
+		.slider-moodboard {
+			.slide {
+				background: $white;
+				.mb_slidepic {
+					height: 25vh;
+					min-height: initial;
+				}
+				.content {
+					padding: $p_s-s $p_s-s $p_s-s $p_s-s;
+					padding-bottom: 80px;
+					height: 75vh;
+					height: calc(76vh - 80px);
+					.mCSB_container {
+						margin-right: 0 !important;
+					}
+				}
+			}
+		}
+		.slide-architecture .title_box h2 {font-size: 1.5em; line-height: 1.4; padding: 0.2em 0 0 0.2em;}
+		.slide-plants .title_box h2 {font-size: 1.9em; line-height: 1.6; padding: 0.2em 0 0 0.3em;}
+		.slide-yoga .title_box h2 {font-size: 2.0em; line-height: 1.4; padding: 0.4em 0 0 0.5em; letter-spacing: 0.3em;}
+		.slide-eclectism .title_box h2 {font-size: 1.4em; line-height: 1.5; padding: 0.2em 0 0 0.1em; letter-spacing: 0.3em;}
+		.slide-art .title_box h2 {font-size: 2.0em; line-height: 1.4; padding: 0.4em 0 0 0.5em; letter-spacing: 0.3em;}
+		.slide-landscapearch .title_box h2 {font-size: 1.0em; line-height: 1.6; padding: 0.3em 0 0 0.2em;}
+		.slide-innovations .title_box h2 {font-size: 1.2em; line-height: 1.7; padding: 0.4em 0 0 0.1em;}
+		.slide-climbing .title_box h2 {font-size: 1.5em; line-height: 1.4; padding: 0.2em 0 0 0.4em; letter-spacing: 0.3em;}
+	}
+	@include mq($from:sph) {
+		.content {
+			padding: $p_s-l;
+			height: 100vh;
+		}
+		.mb-text-main {
+			height: 300px;
+			padding: $p_s-l;
+		}
+		.slider-moodboard {
+			.slide {
+				.mb_slidepic {
+					height: 100vh;
+				}
+			}
+		}
+	}
+	@include mq($from:sph, $until:tb) {
+		.title_box {
+			width: 180px;
+			height: 180px;
+			margin-left: -90px;
+			border: 8px solid;
+			padding: 6px;
+			margin-top: 26vh;
+			span {
+				padding: 1.2em 1.8em 1.8em 2.2em;
+			}
+		}
+		.slide-architecture .title_box h2 {font-size: 1.9em; line-height: 1.6; padding: 0.1em 0 0 0;}
+		.slide-plants .title_box h2 {font-size: 2.8em; line-height: 1.6; padding: 0.1em 0 0 0.1em;}
+		.slide-yoga .title_box h2 {font-size: 3.0em; line-height: 1.4; padding: 0.2em 0 0 0.4em; letter-spacing: 0.3em;}
+		.slide-eclectism .title_box h2 {font-size: 2.0em; line-height: 1.6; padding: 0; letter-spacing: 0.3em;}
+		.slide-art .title_box h2 {font-size: 3.0em; line-height: 1.4; padding: 0.2em 0 0 0.4em; letter-spacing: 0.3em;}
+		.slide-landscapearch .title_box h2 {font-size: 1.3em; line-height: 1.6; padding: 0.3em 0 0 0; letter-spacing: 0.25em;}
+		.slide-innovations .title_box h2 {font-size: 1.7em; line-height: 1.7; padding: 0.3em 0 0 0;}
+		.slide-climbing .title_box h2 {font-size: 2.0em; line-height: 1.5; padding: 0.2em 0 0 0.5em; letter-spacing: 0.3em;}
+	}
+	@include mq($from:tb, $until:dsk-S) {
+		.title_box {
+			width: 240px;
+			height: 240px;
+			margin-left: -120px;
+			border: 10px solid;
+			padding: 6px;
+			margin-top: 30vh;
+			span {
+				padding: 1.4em 2em 2em 2.4em;
+			}
+		}
+		.slide-architecture .title_box h2 {font-size: 2.8em; line-height: 1.6;}
+		.slide-plants .title_box h2 {font-size: 4.0em; line-height: 1.6; padding: 0.1em 0 0 0.2em;}
+		.slide-yoga .title_box h2 {font-size: 5.0em; line-height: 1.2;  padding: 0.2em 0 0 0.4em;}
+		.slide-eclectism .title_box h2 {font-size: 2.6em; line-height: 1.7; padding: 0 0 0 0.3em; letter-spacing: 0.3em;}
+		.slide-art .title_box h2 {font-size: 5.0em; line-height: 1.2;  padding: 0.2em 0 0 0.4em;}
+		.slide-landscapearch .title_box h2 {font-size: 2.1em; line-height: 1.6; padding: 0 0 0 0.1em;}
+		.slide-innovations .title_box h2 {font-size: 2.6em; line-height: 1.7;}
+		.slide-climbing .title_box h2 {font-size: 2.8em; line-height: 1.5; padding: 0.2em 0 0 0.7em; letter-spacing: 0.3em;}
+	}
+	@include mq($from:dsk-S, $until:dsk-M) {
+		.title_box {
+			width: 240px;
+			height: 240px;
+			margin-left: -120px;
+			border: 10px solid;
+			padding: 6px;
+			margin-top: 30vh;
+			span {
+				padding: 1.4em 2em 2em 2.4em;
+			}
+		}
+		.slide-architecture .title_box h2 {font-size: 2.7em; line-height: 1.6; padding: 0.1em 0 0 0.2em;}
+		.slide-plants .title_box h2 {font-size: 4.0em; line-height: 1.6; padding: 0.1em 0 0 0.2em;}
+		.slide-yoga .title_box h2 {font-size: 5.0em; line-height: 1.2; padding: 0.2em 0 0 0.4em;}
+		.slide-eclectism .title_box h2 {font-size: 2.6em; line-height: 1.7; padding: 0 0 0 0.2em; letter-spacing: 0.3em;}
+		.slide-art .title_box h2 {font-size: 5.0em; line-height: 1.2; padding: 0.2em 0 0 0.4em;}
+		.slide-landscapearch .title_box h2 {font-size: 2.1em; line-height: 1.5; padding: 0.1em 0 0 0.1em;}
+		.slide-innovations .title_box h2 {font-size: 2.6em; line-height: 1.7; padding: 0.1em 0 0 0;}
+		.slide-climbing .title_box h2 {font-size: 2.8em; line-height: 1.5; padding: 0.2em 0 0 0.7em; letter-spacing: 0.3em;}
+	}
+	@include mq($from:dsk-M, $until:dsk-XL) {
+		.title_box {
+			width: 240px;
+			height: 240px;
+			margin-left: -120px;
+			border: 10px solid;
+			padding: 6px;
+			margin-top: 30vh;
+			span {
+				padding: 1.4em 2em 2em 2.4em;
+			}
+		}
+		.slide-architecture .title_box h2 {font-size: 2.2em; line-height: 1.6;}
+		.slide-plants .title_box h2 {font-size: 3.0em; line-height: 1.6; padding: 0.1em 0 0 0.2em;}
+		.slide-yoga .title_box h2 {font-size: 4.0em; line-height: 1.3; padding-left: 0.3em;}
+		.slide-eclectism .title_box h2 {font-size: 2.1em; line-height: 1.7; padding: 0 0 0 0.2em; letter-spacing: 0.3em;}
+		.slide-art .title_box h2 {font-size: 4.0em; line-height: 1.3; padding-left: 0.3em;}
+		.slide-landscapearch .title_box h2 {font-size: 1.7em; line-height: 1.5;}
+		.slide-innovations .title_box h2 {font-size: 1.9em; line-height: 1.7; padding: 0.1em 0 0 0.1em;}
+		.slide-climbing .title_box h2 {font-size: 2.4em; line-height: 1.3; padding: 0.3em 0 0 0.5em; letter-spacing: 0.3em;}
+	}
+	@include mq($from:dsk-XL) {
+		.title_box {
+			width: 340px;
+			height: 340px;
+			margin-left: -170px;
+			border: 10px solid;
+			padding: 6px;
+			margin-top: 30vh;
+			span {
+				padding: 1.4em 2em 2em 2.4em;
+			}
+		}
+		.slide-architecture .title_box h2 {font-size: 1.9em; line-height: 1.6; padding: 0.1em 0 0 0;}
+		.slide-plants .title_box h2 {font-size: 2.8em; line-height: 1.6; padding: 0.1em 0 0 0.1em;}
+		.slide-yoga .title_box h2 {font-size: 3.0em; line-height: 1.4; padding: 0.2em 0 0 0.4em; letter-spacing: 0.3em;}
+		.slide-eclectism .title_box h2 {font-size: 2.0em; line-height: 1.6; padding: 0; letter-spacing: 0.3em;}
+		.slide-art .title_box h2 {font-size: 3.0em; line-height: 1.4; padding: 0.2em 0 0 0.4em; letter-spacing: 0.3em;}
+		.slide-landscapearch .title_box h2 {font-size: 1.3em; line-height: 1.6; padding: 0.3em 0 0 0; letter-spacing: 0.25em;}
+		.slide-innovations .title_box h2 {font-size: 1.7em; line-height: 1.7; padding: 0.3em 0 0 0;}
+		.slide-climbing .title_box h2 {font-size: 2.0em; line-height: 1.5; padding: 0.2em 0 0 0.5em; letter-spacing: 0.3em;}
+	}
+}
+.slider-on {
+	right: 0 !important;
+}
+
+//2.2.3.About me
+.vp-about {
+	.about-pic {
+		margin: 6em 0;
+		position: relative;
+		.frame {
+			padding: 8px;
+			@include background($gradient_frame-0);
+			position: absolute;
+			width: 80%;
+			height: 100%;
+			margin: 0 10%;
+			span {
+				background: $white;
+				width: 100%;
+				height: 100%;
+				display: block;
+			}
+			&:before {
+				@include background($gradient_frame-1);
+				content: '';
+				display: block;
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				opacity: 0;
+				z-index: -10;
+				@include transition($slowanim);
+			}
+		}
+		img {
+			position: relative;
+			margin: 3em 0;
+			width: 100%;
+		}
+		&:hover {
+			.frame:before {
+				opacity: 1;
+			}
+		}
+	}
+	.about4, .about5 {
+		margin: 2em 0 3em;
+	}
+	@include mq($until:sph) {
+		padding: $p_s-s;
+	}
+	@include mq($from:sph) {
+		padding: $p_s-l;
+		padding-bottom: $p_s-l*2;
+	}
+	@include mq($until:dsk-XL) {
+		padding-top: 60px;
+	}
+	@include mq($from:dsk-XL) {
+		padding-top: 120px;
+	}
+}
+
+//2.2.3.Works
+.vp-works {
+	$padding-bw: 1.6em;
+	.box_works {
+		padding: 4px;
+		width: 80%;
+		margin: 0 auto 6em;
+		@include background($gradient_frame-0);
+		position: relative;
+		z-index: 10;
+		&:before {
+			@include background($gradient_frame-1);
+			content: '';
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: 0;
+			z-index: -10;
+			@include transition($slowanim);
+		}
+		&:hover {
+			&:before {
+				opacity: 1;
+			}
+		}
+		.box_works-body {
+			padding: $padding-bw;
+			position: relative;
+			background: $black;
+			color: $white;
+		}
+		.details {
+			ul.controls {
+				li {
+					margin-bottom: 1em;
+				}
+			}
+		}
+		img {
+			position: relative;
+			margin-top: -4em;
+			width: calc(100% + 4em);
+			max-width: none;
+		}
+		h2 {
+			font-size: 1.8em;
+		}
+		h4 {
+			font-weight: 300;
+		}
+		@include mq($until: mb) {
+			width: 90%;
+			.small-5, .small-7 {
+				width: 100%;
+			}
+			img {
+				margin-top: 0;
+				margin-bottom: $padding-bw;
+			}
+		}
+		@include mq($from: dsk-M, $until: dsk-L) {
+		}
+		@include mq($from: dsk-L, $until: dsk-XL) {
+		}
+		@include mq($from: dsk-XL) {
+		}
+	}
+	.box_works-top-right {
+		@extend .box_works;
+		@include mq($until: mb) {
+			img {
+				margin-top: 0;
+			}
+		}
+		@include mq($from: mb) {
+			img {
+				margin-bottom: $padding-bw;
+			}
+		}
+	}
+	.box_works-top-left {
+		@extend .box_works;
+		img {
+			margin-left: -4em;
+		}
+		@include mq($until: mb) {
+			img {
+				margin-top: 0;
+			}
+		}
+		@include mq($from: mb) {
+			img {
+				margin-bottom: $padding-bw;
+			}
+		}
+	}
+	.box_works-right-top {
+		@extend .box_works;
+		.details {
+			text-align: right;
+			padding-right: $padding-bw;
+			ul.controls {
+				margin-top: $padding-bw;
+				li {
+					display: block;
+					margin-right: 0;
+					margin-left: $padding-bw;
+					margin: 0 0 1em 0;
+				}
+				button.button:after, a.button:after {
+					left: initial;
+					right: 0;
+				}
+			}
+		}
+		img {
+			margin-right: -5em;
+		}
+		@include mq($until: mb) {
+			img {
+				margin-top: $padding-bw;
+				margin-bottom: 0;
+			}
+		}
+	}
+	.box_works-left-top {
+		@extend .box_works;
+		.details {
+			text-align: left;
+			padding-left: $padding-bw;
+			ul.controls {
+				margin-top: $padding-bw;
+				li {
+					margin-right: 0;
+					margin-left: $padding-bw;
+					margin: 0 0 1em 0;
+				}
+			}
+		}
+		img {
+			margin-left: -4em;
+		}
+		@include mq($until: mb) {
+			img {
+				margin-top: 0;
+			}
+		}
+		@include mq($from: mb) {
+			img {
+				margin-top: -4em;
+			}
+		}
+	}
+	.box_works-left-circle {
+		@extend .box_works;
+		.details {
+			text-align: left;
+			padding-left: $padding-bw;
+			ul.controls {
+				margin-top: $padding-bw;
+				li {
+					display: block;
+					margin-right: 0;
+					margin-left: $padding-bw;
+					margin: 0 0 1em 0;
+				}
+			}
+		}
+		img {
+			margin-left: -5em;
+			margin-top: -6em;
+		}
+	}
+	@include mq($until:sph) {
+		padding: $p_s-s;
+	}
+	@include mq($from:sph, $until:tb) {
+		padding: $p_s-l;
+	}
+	@include mq($from:tb) {
+		padding: $p_s-l;
+	}
+	@include mq($until:dsk-XL) {
+		padding-top: 60px;
+	}
+	@include mq($from:dsk-XL) {
+		padding-top: 120px;
+	}
+}
+//2.2.3.1
+.box-slider-works-example {
+	width: 100%;
+	min-height: 100vh;
+	//position: fixed;
+	//top: 0;
+	//right: -100%;
+	z-index: 20;
+	@include transition(all 2s ease);
+	.slider-works-example {
+		width: 100%;
+		min-height: calc(100vh - 1em - 50px);
+		.slide {
+			width: 100%;
+			position: relative;
+			.title_fixed {
+				width: calc(100% - 30px);
+				margin-right: 30px;
+				position: relative;
+				top: 0;
+				right: -100%;
+				z-index: 10;
+				pointer-events: none;
+				@include transition(all 0s ease);
+				.column {
+					padding-bottom: 1em;
+					padding-right: 30px;
+					position: relative;
+					&:after {
+						width: 100%;
+						height: 20px;
+						position: absolute;
+						bottom: -20px;
+						z-index: 10;
+						content: '';
+						display: block;
+					}
+				}
+			}
+			.content-works {
+				width: 100%;
+				position: relative;
+				.panel-left {
+					img {
+						margin-bottom: 1em;
+					}
+				}
+				.box-padding h2 {
+					margin-bottom: 2.4em;
+				}
+				h4.title {
+					margin-bottom: 3.4em;
+					font-weight: 300;
+				}
+				.box-frame h2, h2.title {
+					margin-bottom: 0.4em;
+				}
+			}
+			.bottom-works {
+				width: 100%;
+				position: absolute;
+				bottom: 0;
+				ul.controls { //do usuniecie? podwojone
+					padding: 0;
+					margin: 0;
+					list-style: none;
+					li {
+						display: inline-block;										&:last-child {
+						margin-right: 0;
+					}
+						.prev-works {
+							&:after {
+								right: 0;
+								left: auto;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.slide .content-works .project-part .box-padding {
+		h2 {
+			margin-bottom: 0.4em;
+		}
+		h4.part-title {
+			margin-bottom: 3em;
+		}
+		.swatches {
+			margin-bottom: 3em;
+		}
+	}
+	@include mq($until:sph) {
+		padding: 50px 1.4em 1em 1em;
+		.slider-works-example {
+			.slide {
+				min-height: calc(100vh - 1em - 50px);
+				.content-works {
+					height: calc(100% - 120px - 0px);
+					.mCSB_container {
+						margin-right: 0 !important;
+					}
+					.small-12 {
+						padding: 0 $p_s-m*0.8 !important;
+					}
+				}
+				.bottom-works {
+					height: 120px + 	0px;
+					padding-top: 0.5em;
+					.small-12 {
+						padding: 0 $p_s-m*0.8 !important;
+					}
+					ul.controls {
+						li {margin-right: 1em;}//???
+					}
+				}
+			}
+			.controls {
+				display: none;
+			}
+			button.slick-prev, button.slick-next {
+				position: absolute;
+				bottom: 30px;
+				height: 50px;
+				width: 50px;
+				&:before {
+					width: inherit;
+					height: inherit;
+					line-height: 50px;
+					font-size: 20px;
+					text-align: center;
+					display: block;
+					font-family: 'IonIcons';
+				}
+			}
+			button.slick-prev {
+				left: -20px;
+				&:before {
+					content: '\f3cf';
+				}
+			}
+			button.slick-next {
+				right: -20px;
+				&:before {
+					content: '\f3d1';
+				}
+			}
+		}
+	}
+	@include mq($from:sph, $until:tb) {
+		padding: 50px 1.2em 0em 1.5em;
+		.slider-works-example {
+			.slide {
+				min-height: calc(100vh - 3em);
+				.panel-left {
+					padding-right: 1em;
+				}
+				.content-works {
+					height: calc(100% - 100px);
+				}
+				.bottom-works {
+					height: 100px;
+					padding-top: 1em;
+					padding-right: 30px;
+					ul.controls {
+						li {margin-right: 1em;}
+					}
+				}
+			}
+		}
+	}
+	@include mq($from:tb, $until:dsk-XL) {
+		padding: 60px 1em 2em 2em;
+		.slider-works-example {
+			.slide {
+				min-height: calc(100vh - 6em);
+				.panel-left {
+					padding-right: 2em;
+				}
+				.content-works {
+					height: calc(100% - 100px);
+					.placeholder {
+						height: 204px;
+					}
+				}
+				.bottom-works {
+					height: 100px;
+					padding-top: 2em;
+					padding-right: 30px;
+					ul.controls {
+						li {margin-right: 2em;}
+					}
+				}
+			}
+		}
+	}
+	@include mq($from:dsk-XL) {
+		padding: 120px 2em 4em 4em;
+		.slider-works-example {
+			.slide {
+				min-height: calc(100vh - 6em);
+				.panel-left {
+					padding-right: 4em;
+				}
+				.content-works {
+					min-height: calc(100% - 200px);
+					.placeholder {
+						height: 408px;
+					}
+				}
+				.bottom-works {
+					height: 200px;
+					padding-top: 3em;
+					padding-right: 60px;
+					ul.controls {
+						li {margin-right: 2em;}
+					}
+				}
+			}
+		}
+	}
+}
+.visible-works {
+	right: 0 !important;
+	.title_fixed {
+		right: 0 !important;
+	}
+}
+
+//2.2.4.Skils
+.vp-skills {
+	.list-skills {
+		.column-separator {
+			width: 100%;
+		}
+	}
+	.separator {
+		height: 2em;
+	}
+	h1 {
+		margin-bottom: 2em;
+	}
+	.column {
+		.skills-label {
+			min-height: 40px;
+			display: table;
+			width: 100%;
+			h3 {
+				display: table-cell;
+				vertical-align: middle;
+				letter-spacing: 0.3em;
+				text-align: right;
+			}
+		}
+	}
+	img.piece {
+		height: 40px;
+		margin-bottom: 20px;
+	}
+	@include mq($until:sph) {
+		padding: $p_s-s;
+	}
+	@include mq($from:sph, $until:tb) {
+		padding: $p_s-m;
+	}
+	@include mq($from:tb) {
+		padding: $p_s-l;
+	}
+	@include mq($until:dsk-XL) {
+		padding-top: 60px;
+	}
+	@include mq($from:dsk-XL) {
+		padding-top: 120px;
+	}
+}
+
+//2.2.5.Thank you
+.vp-thankyou {
+	min-height: 100vh;
+	position: relative;
+	* {
+		text-align: center;
+	}
+	.vertical {
+		display: table;
+		width: 100%;
+		.box-frame {
+			display: table-cell;
+			vertical-align: middle;
+		}
+	}
+	.site-info {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		p {
+			text-transform: uppercase;
+			font-size: 0.8em;
+			letter-spacing: 0.2em;
+		}
+	}
+	@include mq($until:sph) {
+		padding: 60px $p_s-s $p_s-s;
+		.vertical {
+			height: calc(100vh - 2em - 60px);
+		}
+	}
+	@include mq($from:sph, $until:tb) {
+		padding: $p_s-m;
+		.vertical {
+			height: calc(100vh - 6em);
+		}
+	}
+	@include mq($from:tb) {
+		padding: $p_s-l;
+		.vertical {
+			height: calc(100vh - 8em);
+		}
+	}
+}
+//2.3.Numbers
+.sec_number {
+	position: relative;
+	.row {position: relative;}
+	&:before {
+		font-family: $ff-plain;
+		font-family: $ff-numbers;
+		//font-weight: 900;
+		font-size: 200px;
+		line-height: 140px;
+		display: block;
+		position: absolute;
+		top: 40px;
+		left: 20px;
+		z-index: 0;
+	}
+}
+
+.vp-contact:before {content: '05.';}
+.beginning-moodboard .sec_number:before {content: '01.';}
+.beginning-about:before {content: '02.';}
+.beginning-works:before {content: '03.';}
+.beginning-skills:before {content: '04.';}
+
+.end-moodboard .sec_number:before {content: '05.';}
+.end-about:before {content: '04.';}
+.end-works .sec_number:before {content: '03.';}
+.end-skills:before {content: '02.';}
+
+
+//2.4.Colours versions
+.v-beginning, .sliders-beginning  {
+	.section, .mb-text, .apla {
+		background: $white !important;
+		color: $black !important;
+	}
+	button.button, a.button {
+		color: $black;
+		&:after {
+			background: $black;
+		}
+	}
+	ul.responsive {
+		li {
+			.icon {
+				span {
+					border-color: $black;
+				}
+			}
+			.monitor {
+				span {
+					&:after {
+						background: $black;
+					}
+				}
+			}
+		}
+	}
+	.mCS-light.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {background-color: lighten($black,30%);}
+	.mCS-light.mCSB_scrollTools .mCSB_draggerRail {background-color: darken($white,10%);}
+	.slider-works-example, .slider-moodboard {
+		.slick-prev, .slick-next {
+			@include mq($until:sph) {
+				&:before {
+					color: $black;
+				}
+			}
+			@include mq($from:sph, $until:tb) {
+				&:before {
+					color: $black;
+				}
+			}
+			@include mq($from:tb) {
+				&:before {
+					color: $black;
+				}
+			}
+		}
+	}
+	.box-slider-moodboard {
+		.slider-moodboard {
+			background: $white;
+		}
+		.title_box {
+			border-color: $white;
+			span {
+				background: $white;
+			}
+		}
+	}
+	.vp-about {
+		.about-pic {
+			.frame {
+				span {
+					background: $white;
+				}
+			}
+		}
+	}
+	.vp-works {
+		.box_works {
+			.box_works-body {
+				background: $white;
+				color: $black;
+			}
+		}
+	}
+	.box-slider-works-example {
+		background: $white;
+		color: $black;
+		.slider-works-example {
+			.slide {
+				.title_fixed {
+					.column {
+						background: $white;
+						&:after {
+							background: rgba($white,0.5);
+						}
+					}
+				}
+			}
+		}
+		ul.swatches {
+			li {
+				.swatch-main {
+					border-color: rgba($black,0.3);
+				}
+			}
+		}
+	}
+	.sec_number {
+		&:before {
+			color: darken($white,5%);
+		}
+	}
+	.vp-works .sec_number {
+		&:before, &:after {
+		}
+	}
+	p, ul.bullet, ul.bullet-inline, h4 {
+		a {
+			color: darken($palegreen,30%);
+			&:hover {
+				color: darken($paleblue,30%);
+			}
+		}
+	}
+	.vp-thankyou {
+		background: rgba($white,0.7);
+		color: $black;
+	}
+}
+.v-end, .sliders-end {
+	.show_nav {
+		text-shadow: 0 0 10px $white;
+	}
+	.section, .mb-text, .apla {
+		background: $black !important;
+		color: $white !important;
+	}
+	button.button, a.button {
+		color: $white;
+		&:after {
+			background: $white;
+		}
+	}
+	ul.responsive {
+		li {
+			.icon {
+				span {
+					border-color: $white;
+				}
+			}
+			.monitor {
+				span {
+					&:after {
+						background: $white;
+					}
+				}
+			}
+		}
+	}
+	.mCS-light.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {background-color: darken($white,30%);}
+	.mCS-light.mCSB_scrollTools .mCSB_draggerRail {background-color: lighten($black,10%);}
+	.slider-works-example, .slider-moodboard {
+		.slick-prev, .slick-next {
+			@include mq($until:sph) {
+				&:before {
+					color: rgba($white,1);
+				}
+			}
+			@include mq($from:sph, $until:tb) {
+				&:before {
+					color: rgba($white,1);
+				}
+			}
+			@include mq($from:tb) {
+				&:before {
+					color: rgba($white,1);
+				}
+			}
+		}
+	}
+	.box-slider-moodboard {
+		.slider-moodboard {
+			background: $black;
+			.slide {
+				background: $black;
+			}
+		}
+		.hide-moodboard {
+			@include mq($until:sph) {
+				color: $black;
+			}
+			@include mq($from:sph) {
+				color: $white;
+			}
+		}
+		.title_box {
+			border-color: $black;
+			span {
+				background: $black;
+				color: $white;
+			}
+		}
+	}
+	.vp-about {
+		.about-pic {
+			.frame {
+				span {
+					background: $black;
+				}
+			}
+		}
+	}
+	.vp-works {
+		.box_works {
+			.box_works-body {
+				background: $black;
+				color: $white;
+			}
+		}
+	}
+	.box-slider-works-example {
+		background: $black;
+		color: $white;
+		.slider-works-example {
+			.slide {
+				.title_fixed {
+					.column {
+						background: $black;
+						&:after {
+							background: rgba($black,0.5);
+						}
+					}
+				}
+			}
+		}
+		ul.swatches {
+			li {
+				.swatch-main {
+					border-color: rgba($white,0.3);
+				}
+			}
+		}
+	}
+	.vp-skills {
+	}
+	.sec_number {
+		&:before {
+			color: lighten($black,5%);
+		}
+	}
+	p, ul.bullet, ul.bullet-inline, h4 {
+		a {
+			color: $palegreen;
+			&:hover {
+				color: $paleblue;
+			}
+		}
+	}
+	.vp-thankyou {
+		background: rgba($black,0.7);
+		color: $white;
+	}
+}
+//
 
 //3.0.MODS
-	@include mq($until:sph) {
-		.hide-on-small {
-			display: none;
-		}
+@include mq($until:sph) {
+	.hide-on-small {
+		display: none;
 	}
+}
 
-	.align-center, .align-center * {
-		text-align: center !important;
-	}
+.align-center, .align-center * {
+	text-align: center !important;
+}
 
 
 
@@ -4175,7 +4178,7 @@
 	z-index: 100;
 	&:before {
 		@include background($gradient_frame-1);
-		content: '';    
+		content: '';
 		display: block;
 		width: 100%;
 		height: 100%;
@@ -4190,20 +4193,19 @@
 		&:before {
 			opacity: 1;
 		}
-	}	
+	}
 }
 
 
 
 
-
-//IE	
-	//IE6, IE7, IE8
-	@media \0screen\,screen\9 {
-	}
-	//IE9+
-	@media screen and (min-width:0\0) and (min-resolution: +72dpi) {
-	}
-	//IE12+
-	@supports (-ms-accelerator:true) {
-	}
+//IE
+//IE6, IE7, IE8
+@media \0screen\,screen\9 {
+}
+//IE9+
+@media screen and (min-width:0\0) and (min-resolution: +72dpi) {
+}
+//IE12+
+@supports (-ms-accelerator:true) {
+}
