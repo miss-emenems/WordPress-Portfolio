@@ -5,9 +5,9 @@
         });
     });
 })(jQuery);
-$(document).foundation()
+jQuery(document).foundation()
 
-$(window).load(function() {
+jQuery(window).load(function() {
 	//loader animation
     incrementalNumber();
     if($(window).width() < 1024) {
@@ -27,16 +27,16 @@ $(window).load(function() {
       $(".welcome-logo, .audio_control").addClass("fadein-stage3"); 
    	}, 6800);
 });
-$(document).ready(function(){
-    $('.loading').click(function(){
+jQuery(document).ready(function(){
+    jQuery('.loading').click(function(){
     	$(this).delay(3000).addClass('fadeout-stage3');
     	$(".welcome-logo, .audio_control").addClass("fadein-stage3"); 
     });
 	//hides all section appart welcome
-	$('.vp-moodboard, .vp-about, .vp-works, .vp-skills, .vp-contact, .vp-thankyou').hide();
+    //jQuery('.vp-moodboard, .vp-about, .vp-works, .vp-skills, .vp-contact, .vp-thankyou').hide();  // HERE
 
 	//animation welcome
-	$('.select-end').click(function(){
+    jQuery('.select-end').click(function(){
 		$('.wrapper').addClass('v-end');
 		$('.sliders').addClass('sliders-end');
 		$('.show_nav').addClass('show_nav-end');
@@ -69,7 +69,7 @@ $(document).ready(function(){
         });
 
 	});
-	$('.select-beginning').click(function(){
+    jQuery('.select-beginning').click(function(){
 		$('.wrapper').addClass('v-beginning');
 		$('.sliders').addClass('sliders-beginning');
 		$('.show_nav').addClass('show_nav-beginning');
@@ -78,7 +78,7 @@ $(document).ready(function(){
         	theme:"my-theme"
         });	
 	});
-	$('.select-beginning, .select-end').click(function(){
+    jQuery('.select-beginning, .select-end').click(function(){
 		//turn on slider works
 		$('.show_nav').addClass('visible_show_nav');
 		$('.slider-moodboard').slick({
@@ -112,7 +112,7 @@ $(document).ready(function(){
 			});
 		}
 	});
-	$('.about-me').slick({
+    jQuery('.about-me').slick({
 		infinite: false,
 		dots: false,
 		autoplay: false,	
@@ -120,10 +120,10 @@ $(document).ready(function(){
 		fade: true,
   		cssEase: 'ease'
 	});
-		$('.number').addClass('animated');
+    jQuery('.number').addClass('animated');
 
 	//Nav
-	$('.show_nav').click(function(){
+    jQuery('.show_nav').click(function(){
 		$('.nav_box').toggleClass('visible_nav');
 		$('.nav_box').removeClass('visible_contact');
 		$('.show_nav .icon').toggleClass('ion-android-close ion-navicon');
@@ -131,21 +131,21 @@ $(document).ready(function(){
 		$('.wrapper').removeClass('wrapper_to_right-2');
 		$('.number').toggleClass('slideInUp');
 	});
-	$('.show_contact').click(function(){
+    jQuery('.show_contact').click(function(){
 		$('.nav_box').addClass('visible_contact');
 		$('.wrapper').addClass('wrapper_to_right-2');
 	});
-	$('.show_contact-thankyou').click(function(){
+    jQuery('.show_contact-thankyou').click(function(){
 		$('.nav_box').addClass('visible_contact');
 		$('.nav_box').toggleClass('visible_nav');
 		$('.wrapper').toggleClass('wrapper_to_right-1');
 		$('.wrapper').addClass('wrapper_to_right-2');		
 		$('.show_nav .icon').toggleClass('ion-navicon ion-android-close');	
 	});
-	$('.show_nav .ion-android-close').click(function(){
+    jQuery('.show_nav .ion-android-close').click(function(){
 		$('.nav_box').toggleClass('visible_nav');
 	});
-	$('.goto').click(function(){
+    jQuery('.goto').click(function(){
 		var vp = $(this).attr('data-target');
 		$('html, body').animate({
 			scrollTop: $('.vp-'+vp).offset().top
@@ -156,30 +156,30 @@ $(document).ready(function(){
 		$('.wrapper').removeClass('wrapper_to_right-1');
 		$('.wrapper').removeClass('wrapper_to_right-2');
 	});
-	$('.show_references').click(function(){
+    jQuery('.show_references').click(function(){
 		$('.box-contact_info').addClass('lifted');
 	});
-	$('.hide_references').click(function(){
+    jQuery('.hide_references').click(function(){
 		$('.box-contact_info').removeClass('lifted');
 	});
 
 	//scroll down to first section
-	$('.scroll-down').click(function(){
+    jQuery('.scroll-down').click(function(){
 		$('html, body').animate({
 			scrollTop: $('.section:nth-of-type(2)').offset().top
 		}, 2000);
 	});
 
-	var scrollTop = $(window).scrollTop();
-	var overlay = $('.dh-overlay').offset().top - 1000;
+	var scrollTop = jQuery(window).scrollTop();
+	var overlay = jQuery('.dh-overlay').offset().top - 1000;
 
-	if($(window).width() > 768) {
-		$('.dh-container').directionalHover({
+	if(jQuery(window).width() > 768) {
+        jQuery('.dh-container').directionalHover({
 			easing: "swing",
 			speed: 200
 		});
 	} else {
-		$(window).scroll(function(){
+        jQuery(window).scroll(function(){
 			if(scrollTop > overlay) {
 				$('.dh-overlay').css({'opacity': '1'});
 				$(this).addClass('test');
@@ -191,7 +191,7 @@ $(document).ready(function(){
 	}
 
 	//make a slider-moodboard visible + lead to the right slide
-	$('.seemore').click(function(){
+    jQuery('.seemore').click(function(){
 		var mb_slide_no = $(this).attr('data-target');
     	$(".slider-moodboard").slick('slickGoTo', mb_slide_no);
     	$('.box-slider-moodboard').addClass('slider-on');
@@ -200,7 +200,7 @@ $(document).ready(function(){
 	});
 
     //turn off a slider in moodboard section + reset postion of content
-    $('.hide-moodboard').click(function(){
+    jQuery('.hide-moodboard').click(function(){
 		$('html, body').animate({
 			scrollTop: $('.vp-moodboard').offset().top
 		}, 0);    	
@@ -210,7 +210,7 @@ $(document).ready(function(){
     });
 
     //slide works-example to viewport
-    $('.show_project').click(function(){
+    jQuery('.show_project').click(function(){
     	$('.box-slider-works-example').addClass('visible-works');
     	var works_example_no = $(this).attr('data-target');
     	$(".slider-works-example").slick('slickGoTo', works_example_no);
@@ -219,14 +219,14 @@ $(document).ready(function(){
     });
 
     //turn off a slider in works section + reset postion of content
-    $('.hide-works').click(function(){  	
+    jQuery('.hide-works').click(function(){
 		$('.box-slider-works-example').removeClass('visible-works');
     	$('.show_nav').addClass('visible_show_nav');
     	$('body').removeClass('scroll-off');
     });
 
     //change order of elements for works description on mobile
-    if($(window).width() < 768) {
+    if(jQuery(window).width() < 768) {
 		$('.works-pic-1').insertAfter('.works-desc-1');
 		$('.works-pic-2').insertAfter('.works-desc-2');
 		$('.works-pic-3').insertAfter('.works-desc-3');
@@ -242,43 +242,43 @@ $(document).ready(function(){
 
     //video play
 
-    	$(".welcome-left, .welcome-right, .loading").hover( hoverleft, hoverright, pauseboth );
+    jQuery(".welcome-left, .welcome-right, .loading").hover( hoverleft, hoverright, pauseboth );
 
     	function pauseboth(e) {
-    		$('.loading').hover(function(){
-		    	$('.video-beginning').get(0).pause();
+    		jQuery('.loading').hover(function(){
+                jQuery('.video-beginning').get(0).pause();
 		    	//$('.video-end').get(0).pause(); 
     		});    		
     	}
 
     	function hoverleft(e) {
-    		$('.welcome-left').hover(function(){
-		    	$('.video-beginning').get(0).play(); 
-		    	$('.video-end').get(0).pause(); 
+            jQuery('.welcome-left').hover(function(){
+		    	jQuery('.video-beginning').get(0).play();
+		    	jQuery('.video-end').get(0).pause();
     		});
 		}
 
 		function hoverright(e) {
-    		$('.welcome-right').hover(function(){
-		    	$('.video-beginning').get(0).pause(); 
-		    	$('.video-end').get(0).play(); 
+            jQuery('.welcome-right').hover(function(){
+		    	jQuery('.video-beginning').get(0).pause();
+		    	jQuery('.video-end').get(0).play();
     		});			
 		}
 
-		$('.allow_video').click(function(){
-		   	$('.video-end, .video-beginning').get(0).play(); 
-    	});
+    jQuery('.allow_video').click(function(){
+        jQuery('.video-end, .video-beginning').get(0).play();
+	});
 
 
 	//AUDIO
-	    $('audio').prop("volume", 0.04);
-		$('#play').click(function() {
-			$("audio")[0].play();
-			$('.button_wrapper').addClass('audio_on');
+	    jQuery('audio').prop("volume", 0.04);
+		jQuery('#play').click(function() {
+			jQuery("audio")[0].play();
+			jQuery('.button_wrapper').addClass('audio_on');
 	    });
-		$('#pause').click(function() {
-			$("audio")[0].pause();
-			$('.button_wrapper').removeClass('audio_on');
+		jQuery('#pause').click(function() {
+			jQuery("audio")[0].pause();
+			jQuery('.button_wrapper').removeClass('audio_on');
 	    });
 
 

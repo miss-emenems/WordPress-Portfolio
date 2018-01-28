@@ -1826,7 +1826,7 @@
 						width: 100%;
 						position: absolute;
 						bottom: -44px;
-						opacity: 0;
+						//opacity: 0; // HERE
 						@include transition($slowanim);
 						.scroll-down {
 							display: block;
@@ -1904,7 +1904,7 @@
 							width: 100%;
 							.welcome-logo {
 								@include transition($slowanim);
-								opacity: 0;
+								//opacity: 0; // HERE
 								.button-welcome {
 									font-family: $ff-header;
 									font-weight: 700;

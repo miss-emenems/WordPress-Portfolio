@@ -6516,7 +6516,6 @@ ul.controls {
       width: 100%;
       position: absolute;
       bottom: -44px;
-      opacity: 0;
       -webkit-transition: all 0.7s ease;
       -moz-transition: all 0.7s ease;
       -o-transition: all 0.7s ease;
@@ -6590,8 +6589,7 @@ ul.controls {
           -webkit-transition: all 0.7s ease;
           -moz-transition: all 0.7s ease;
           -o-transition: all 0.7s ease;
-          transition: all 0.7s ease;
-          opacity: 0; }
+          transition: all 0.7s ease; }
           .wrapper .vp-welcome .welcome-left .welcome-vertical .welcome-logo .button-welcome, .wrapper .vp-welcome .welcome-right .welcome-vertical .welcome-logo .button-welcome {
             font-family: "Yanone Kaffeesatz", Helvetica, Sans-Serif;
             font-weight: 700;
