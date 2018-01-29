@@ -27,11 +27,8 @@ incrementalNumber = function () {
     },numberTime);
   }
 
-  $.each($(rt.item), function( index, value ) {
-    data     = $(this).attr(rt.value);
-    autoincrementNumber(numberTimers.length,$(this),data);
+  jQuery.each(jQuery(rt.item), function( index, value ) {
+    data     = jQuery(this).attr(rt.value);
+    autoincrementNumber(numberTimers.length,jQuery(this),data);
   });
-
-
-
 }

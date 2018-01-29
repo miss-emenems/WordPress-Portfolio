@@ -2,8 +2,8 @@
     <div class="welcome-left">
         <div class="video_box">
             <video id='video1' class="video-beginning" poster="<?php echo get_bloginfo('template_url') ?>/images/bg-beginning.jpg" id="bgvid" playsinline autoplay muted loop controls="false">
-                <source src="video/beginning.mp4" type="video/mp4">
-                <source src="video/beginning.webm" type="video/webm">
+                <source src="<?php echo get_bloginfo('template_url') ?>/video/beginning.mp4" type="video/mp4">
+                <source src="<?php echo get_bloginfo('template_url') ?>/video/beginning.webm" type="video/webm">
             </video>
         </div>
         <div class="welcome-vertical">
@@ -16,8 +16,8 @@
     <div class="welcome-right">
         <div class="video_box">
             <video class="video-end" poster="<?php echo get_bloginfo('template_url') ?>/images/bg-end.jpg" id="bgvid" playsinline autoplay muted loop controls="false">
-                <source src="video/end.mp4" type="video/mp4">
-                <source src="video/end.webm" type="video/webm">
+                <source src="<?php echo get_bloginfo('template_url') ?>/video/end.mp4" type="video/mp4">
+                <source src="<?php echo get_bloginfo('template_url') ?>/video/end.webm" type="video/webm">
             </video>
         </div>
         <div class="welcome-vertical">

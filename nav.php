@@ -3,7 +3,7 @@
 //$post = get_page_by_title('Nav');
 ?>
 
-<!--<div class="loading">
+<div class="loading">
     <div class="loading_box">
         <div class="left_box">
             <div class="vertical">
@@ -19,14 +19,14 @@
         <div class="right_box">
             <div class="vertical">
                 <div class="logo">
-                    <img src="<?php /*echo get_bloginfo('template_url') */?>/images/logo_logo-full-black.png" alt="">
+                    <img src="<?php echo get_bloginfo('template_url') ?>/images/logo_logo-full-black.png" alt="">
                     <h1>Martyna<br>Machowiak</h1>
                 </div>
                 <h5>Web Designer / Front end developer</h5>
             </div>
         </div>
     </div>
-</div>-->
+</div>
 <div class="nav_box">
     <button class="show_nav"><i class="icon ion-navicon"></i></button>
     <!-- <button class="close_nav"><i class="icon ion-android-close"></i></button> -->

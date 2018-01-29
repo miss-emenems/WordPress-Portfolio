@@ -5,7 +5,7 @@ get_header(); ?>
 <?php
     include('nav.php');
 ?>
-<div class="wrapper v-beginning">
+<div class="wrapper">
 
     <?php
 
