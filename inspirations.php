@@ -46,4 +46,5 @@ $post = get_page_by_title('Inspirations');
         endif; ?>
 
     </div>
+    <button class="hide-moodboard"><i class="icon ion-android-close"></i></button>
 </section>

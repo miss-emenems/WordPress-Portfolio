@@ -104,8 +104,8 @@ jQuery(document).ready(function(){
 				dots: false,
 				autoplay: false,
 				autoplaySpeed: 3000,
-				nextArrow: $('.next-works'),
-				prevArrow: $('.prev-works'),
+				nextArrow: jQuery('.next-works'),
+				prevArrow: jQuery('.prev-works'),
 				fade: true,
 	  			cssEase: 'linear',
 				speed: 1000	
@@ -212,7 +212,7 @@ jQuery(document).ready(function(){
     //slide works-example to viewport
     jQuery('.show_project').click(function(){
         jQuery('.box-slider-works-example').addClass('visible-works');
-    	var works_example_no = $(this).attr('data-target');
+    	var works_example_no = jQuery(this).attr('data-target');
     	jQuery(".slider-works-example").slick('slickGoTo', works_example_no);
     	jQuery('.show_nav').removeClass('visible_show_nav');
     	jQuery('body').addClass('scroll-off');

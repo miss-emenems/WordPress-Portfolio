@@ -144,4 +144,5 @@ Template Name: Case Studies
         endif; ?>
 
     </div>
+    <button class="hide-works"><i class="icon ion-android-close"></i></button>
 </section>

@@ -1,6 +1,7 @@
 <?php
 
 function porfolioSetUp() {
+    wp_enqueue_style('ionicons', 'http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css', false, '1.0', 'all');
     wp_enqueue_style('style', get_template_directory_uri() . '/css/style.css', false, '1.0', 'all');
     wp_enqueue_script(
         'slick',
